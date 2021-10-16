@@ -1,0 +1,3582 @@
+2021-09-22 22:12:09 Config:
+{'all_joints': [[0],
+                [1],
+                [2],
+                [3],
+                [4],
+                [5],
+                [6],
+                [7],
+                [8],
+                [9],
+                [10],
+                [11],
+                [12],
+                [13],
+                [14],
+                [15]],
+ 'all_joints_names': ['earr',
+                      'earl',
+                      'eyer',
+                      'eyel',
+                      'nose',
+                      'throat',
+                      'elbowr',
+                      'elbowl',
+                      'handr',
+                      'handl',
+                      'tailbase',
+                      'tailtip',
+                      'kneer',
+                      'kneel',
+                      'ankler',
+                      'anklel'],
+ 'alpha_r': 0.02,
+ 'apply_prob': 0.5,
+ 'batch_size': 1,
+ 'clahe': True,
+ 'claheratio': 0.1,
+ 'crop_pad': 0,
+ 'crop_sampling': 'hybrid',
+ 'crop_size': [400, 400],
+ 'cropratio': 0.4,
+ 'dataset': 'training-datasets/iteration-0/UnaugmentedDataSet_Simba '
+            'ModifiedAug27/Simba Modified_Hamila95shuffle0.mat',
+ 'dataset_type': 'default',
+ 'decay_steps': 30000,
+ 'deterministic': False,
+ 'display_iters': 1000,
+ 'edge': False,
+ 'emboss': {'alpha': [0.0, 1.0], 'embossratio': 0.1, 'strength': [0.5, 1.5]},
+ 'fg_fraction': 0.25,
+ 'global_scale': 0.8,
+ 'histeq': True,
+ 'histeqratio': 0.1,
+ 'init_weights': '/usr/local/lib/python3.7/dist-packages/deeplabcut/pose_estimation_tensorflow/models/pretrained/efficientnet-b0/model.ckpt',
+ 'intermediate_supervision': False,
+ 'intermediate_supervision_layer': 12,
+ 'location_refinement': True,
+ 'locref_huber_loss': True,
+ 'locref_loss_weight': 0.05,
+ 'locref_stdev': 7.2801,
+ 'log_dir': 'log',
+ 'lr_init': 0.0005,
+ 'max_input_size': 1500,
+ 'max_shift': 0.4,
+ 'mean_pixel': [123.68, 116.779, 103.939],
+ 'metadataset': 'training-datasets/iteration-0/UnaugmentedDataSet_Simba '
+                'ModifiedAug27/Documentation_data-Simba '
+                'Modified_95shuffle0.pickle',
+ 'min_input_size': 64,
+ 'mirror': False,
+ 'multi_stage': False,
+ 'multi_step': [[0.005, 10000],
+                [0.02, 430000],
+                [0.002, 730000],
+                [0.001, 1030000]],
+ 'net_type': 'efficientnet-b0',
+ 'num_joints': 16,
+ 'optimizer': 'sgd',
+ 'pairwise_huber_loss': False,
+ 'pairwise_predict': False,
+ 'partaffinityfield_predict': False,
+ 'pos_dist_thresh': 17,
+ 'pre_resize': [],
+ 'project_path': '/content/drive/MyDrive/DLC/Simba Modified-Hamila-2021-08-27',
+ 'regularize': False,
+ 'rotation': 25,
+ 'rotratio': 0.4,
+ 'save_iters': 50000,
+ 'scale_jitter_lo': 0.5,
+ 'scale_jitter_up': 1.25,
+ 'scoremap_dir': 'test',
+ 'sharpen': False,
+ 'sharpenratio': 0.3,
+ 'shuffle': True,
+ 'snapshot_prefix': '/content/drive/MyDrive/DLC/Simba '
+                    'Modified-Hamila-2021-08-27/dlc-models/iteration-0/Simba '
+                    'ModifiedAug27-trainset95shuffle0/train/snapshot',
+ 'stride': 8.0,
+ 'weigh_negatives': False,
+ 'weigh_only_present_joints': False,
+ 'weigh_part_predictions': False,
+ 'weight_decay': 0.0001}
+2021-09-22 22:14:39 iteration: 100 loss: 0.0479 lr: 0.0004999865777790546
+2021-09-22 22:16:08 iteration: 200 loss: 0.0191 lr: 0.0004999462980777025
+2021-09-22 22:17:37 iteration: 300 loss: 0.0149 lr: 0.0004998791264370084
+2021-09-22 22:19:06 iteration: 400 loss: 0.0114 lr: 0.0004997851210646331
+2021-09-22 22:20:35 iteration: 500 loss: 0.0098 lr: 0.0004996642819605768
+2021-09-22 22:22:05 iteration: 600 loss: 0.0085 lr: 0.0004995165509171784
+2021-09-22 22:23:34 iteration: 700 loss: 0.0077 lr: 0.0004993421025574207
+2021-09-22 22:25:03 iteration: 800 loss: 0.0074 lr: 0.000499140762258321
+2021-09-22 22:26:32 iteration: 900 loss: 0.0063 lr: 0.0004989127046428621
+2021-09-22 22:28:01 iteration: 1000 loss: 0.0069 lr: 0.0004986578715033829
+2021-09-22 22:29:30 iteration: 1100 loss: 0.0053 lr: 0.0004983763210475445
+2021-09-22 22:31:00 iteration: 1200 loss: 0.0054 lr: 0.0004980681696906686
+2021-09-22 22:32:29 iteration: 1300 loss: 0.0054 lr: 0.0004977332428097725
+2021-09-22 22:33:58 iteration: 1400 loss: 0.0052 lr: 0.0004973717732354999
+2021-09-22 22:35:27 iteration: 1500 loss: 0.0046 lr: 0.0004969836445525289
+2021-09-22 22:36:56 iteration: 1600 loss: 0.0049 lr: 0.0004965690313838422
+2021-09-22 22:38:26 iteration: 1700 loss: 0.0044 lr: 0.00049612793372944
+2021-09-22 22:39:56 iteration: 1800 loss: 0.0044 lr: 0.000495660409796983
+2021-09-22 22:41:25 iteration: 1900 loss: 0.0039 lr: 0.0004951664595864713
+2021-09-22 22:42:55 iteration: 2000 loss: 0.0038 lr: 0.0004946461995132267
+2021-09-22 22:44:25 iteration: 2100 loss: 0.0037 lr: 0.0004940996295772493
+2021-09-22 22:45:55 iteration: 2200 loss: 0.0037 lr: 0.0004935268661938608
+2021-09-22 22:47:24 iteration: 2300 loss: 0.0036 lr: 0.0004929279093630612
+2021-09-22 22:48:53 iteration: 2400 loss: 0.0032 lr: 0.0004923028755001724
+2021-09-22 22:50:23 iteration: 2500 loss: 0.0034 lr: 0.0004916518810205162
+2021-09-22 22:51:53 iteration: 2600 loss: 0.0034 lr: 0.0004909748095087707
+2021-09-22 22:53:22 iteration: 2700 loss: 0.0031 lr: 0.0004902720102109015
+2021-09-22 22:54:51 iteration: 2800 loss: 0.0031 lr: 0.0004895433085039258
+2021-09-22 22:56:21 iteration: 2900 loss: 0.0032 lr: 0.0004887888790108263
+2021-09-22 22:57:50 iteration: 3000 loss: 0.0033 lr: 0.00048800883814692497
+2021-09-22 22:59:21 iteration: 3100 loss: 0.0028 lr: 0.0004872033023275435
+2021-09-22 23:00:50 iteration: 3200 loss: 0.0028 lr: 0.000486372213345021
+2021-09-22 23:02:19 iteration: 3300 loss: 0.0030 lr: 0.0004855158331338316
+2021-09-22 23:03:49 iteration: 3400 loss: 0.0030 lr: 0.0004846341034863144
+2021-09-22 23:05:18 iteration: 3500 loss: 0.0031 lr: 0.00048372719902545214
+2021-09-22 23:06:47 iteration: 3600 loss: 0.0027 lr: 0.00048279526527039707
+2021-09-22 23:08:17 iteration: 3700 loss: 0.0026 lr: 0.00048183833132497966
+2021-09-22 23:09:46 iteration: 3800 loss: 0.0026 lr: 0.0004808564845006913
+2021-09-22 23:11:16 iteration: 3900 loss: 0.0025 lr: 0.0004798498994205147
+2021-09-22 23:12:46 iteration: 4000 loss: 0.0025 lr: 0.00047881866339594126
+2021-09-22 23:14:15 iteration: 4100 loss: 0.0026 lr: 0.0004777628928422928
+2021-09-22 23:15:45 iteration: 4200 loss: 0.0026 lr: 0.0004766826459672302
+2021-09-22 23:17:14 iteration: 4300 loss: 0.0025 lr: 0.00047557815560139716
+2021-09-22 23:18:44 iteration: 4400 loss: 0.0026 lr: 0.00047444942174479365
+2021-09-22 23:20:13 iteration: 4500 loss: 0.0024 lr: 0.00047329661902040243
+2021-09-22 23:21:42 iteration: 4600 loss: 0.0023 lr: 0.0004721198929473758
+2021-09-22 23:23:12 iteration: 4700 loss: 0.0022 lr: 0.00047091938904486597
+2021-09-22 23:24:41 iteration: 4800 loss: 0.0023 lr: 0.0004696951655205339
+2021-09-22 23:26:10 iteration: 4900 loss: 0.0020 lr: 0.00046844742610119283
+2021-09-22 23:27:40 iteration: 5000 loss: 0.0024 lr: 0.0004671762580983341
+2021-09-22 23:29:09 iteration: 5100 loss: 0.0025 lr: 0.0004658818361349404
+2021-09-22 23:30:38 iteration: 5200 loss: 0.0023 lr: 0.0004645642766263336
+2021-09-22 23:32:08 iteration: 5300 loss: 0.0020 lr: 0.000463223725091666
+2021-09-22 23:33:37 iteration: 5400 loss: 0.0024 lr: 0.0004618603561539203
+2021-09-22 23:35:06 iteration: 5500 loss: 0.0023 lr: 0.0004604743153322488
+2021-09-22 23:36:35 iteration: 5600 loss: 0.0019 lr: 0.00045906571904197335
+2021-09-22 23:38:05 iteration: 5700 loss: 0.0020 lr: 0.0004576347710099071
+2021-09-22 23:39:34 iteration: 5800 loss: 0.0019 lr: 0.00045618158765137196
+2021-09-22 23:41:03 iteration: 5900 loss: 0.0019 lr: 0.0004547063435893506
+2021-09-22 23:42:33 iteration: 6000 loss: 0.0023 lr: 0.0004532091843429953
+2021-09-22 23:44:02 iteration: 6100 loss: 0.0021 lr: 0.00045169031363911927
+2021-09-22 23:45:31 iteration: 6200 loss: 0.0020 lr: 0.0004501498769968748
+2021-09-22 23:47:00 iteration: 6300 loss: 0.0019 lr: 0.0004485879617277533
+2021-09-22 23:48:29 iteration: 6400 loss: 0.0019 lr: 0.0004470049461815506
+2021-09-22 23:49:57 iteration: 6500 loss: 0.0021 lr: 0.0004454008012544364
+2021-09-22 23:51:24 iteration: 6600 loss: 0.0019 lr: 0.0004437757597770542
+2021-09-22 23:52:51 iteration: 6700 loss: 0.0018 lr: 0.0004421300545800477
+2021-09-22 23:54:19 iteration: 6800 loss: 0.0018 lr: 0.00044046377297490835
+2021-09-22 23:55:46 iteration: 6900 loss: 0.0019 lr: 0.0004387772351037711
+2021-09-22 23:57:13 iteration: 7000 loss: 0.0017 lr: 0.0004370704700704664
+2021-09-22 23:58:41 iteration: 7100 loss: 0.0016 lr: 0.00043534382712095976
+2021-09-23 00:00:08 iteration: 7200 loss: 0.0018 lr: 0.00043359730625525117
+2021-09-23 00:01:36 iteration: 7300 loss: 0.0015 lr: 0.00043183128582313657
+2021-09-23 00:03:03 iteration: 7400 loss: 0.0014 lr: 0.00043004582403227687
+2021-09-23 00:04:31 iteration: 7500 loss: 0.0015 lr: 0.0004282411828171462
+2021-09-23 00:05:58 iteration: 7600 loss: 0.0016 lr: 0.00042641753680072725
+2021-09-23 00:07:26 iteration: 7700 loss: 0.0014 lr: 0.0004245751188136637
+2021-09-23 00:08:53 iteration: 7800 loss: 0.0017 lr: 0.00042271404527127743
+2021-09-23 00:10:21 iteration: 7900 loss: 0.0015 lr: 0.00042083460721187294
+2021-09-23 00:11:48 iteration: 8000 loss: 0.0015 lr: 0.00041893700836226344
+2021-09-23 00:13:16 iteration: 8100 loss: 0.0014 lr: 0.0004170214233454317
+2021-09-23 00:14:43 iteration: 8200 loss: 0.0015 lr: 0.0004150880849920213
+2021-09-23 00:16:10 iteration: 8300 loss: 0.0016 lr: 0.0004131371679250151
+2021-09-23 00:17:38 iteration: 8400 loss: 0.0014 lr: 0.00041116890497505665
+2021-09-23 00:19:05 iteration: 8500 loss: 0.0016 lr: 0.00040918352897278965
+2021-09-23 00:20:33 iteration: 8600 loss: 0.0014 lr: 0.0004071812145411968
+2021-09-23 00:22:00 iteration: 8700 loss: 0.0013 lr: 0.0004051622236147523
+2021-09-23 00:23:28 iteration: 8800 loss: 0.0017 lr: 0.00040312675992026925
+2021-09-23 00:24:55 iteration: 8900 loss: 0.0014 lr: 0.0004010750853922218
+2021-09-23 00:26:23 iteration: 9000 loss: 0.0013 lr: 0.00039900740375742316
+2021-09-23 00:27:51 iteration: 9100 loss: 0.0013 lr: 0.00039692388963885605
+2021-09-23 00:29:19 iteration: 9200 loss: 0.0013 lr: 0.00039482483407482505
+2021-09-23 00:30:46 iteration: 9300 loss: 0.0014 lr: 0.00039271044079214334
+2021-09-23 00:32:14 iteration: 9400 loss: 0.0015 lr: 0.00039058091351762414
+2021-09-23 00:33:41 iteration: 9500 loss: 0.0011 lr: 0.00038843657239340246
+2021-09-23 00:35:08 iteration: 9600 loss: 0.0013 lr: 0.0003862775338348001
+2021-09-23 00:36:36 iteration: 9700 loss: 0.0012 lr: 0.00038410420529544353
+2021-09-23 00:38:03 iteration: 9800 loss: 0.0014 lr: 0.00038191667408682406
+2021-09-23 00:39:30 iteration: 9900 loss: 0.0014 lr: 0.0003797151439357549
+2021-09-23 00:40:57 iteration: 10000 loss: 0.0014 lr: 0.00037750002229586244
+2021-09-23 00:42:24 iteration: 10100 loss: 0.0013 lr: 0.0003752714255824685
+2021-09-23 00:43:51 iteration: 10200 loss: 0.0013 lr: 0.0003730296448338777
+2021-09-23 00:45:18 iteration: 10300 loss: 0.0013 lr: 0.00037077494198456407
+2021-09-23 00:46:45 iteration: 10400 loss: 0.0012 lr: 0.0003685075498651713
+2021-09-23 00:48:12 iteration: 10500 loss: 0.0013 lr: 0.0003662276722025126
+2021-09-23 00:49:39 iteration: 10600 loss: 0.0013 lr: 0.000363935629138723
+2021-09-23 00:51:06 iteration: 10700 loss: 0.0013 lr: 0.0003616316244006157
+2021-09-23 00:52:33 iteration: 10800 loss: 0.0013 lr: 0.0003593159490264952
+2021-09-23 00:54:00 iteration: 10900 loss: 0.0012 lr: 0.0003569888067431748
+2021-09-23 00:55:27 iteration: 11000 loss: 0.0012 lr: 0.000354650488588959
+2021-09-23 00:56:54 iteration: 11100 loss: 0.0011 lr: 0.0003523012564983219
+2021-09-23 00:58:21 iteration: 11200 loss: 0.0013 lr: 0.0003499413433019072
+2021-09-23 00:59:47 iteration: 11300 loss: 0.0011 lr: 0.00034757101093418896
+2021-09-23 01:01:14 iteration: 11400 loss: 0.0012 lr: 0.00034519052132964134
+2021-09-23 01:02:41 iteration: 11500 loss: 0.0013 lr: 0.0003428001655265689
+2021-09-23 01:04:08 iteration: 11600 loss: 0.0010 lr: 0.0003404001472517848
+2021-09-23 01:05:35 iteration: 11700 loss: 0.0011 lr: 0.00033799081575125456
+2021-09-23 01:07:02 iteration: 11800 loss: 0.0011 lr: 0.0003355723456479609
+2021-09-23 01:08:29 iteration: 11900 loss: 0.0012 lr: 0.0003331450279802084
+2021-09-23 01:09:56 iteration: 12000 loss: 0.0011 lr: 0.00033070918289013207
+2021-09-23 01:11:23 iteration: 12100 loss: 0.0012 lr: 0.00032826498500071466
+2021-09-23 01:12:50 iteration: 12200 loss: 0.0011 lr: 0.0003258128126617521
+2021-09-23 01:14:17 iteration: 12300 loss: 0.0010 lr: 0.00032335284049622715
+2021-09-23 01:15:44 iteration: 12400 loss: 0.0011 lr: 0.0003208853886462748
+2021-09-23 01:17:12 iteration: 12500 loss: 0.0010 lr: 0.0003184106608387083
+2021-09-23 01:18:39 iteration: 12600 loss: 0.0011 lr: 0.0003159290354233235
+2021-09-23 01:20:08 iteration: 12700 loss: 0.0010 lr: 0.0003134407161269337
+2021-09-23 01:21:36 iteration: 12800 loss: 0.0010 lr: 0.00031094596488401294
+2021-09-23 01:23:04 iteration: 12900 loss: 0.0010 lr: 0.00030844510183669627
+2021-09-23 01:24:32 iteration: 13000 loss: 0.0011 lr: 0.00030593835981562734
+2021-09-23 01:26:01 iteration: 13100 loss: 0.0012 lr: 0.00030342605896294117
+2021-09-23 01:27:29 iteration: 13200 loss: 0.0012 lr: 0.0003009084321092814
+2021-09-23 01:28:57 iteration: 13300 loss: 0.0010 lr: 0.0002983857411891222
+2021-09-23 01:30:26 iteration: 13400 loss: 0.0011 lr: 0.00029585836455225945
+2021-09-23 01:31:54 iteration: 13500 loss: 0.0011 lr: 0.00029332644771784544
+2021-09-23 01:33:23 iteration: 13600 loss: 0.0010 lr: 0.00029079033993184566
+2021-09-23 01:34:51 iteration: 13700 loss: 0.0009 lr: 0.00028825030312873423
+2021-09-23 01:36:19 iteration: 13800 loss: 0.0009 lr: 0.00028570665745064616
+2021-09-23 01:37:47 iteration: 13900 loss: 0.0010 lr: 0.00028315960662439466
+2021-09-23 01:39:16 iteration: 14000 loss: 0.0009 lr: 0.00028060947079211473
+2021-09-23 01:40:44 iteration: 14100 loss: 0.0008 lr: 0.00027805654099211097
+2021-09-23 01:42:12 iteration: 14200 loss: 0.0009 lr: 0.000275501050055027
+2021-09-23 01:43:41 iteration: 14300 loss: 0.0008 lr: 0.00027294334722682834
+2021-09-23 01:45:09 iteration: 14400 loss: 0.0009 lr: 0.00027038369444198906
+2021-09-23 01:46:38 iteration: 14500 loss: 0.0010 lr: 0.0002678222954273224
+2021-09-23 01:48:06 iteration: 14600 loss: 0.0009 lr: 0.00026525952853262424
+2021-09-23 01:49:35 iteration: 14700 loss: 0.0008 lr: 0.0002626956265885383
+2021-09-23 05:25:39 Config:
+{'all_joints': [[0],
+                [1],
+                [2],
+                [3],
+                [4],
+                [5],
+                [6],
+                [7],
+                [8],
+                [9],
+                [10],
+                [11],
+                [12],
+                [13],
+                [14],
+                [15]],
+ 'all_joints_names': ['earr',
+                      'earl',
+                      'eyer',
+                      'eyel',
+                      'nose',
+                      'throat',
+                      'elbowr',
+                      'elbowl',
+                      'handr',
+                      'handl',
+                      'tailbase',
+                      'tailtip',
+                      'kneer',
+                      'kneel',
+                      'ankler',
+                      'anklel'],
+ 'alpha_r': 0.02,
+ 'apply_prob': 0.5,
+ 'batch_size': 1,
+ 'clahe': True,
+ 'claheratio': 0.1,
+ 'crop_pad': 0,
+ 'crop_sampling': 'hybrid',
+ 'crop_size': [400, 400],
+ 'cropratio': 0.4,
+ 'dataset': 'training-datasets/iteration-0/UnaugmentedDataSet_Simba '
+            'ModifiedAug27/Simba Modified_Hamila95shuffle0.mat',
+ 'dataset_type': 'default',
+ 'decay_steps': 30000,
+ 'deterministic': False,
+ 'display_iters': 1000,
+ 'edge': False,
+ 'emboss': {'alpha': [0.0, 1.0], 'embossratio': 0.1, 'strength': [0.5, 1.5]},
+ 'fg_fraction': 0.25,
+ 'global_scale': 0.8,
+ 'histeq': True,
+ 'histeqratio': 0.1,
+ 'init_weights': '/content/drive/MyDrive/DLC/Simba '
+                 'Modified-Hamila-2021-08-27/dlc-models/iteration-0/Simba '
+                 'ModifiedAug27-trainset95shuffle0/train/snapshot-12000',
+ 'intermediate_supervision': False,
+ 'intermediate_supervision_layer': 12,
+ 'location_refinement': True,
+ 'locref_huber_loss': True,
+ 'locref_loss_weight': 0.05,
+ 'locref_stdev': 7.2801,
+ 'log_dir': 'log',
+ 'lr_init': 0.0005,
+ 'max_input_size': 1500,
+ 'max_shift': 0.4,
+ 'mean_pixel': [123.68, 116.779, 103.939],
+ 'metadataset': 'training-datasets/iteration-0/UnaugmentedDataSet_Simba '
+                'ModifiedAug27/Documentation_data-Simba '
+                'Modified_95shuffle0.pickle',
+ 'min_input_size': 64,
+ 'mirror': False,
+ 'multi_stage': False,
+ 'multi_step': [[0.005, 10000],
+                [0.02, 430000],
+                [0.002, 730000],
+                [0.001, 1030000]],
+ 'net_type': 'efficientnet-b0',
+ 'num_joints': 16,
+ 'optimizer': 'sgd',
+ 'pairwise_huber_loss': False,
+ 'pairwise_predict': False,
+ 'partaffinityfield_predict': False,
+ 'pos_dist_thresh': 17,
+ 'pre_resize': [],
+ 'project_path': '/content/drive/MyDrive/DLC/Simba Modified-Hamila-2021-08-27',
+ 'regularize': False,
+ 'rotation': 25,
+ 'rotratio': 0.4,
+ 'save_iters': 50000,
+ 'scale_jitter_lo': 0.5,
+ 'scale_jitter_up': 1.25,
+ 'scoremap_dir': 'test',
+ 'sharpen': False,
+ 'sharpenratio': 0.3,
+ 'shuffle': True,
+ 'snapshot_prefix': '/content/drive/MyDrive/DLC/Simba '
+                    'Modified-Hamila-2021-08-27/dlc-models/iteration-0/Simba '
+                    'ModifiedAug27-trainset95shuffle0/train/snapshot',
+ 'stride': 8.0,
+ 'weigh_negatives': False,
+ 'weigh_only_present_joints': False,
+ 'weigh_part_predictions': False,
+ 'weight_decay': 0.0001}
+2021-09-23 05:25:59 Config:
+{'all_joints': [[0],
+                [1],
+                [2],
+                [3],
+                [4],
+                [5],
+                [6],
+                [7],
+                [8],
+                [9],
+                [10],
+                [11],
+                [12],
+                [13],
+                [14],
+                [15]],
+ 'all_joints_names': ['earr',
+                      'earl',
+                      'eyer',
+                      'eyel',
+                      'nose',
+                      'throat',
+                      'elbowr',
+                      'elbowl',
+                      'handr',
+                      'handl',
+                      'tailbase',
+                      'tailtip',
+                      'kneer',
+                      'kneel',
+                      'ankler',
+                      'anklel'],
+ 'alpha_r': 0.02,
+ 'apply_prob': 0.5,
+ 'batch_size': 1,
+ 'clahe': True,
+ 'claheratio': 0.1,
+ 'crop_pad': 0,
+ 'crop_sampling': 'hybrid',
+ 'crop_size': [400, 400],
+ 'cropratio': 0.4,
+ 'dataset': 'training-datasets/iteration-0/UnaugmentedDataSet_Simba '
+            'ModifiedAug27/Simba Modified_Hamila95shuffle0.mat',
+ 'dataset_type': 'default',
+ 'decay_steps': 30000,
+ 'deterministic': False,
+ 'display_iters': 1000,
+ 'edge': False,
+ 'emboss': {'alpha': [0.0, 1.0], 'embossratio': 0.1, 'strength': [0.5, 1.5]},
+ 'fg_fraction': 0.25,
+ 'global_scale': 0.8,
+ 'histeq': True,
+ 'histeqratio': 0.1,
+ 'init_weights': '/content/drive/MyDrive/DLC/Simba '
+                 'Modified-Hamila-2021-08-27/dlc-models/iteration-0/Simba '
+                 'ModifiedAug27-trainset95shuffle0/train/snapshot-12000',
+ 'intermediate_supervision': False,
+ 'intermediate_supervision_layer': 12,
+ 'location_refinement': True,
+ 'locref_huber_loss': True,
+ 'locref_loss_weight': 0.05,
+ 'locref_stdev': 7.2801,
+ 'log_dir': 'log',
+ 'lr_init': 0.0005,
+ 'max_input_size': 1500,
+ 'max_shift': 0.4,
+ 'mean_pixel': [123.68, 116.779, 103.939],
+ 'metadataset': 'training-datasets/iteration-0/UnaugmentedDataSet_Simba '
+                'ModifiedAug27/Documentation_data-Simba '
+                'Modified_95shuffle0.pickle',
+ 'min_input_size': 64,
+ 'mirror': False,
+ 'multi_stage': False,
+ 'multi_step': [[0.005, 10000],
+                [0.02, 430000],
+                [0.002, 730000],
+                [0.001, 1030000]],
+ 'net_type': 'efficientnet-b0',
+ 'num_joints': 16,
+ 'optimizer': 'sgd',
+ 'pairwise_huber_loss': False,
+ 'pairwise_predict': False,
+ 'partaffinityfield_predict': False,
+ 'pos_dist_thresh': 17,
+ 'pre_resize': [],
+ 'project_path': '/content/drive/MyDrive/DLC/Simba Modified-Hamila-2021-08-27',
+ 'regularize': False,
+ 'rotation': 25,
+ 'rotratio': 0.4,
+ 'save_iters': 50000,
+ 'scale_jitter_lo': 0.5,
+ 'scale_jitter_up': 1.25,
+ 'scoremap_dir': 'test',
+ 'sharpen': False,
+ 'sharpenratio': 0.3,
+ 'shuffle': True,
+ 'snapshot_prefix': '/content/drive/MyDrive/DLC/Simba '
+                    'Modified-Hamila-2021-08-27/dlc-models/iteration-0/Simba '
+                    'ModifiedAug27-trainset95shuffle0/train/snapshot',
+ 'stride': 8.0,
+ 'weigh_negatives': False,
+ 'weigh_only_present_joints': False,
+ 'weigh_part_predictions': False,
+ 'weight_decay': 0.0001}
+2021-09-23 05:28:20 iteration: 12100 loss: 0.0011 lr: 0.00032826498500071466
+2021-09-23 05:29:45 iteration: 12200 loss: 0.0011 lr: 0.0003258128126617521
+2021-09-23 05:31:10 iteration: 12300 loss: 0.0011 lr: 0.00032335284049622715
+2021-09-23 05:32:36 iteration: 12400 loss: 0.0010 lr: 0.0003208853886462748
+2021-09-23 05:34:01 iteration: 12500 loss: 0.0010 lr: 0.0003184106608387083
+2021-09-23 05:35:26 iteration: 12600 loss: 0.0012 lr: 0.0003159290354233235
+2021-09-23 05:36:52 iteration: 12700 loss: 0.0011 lr: 0.0003134407161269337
+2021-09-23 05:38:17 iteration: 12800 loss: 0.0010 lr: 0.00031094596488401294
+2021-09-23 05:39:43 iteration: 12900 loss: 0.0010 lr: 0.00030844510183669627
+2021-09-23 05:41:08 iteration: 13000 loss: 0.0011 lr: 0.00030593835981562734
+2021-09-23 05:42:33 iteration: 13100 loss: 0.0011 lr: 0.00030342605896294117
+2021-09-23 05:43:58 iteration: 13200 loss: 0.0011 lr: 0.0003009084321092814
+2021-09-23 05:45:24 iteration: 13300 loss: 0.0010 lr: 0.0002983857411891222
+2021-09-23 05:46:49 iteration: 13400 loss: 0.0009 lr: 0.00029585836455225945
+2021-09-23 05:48:14 iteration: 13500 loss: 0.0010 lr: 0.00029332644771784544
+2021-09-23 05:49:40 iteration: 13600 loss: 0.0010 lr: 0.00029079033993184566
+2021-09-23 05:51:06 iteration: 13700 loss: 0.0010 lr: 0.00028825030312873423
+2021-09-23 05:52:32 iteration: 13800 loss: 0.0009 lr: 0.00028570665745064616
+2021-09-23 05:53:58 iteration: 13900 loss: 0.0009 lr: 0.00028315960662439466
+2021-09-23 05:55:24 iteration: 14000 loss: 0.0009 lr: 0.00028060947079211473
+2021-09-23 05:56:49 iteration: 14100 loss: 0.0009 lr: 0.00027805654099211097
+2021-09-23 05:58:14 iteration: 14200 loss: 0.0010 lr: 0.000275501050055027
+2021-09-23 05:59:40 iteration: 14300 loss: 0.0009 lr: 0.00027294334722682834
+2021-09-23 06:01:05 iteration: 14400 loss: 0.0009 lr: 0.00027038369444198906
+2021-09-23 06:02:30 iteration: 14500 loss: 0.0010 lr: 0.0002678222954273224
+2021-09-23 06:03:55 iteration: 14600 loss: 0.0009 lr: 0.00026525952853262424
+2021-09-23 06:05:20 iteration: 14700 loss: 0.0010 lr: 0.0002626956265885383
+2021-09-23 06:06:45 iteration: 14800 loss: 0.0009 lr: 0.0002601308806333691
+2021-09-23 06:08:11 iteration: 14900 loss: 0.0009 lr: 0.0002575655817054212
+2021-09-23 06:09:36 iteration: 15000 loss: 0.0009 lr: 0.0002550000208429992
+2021-09-23 06:11:02 iteration: 15100 loss: 0.0010 lr: 0.0002524344017729163
+2021-09-23 06:12:27 iteration: 15200 loss: 0.0009 lr: 0.00024986910284496844
+2021-09-23 06:13:53 iteration: 15300 loss: 0.0009 lr: 0.0002473043859936297
+2021-09-23 06:15:18 iteration: 15400 loss: 0.0009 lr: 0.00024474048404954374
+2021-09-23 06:16:43 iteration: 15500 loss: 0.0010 lr: 0.00024217768805101514
+2021-09-23 06:18:08 iteration: 15600 loss: 0.0008 lr: 0.00023961633269209415
+2021-09-23 06:19:33 iteration: 15700 loss: 0.0010 lr: 0.00023705665080342442
+2021-09-23 06:20:59 iteration: 15800 loss: 0.0009 lr: 0.00023449896252714097
+2021-09-23 06:22:24 iteration: 15900 loss: 0.0007 lr: 0.00023194347159005702
+2021-09-23 06:23:49 iteration: 16000 loss: 0.0009 lr: 0.00022939054179005325
+2021-09-23 06:25:14 iteration: 16100 loss: 0.0008 lr: 0.00022684040595777333
+2021-09-23 06:26:39 iteration: 16200 loss: 0.0008 lr: 0.00022429335513152182
+2021-09-23 06:28:05 iteration: 16300 loss: 0.0009 lr: 0.00022174970945343375
+2021-09-23 06:29:30 iteration: 16400 loss: 0.0007 lr: 0.00021920967265032232
+2021-09-23 06:30:56 iteration: 16500 loss: 0.0007 lr: 0.00021667356486432254
+2021-09-23 06:32:21 iteration: 16600 loss: 0.0007 lr: 0.00021414166258182377
+2021-09-23 06:33:46 iteration: 16700 loss: 0.0009 lr: 0.00021161424228921533
+2021-09-23 06:35:11 iteration: 16800 loss: 0.0008 lr: 0.0002090915950248018
+2021-09-23 06:36:37 iteration: 16900 loss: 0.0007 lr: 0.0002065739536192268
+2021-09-23 06:38:02 iteration: 17000 loss: 0.0007 lr: 0.00020406165276654065
+2021-09-23 06:39:27 iteration: 17100 loss: 0.0007 lr: 0.00020155493984930217
+2021-09-23 06:40:52 iteration: 17200 loss: 0.0007 lr: 0.00019905403314623982
+2021-09-23 06:42:17 iteration: 17300 loss: 0.0007 lr: 0.00019655931100714952
+2021-09-23 06:43:42 iteration: 17400 loss: 0.0007 lr: 0.0001940709917107597
+2021-09-23 06:45:08 iteration: 17500 loss: 0.0008 lr: 0.00019158933719154447
+2021-09-23 06:46:33 iteration: 17600 loss: 0.0008 lr: 0.0001891146384878084
+2021-09-23 06:47:58 iteration: 17700 loss: 0.0008 lr: 0.0001866472011897713
+2021-09-23 06:49:24 iteration: 17800 loss: 0.0007 lr: 0.00018418724357616156
+2021-09-23 06:50:49 iteration: 17900 loss: 0.0007 lr: 0.00018173499847762287
+2021-09-23 06:52:14 iteration: 18000 loss: 0.0007 lr: 0.00017929084424395114
+2021-09-23 06:53:40 iteration: 18100 loss: 0.0007 lr: 0.00017685497005004436
+2021-09-23 06:55:05 iteration: 18200 loss: 0.0006 lr: 0.00017442766693420708
+2021-09-23 06:56:30 iteration: 18300 loss: 0.0006 lr: 0.00017200921138282865
+2021-09-23 06:57:55 iteration: 18400 loss: 0.0007 lr: 0.00016959985077846795
+2021-09-23 06:59:20 iteration: 18500 loss: 0.0007 lr: 0.0001671998470555991
+2021-09-23 07:00:46 iteration: 18600 loss: 0.0006 lr: 0.00016480949125252664
+2021-09-23 07:02:11 iteration: 18700 loss: 0.0006 lr: 0.00016242901619989425
+2021-09-23 07:03:37 iteration: 18800 loss: 0.0007 lr: 0.00016005871293600649
+2021-09-23 07:05:02 iteration: 18900 loss: 0.0007 lr: 0.00015769877063576132
+2021-09-23 07:06:27 iteration: 19000 loss: 0.0007 lr: 0.000155349523993209
+2021-09-23 07:07:52 iteration: 19100 loss: 0.0006 lr: 0.00015301122039090842
+2021-09-23 07:09:17 iteration: 19200 loss: 0.0007 lr: 0.000150684078107588
+2021-09-23 07:10:43 iteration: 19300 loss: 0.0007 lr: 0.00014836841728538275
+2021-09-23 07:12:08 iteration: 19400 loss: 0.0007 lr: 0.00014606441254727542
+2021-09-23 07:13:33 iteration: 19500 loss: 0.0006 lr: 0.00014377232582774013
+2021-09-23 07:14:58 iteration: 19600 loss: 0.0005 lr: 0.00014149249182082713
+2021-09-23 07:16:24 iteration: 19700 loss: 0.0006 lr: 0.00013922508514951915
+2021-09-23 07:17:49 iteration: 19800 loss: 0.0005 lr: 0.00013697033864445984
+2021-09-23 07:19:15 iteration: 19900 loss: 0.0007 lr: 0.0001347286015516147
+2021-09-23 07:20:40 iteration: 20000 loss: 0.0007 lr: 0.00013250000483822078
+2021-09-23 07:22:05 iteration: 20100 loss: 0.0006 lr: 0.00013028483954258263
+2021-09-23 07:23:30 iteration: 20200 loss: 0.0006 lr: 0.00012808339670300484
+2021-09-23 07:24:55 iteration: 20300 loss: 0.0005 lr: 0.0001258958363905549
+2021-09-23 07:26:20 iteration: 20400 loss: 0.0006 lr: 0.00012372240598779172
+2021-09-23 07:27:45 iteration: 20500 loss: 0.0006 lr: 0.00012156344018876553
+2021-09-23 07:29:11 iteration: 20600 loss: 0.0006 lr: 0.00011941904813284054
+2021-09-23 07:30:36 iteration: 20700 loss: 0.0006 lr: 0.00011728954268619418
+2021-09-23 07:32:02 iteration: 20800 loss: 0.0006 lr: 0.00011517517850734293
+2021-09-23 07:33:27 iteration: 20900 loss: 0.0007 lr: 0.00011307609383948147
+2021-09-23 07:34:52 iteration: 21000 loss: 0.0005 lr: 0.00011099257972091436
+2021-09-23 07:36:18 iteration: 21100 loss: 0.0006 lr: 0.00010892489808611572
+2021-09-23 07:37:43 iteration: 21200 loss: 0.0006 lr: 0.0001068731871782802
+2021-09-23 07:39:08 iteration: 21300 loss: 0.0006 lr: 0.00010483778169145808
+2021-09-23 07:40:33 iteration: 21400 loss: 0.0007 lr: 0.00010281879076501355
+2021-09-23 07:41:59 iteration: 21500 loss: 0.0005 lr: 0.00010081647633342072
+2021-09-23 07:43:24 iteration: 21600 loss: 0.0005 lr: 9.883112943498418e-05
+2021-09-23 07:44:50 iteration: 21700 loss: 0.0005 lr: 9.686285920906812e-05
+2021-09-23 07:46:15 iteration: 21800 loss: 0.0006 lr: 9.491192031418905e-05
+2021-09-23 07:47:40 iteration: 21900 loss: 0.0005 lr: 9.297859651269391e-05
+2021-09-23 07:49:06 iteration: 22000 loss: 0.0005 lr: 9.106298966798931e-05
+2021-09-23 07:50:31 iteration: 22100 loss: 0.0005 lr: 8.916534716263413e-05
+2021-09-23 07:51:56 iteration: 22200 loss: 0.0006 lr: 8.728595275897533e-05
+2021-09-23 07:53:21 iteration: 22300 loss: 0.0006 lr: 8.542490104446188e-05
+2021-09-23 07:54:46 iteration: 22400 loss: 0.0006 lr: 8.358245395356789e-05
+2021-09-23 07:56:12 iteration: 22500 loss: 0.0006 lr: 8.175884431693703e-05
+2021-09-23 07:57:37 iteration: 22600 loss: 0.0005 lr: 7.995417399797589e-05
+2021-09-23 07:59:02 iteration: 22700 loss: 0.0004 lr: 7.816872675903141e-05
+2021-09-23 08:00:28 iteration: 22800 loss: 0.0005 lr: 7.640269177500159e-05
+2021-09-23 08:01:53 iteration: 22900 loss: 0.0005 lr: 7.465620001312345e-05
+2021-10-01 14:03:10 Config:
+{'all_joints': [[0],
+                [1],
+                [2],
+                [3],
+                [4],
+                [5],
+                [6],
+                [7],
+                [8],
+                [9],
+                [10],
+                [11],
+                [12],
+                [13],
+                [14],
+                [15]],
+ 'all_joints_names': ['earr',
+                      'earl',
+                      'eyer',
+                      'eyel',
+                      'nose',
+                      'throat',
+                      'elbowr',
+                      'elbowl',
+                      'handr',
+                      'handl',
+                      'tailbase',
+                      'tailtip',
+                      'kneer',
+                      'kneel',
+                      'ankler',
+                      'anklel'],
+ 'alpha_r': 0.02,
+ 'apply_prob': 0.5,
+ 'batch_size': 1,
+ 'clahe': True,
+ 'claheratio': 0.1,
+ 'crop_pad': 0,
+ 'crop_sampling': 'hybrid',
+ 'crop_size': [400, 400],
+ 'cropratio': 0.4,
+ 'dataset': 'training-datasets/iteration-0/UnaugmentedDataSet_Simba '
+            'ModifiedAug27/Simba Modified_Hamila95shuffle0.mat',
+ 'dataset_type': 'default',
+ 'decay_steps': 30000,
+ 'deterministic': False,
+ 'display_iters': 1000,
+ 'edge': False,
+ 'emboss': {'alpha': [0.0, 1.0], 'embossratio': 0.1, 'strength': [0.5, 1.5]},
+ 'fg_fraction': 0.25,
+ 'global_scale': 0.8,
+ 'histeq': True,
+ 'histeqratio': 0.1,
+ 'init_weights': '/content/drive/MyDrive/DLC/Simba '
+                 'Modified-Hamila-2021-08-27/dlc-models/iteration-0/Simba '
+                 'ModifiedAug27-trainset95shuffle0/train/snapshot-21000',
+ 'intermediate_supervision': False,
+ 'intermediate_supervision_layer': 12,
+ 'location_refinement': True,
+ 'locref_huber_loss': True,
+ 'locref_loss_weight': 0.05,
+ 'locref_stdev': 7.2801,
+ 'log_dir': 'log',
+ 'lr_init': 0.0005,
+ 'max_input_size': 1500,
+ 'max_shift': 0.4,
+ 'mean_pixel': [123.68, 116.779, 103.939],
+ 'metadataset': 'training-datasets/iteration-0/UnaugmentedDataSet_Simba '
+                'ModifiedAug27/Documentation_data-Simba '
+                'Modified_95shuffle0.pickle',
+ 'min_input_size': 64,
+ 'mirror': False,
+ 'multi_stage': False,
+ 'multi_step': [[0.005, 10000],
+                [0.02, 430000],
+                [0.002, 730000],
+                [0.001, 1030000]],
+ 'net_type': 'efficientnet-b0',
+ 'num_joints': 16,
+ 'optimizer': 'sgd',
+ 'pairwise_huber_loss': False,
+ 'pairwise_predict': False,
+ 'partaffinityfield_predict': False,
+ 'pos_dist_thresh': 17,
+ 'pre_resize': [],
+ 'project_path': '/content/drive/MyDrive/DLC/Simba Modified-Hamila-2021-08-27',
+ 'regularize': False,
+ 'rotation': 25,
+ 'rotratio': 0.4,
+ 'save_iters': 50000,
+ 'scale_jitter_lo': 0.5,
+ 'scale_jitter_up': 1.25,
+ 'scoremap_dir': 'test',
+ 'sharpen': False,
+ 'sharpenratio': 0.3,
+ 'shuffle': True,
+ 'snapshot_prefix': '/content/drive/MyDrive/DLC/Simba '
+                    'Modified-Hamila-2021-08-27/dlc-models/iteration-0/Simba '
+                    'ModifiedAug27-trainset95shuffle0/train/snapshot',
+ 'stride': 8.0,
+ 'weigh_negatives': False,
+ 'weigh_only_present_joints': False,
+ 'weigh_part_predictions': False,
+ 'weight_decay': 0.0001}
+2021-10-01 14:05:35 iteration: 21100 loss: 0.0006 lr: 0.00010892489808611572
+2021-10-01 14:07:00 iteration: 21200 loss: 0.0005 lr: 0.0001068731871782802
+2021-10-01 14:08:24 iteration: 21300 loss: 0.0006 lr: 0.00010483778169145808
+2021-10-01 14:09:49 iteration: 21400 loss: 0.0005 lr: 0.00010281879076501355
+2021-10-01 14:11:15 iteration: 21500 loss: 0.0005 lr: 0.00010081647633342072
+2021-10-01 14:12:40 iteration: 21600 loss: 0.0005 lr: 9.883112943498418e-05
+2021-10-01 14:14:06 iteration: 21700 loss: 0.0006 lr: 9.686285920906812e-05
+2021-10-01 14:15:30 iteration: 21800 loss: 0.0005 lr: 9.491192031418905e-05
+2021-10-01 14:16:55 iteration: 21900 loss: 0.0005 lr: 9.297859651269391e-05
+2021-10-01 14:18:20 iteration: 22000 loss: 0.0006 lr: 9.106298966798931e-05
+2021-10-01 14:19:45 iteration: 22100 loss: 0.0005 lr: 8.916534716263413e-05
+2021-10-01 14:21:11 iteration: 22200 loss: 0.0005 lr: 8.728595275897533e-05
+2021-10-01 14:22:36 iteration: 22300 loss: 0.0006 lr: 8.542490104446188e-05
+2021-10-01 14:24:01 iteration: 22400 loss: 0.0006 lr: 8.358245395356789e-05
+2021-10-01 14:25:25 iteration: 22500 loss: 0.0005 lr: 8.175884431693703e-05
+2021-10-01 14:26:50 iteration: 22600 loss: 0.0005 lr: 7.995417399797589e-05
+2021-10-01 14:28:15 iteration: 22700 loss: 0.0005 lr: 7.816872675903141e-05
+2021-10-01 14:29:40 iteration: 22800 loss: 0.0006 lr: 7.640269177500159e-05
+2021-10-01 14:31:05 iteration: 22900 loss: 0.0005 lr: 7.465620001312345e-05
+2021-10-01 14:32:30 iteration: 23000 loss: 0.0005 lr: 7.292948430404067e-05
+2021-10-01 14:33:54 iteration: 23100 loss: 0.0004 lr: 7.12227847543545e-05
+2021-10-01 14:35:18 iteration: 23200 loss: 0.0005 lr: 6.953619595151395e-05
+2021-10-01 14:36:43 iteration: 23300 loss: 0.0006 lr: 6.78699798299931e-05
+2021-10-01 14:38:09 iteration: 23400 loss: 0.0004 lr: 6.622424552915618e-05
+2021-10-01 14:39:35 iteration: 23500 loss: 0.0005 lr: 6.459922587964684e-05
+2021-10-01 14:40:59 iteration: 23600 loss: 0.0006 lr: 6.299511733232066e-05
+2021-10-01 14:42:24 iteration: 23700 loss: 0.0005 lr: 6.141201447462663e-05
+2021-10-01 14:43:48 iteration: 23800 loss: 0.0005 lr: 5.98501501372084e-05
+2021-10-01 14:45:12 iteration: 23900 loss: 0.0005 lr: 5.830972077092156e-05
+2021-10-01 14:46:37 iteration: 24000 loss: 0.0005 lr: 5.679082460119389e-05
+2021-10-01 14:48:02 iteration: 24100 loss: 0.0005 lr: 5.5293665354838595e-05
+2021-10-01 14:49:26 iteration: 24200 loss: 0.0005 lr: 5.381844312069006e-05
+2021-10-01 14:50:51 iteration: 24300 loss: 0.0005 lr: 5.236525248619728e-05
+2021-10-01 14:52:15 iteration: 24400 loss: 0.0005 lr: 5.09342789882794e-05
+2021-10-01 14:53:39 iteration: 24500 loss: 0.0005 lr: 4.952571907779202e-05
+2021-10-01 14:55:04 iteration: 24600 loss: 0.0006 lr: 4.8139649152290076e-05
+2021-10-01 14:56:28 iteration: 24700 loss: 0.0005 lr: 4.677626566262916e-05
+2021-10-01 14:57:52 iteration: 24800 loss: 0.0005 lr: 4.543575778370723e-05
+2021-10-01 14:59:16 iteration: 24900 loss: 0.0004 lr: 4.4118190999142826e-05
+2021-10-01 15:00:40 iteration: 25000 loss: 0.0004 lr: 4.282375448383391e-05
+2021-10-01 15:02:04 iteration: 25100 loss: 0.0005 lr: 4.1552604670869187e-05
+2021-10-01 15:03:29 iteration: 25200 loss: 0.0004 lr: 4.030483978567645e-05
+2021-10-01 15:04:53 iteration: 25300 loss: 0.0005 lr: 3.9080663555068895e-05
+2021-10-01 15:06:17 iteration: 25400 loss: 0.0004 lr: 3.7880123272771016e-05
+2021-10-01 15:07:41 iteration: 25500 loss: 0.0004 lr: 3.670338628580794e-05
+2021-10-01 15:09:05 iteration: 25600 loss: 0.0005 lr: 3.5550619941204786e-05
+2021-10-01 15:10:30 iteration: 25700 loss: 0.0006 lr: 3.4421896998537704e-05
+2021-10-01 15:11:54 iteration: 25800 loss: 0.0005 lr: 3.331735933898017e-05
+2021-10-01 15:13:18 iteration: 25900 loss: 0.0005 lr: 3.223715248168446e-05
+2021-10-01 15:14:42 iteration: 26000 loss: 0.0005 lr: 3.118135646218434e-05
+2021-10-01 15:16:06 iteration: 26100 loss: 0.0005 lr: 3.0150098609738052e-05
+2021-10-01 15:17:30 iteration: 26200 loss: 0.0005 lr: 2.9143531719455495e-05
+2021-10-01 15:18:55 iteration: 26300 loss: 0.0005 lr: 2.816170672303997e-05
+2021-10-01 15:20:19 iteration: 26400 loss: 0.0005 lr: 2.7204747311770916e-05
+2021-10-01 15:21:43 iteration: 26500 loss: 0.0005 lr: 2.62727899098536e-05
+2021-10-01 15:23:07 iteration: 26600 loss: 0.0005 lr: 2.536590545787476e-05
+2021-10-01 15:24:32 iteration: 26700 loss: 0.0005 lr: 2.4484195819240995e-05
+2021-10-01 15:25:56 iteration: 26800 loss: 0.0004 lr: 2.3627781047252938e-05
+2021-10-01 15:27:20 iteration: 26900 loss: 0.0004 lr: 2.2796730263507925e-05
+2021-10-01 15:28:44 iteration: 27000 loss: 0.0004 lr: 2.1991134417476133e-05
+2021-10-01 15:30:09 iteration: 27100 loss: 0.0005 lr: 2.1211122657405213e-05
+2021-10-01 15:31:33 iteration: 27200 loss: 0.0004 lr: 2.0456709535210393e-05
+2021-10-01 15:32:58 iteration: 27300 loss: 0.0004 lr: 1.972805694094859e-05
+2021-10-01 15:34:22 iteration: 27400 loss: 0.0005 lr: 1.90251630556304e-05
+2021-10-01 15:35:46 iteration: 27500 loss: 0.0004 lr: 1.8348162484471686e-05
+2021-10-01 15:37:10 iteration: 27600 loss: 0.0004 lr: 1.769712434906978e-05
+2021-10-01 15:38:35 iteration: 27700 loss: 0.0004 lr: 1.707209594314918e-05
+2021-10-01 15:39:59 iteration: 27800 loss: 0.0005 lr: 1.647316457820125e-05
+2021-10-01 15:41:23 iteration: 27900 loss: 0.0004 lr: 1.5900397556833923e-05
+2021-10-01 15:42:47 iteration: 28000 loss: 0.0004 lr: 1.5353833077824675e-05
+2021-10-01 15:44:11 iteration: 28100 loss: 0.0005 lr: 1.483355117670726e-05
+2021-10-01 15:45:35 iteration: 28200 loss: 0.0004 lr: 1.4339630070026033e-05
+2021-10-01 15:47:00 iteration: 28300 loss: 0.0004 lr: 1.3872066119802184e-05
+2021-10-01 15:48:24 iteration: 28400 loss: 0.0005 lr: 1.343096391792642e-05
+2021-10-01 15:49:48 iteration: 28500 loss: 0.0004 lr: 1.3016350749239791e-05
+2021-10-01 15:51:12 iteration: 28600 loss: 0.0004 lr: 1.262827299797209e-05
+2021-10-01 15:52:36 iteration: 28700 loss: 0.0004 lr: 1.2266772500879597e-05
+2021-10-01 15:54:00 iteration: 28800 loss: 0.0004 lr: 1.1931892913707998e-05
+2021-10-01 15:55:25 iteration: 28900 loss: 0.0004 lr: 1.162366424978245e-05
+2021-10-01 15:56:49 iteration: 29000 loss: 0.0004 lr: 1.1342131074343342e-05
+2021-10-01 15:58:13 iteration: 29100 loss: 0.0004 lr: 1.1087321581726428e-05
+2021-10-01 15:59:37 iteration: 29200 loss: 0.0004 lr: 1.0859248504857533e-05
+2021-10-01 16:01:02 iteration: 29300 loss: 0.0005 lr: 1.0657959137461148e-05
+2021-10-01 16:02:26 iteration: 29400 loss: 0.0004 lr: 1.0483451660547871e-05
+2021-10-01 16:03:50 iteration: 29500 loss: 0.0004 lr: 1.033575608744286e-05
+2021-10-01 16:05:15 iteration: 29600 loss: 0.0005 lr: 1.0214899702987168e-05
+2021-10-01 16:06:39 iteration: 29700 loss: 0.0004 lr: 1.0120899787580129e-05
+2021-10-01 16:08:03 iteration: 29800 loss: 0.0004 lr: 1.0053725418401882e-05
+2021-10-01 16:09:27 iteration: 29900 loss: 0.0004 lr: 1.0013435712608043e-05
+2021-10-01 16:10:51 iteration: 30000 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-01 16:12:16 iteration: 30100 loss: 0.0005 lr: 1.0000000656873453e-05
+2021-10-01 16:13:40 iteration: 30200 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-01 16:15:04 iteration: 30300 loss: 0.0005 lr: 1.0000000656873453e-05
+2021-10-01 16:16:28 iteration: 30400 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-01 16:17:53 iteration: 30500 loss: 0.0005 lr: 1.0000000656873453e-05
+2021-10-01 16:19:17 iteration: 30600 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-01 16:20:41 iteration: 30700 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-01 16:22:05 iteration: 30800 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-01 16:23:29 iteration: 30900 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-01 16:24:54 iteration: 31000 loss: 0.0005 lr: 1.0000000656873453e-05
+2021-10-01 16:26:18 iteration: 31100 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-01 16:27:42 iteration: 31200 loss: 0.0005 lr: 1.0000000656873453e-05
+2021-10-01 16:29:06 iteration: 31300 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-01 16:30:30 iteration: 31400 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-01 16:31:54 iteration: 31500 loss: 0.0005 lr: 1.0000000656873453e-05
+2021-10-01 16:33:18 iteration: 31600 loss: 0.0005 lr: 1.0000000656873453e-05
+2021-10-01 16:34:42 iteration: 31700 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-01 16:36:07 iteration: 31800 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-01 16:37:31 iteration: 31900 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-01 16:38:55 iteration: 32000 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-01 16:40:19 iteration: 32100 loss: 0.0005 lr: 1.0000000656873453e-05
+2021-10-01 16:41:43 iteration: 32200 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-01 16:43:07 iteration: 32300 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-01 16:44:31 iteration: 32400 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-01 16:45:55 iteration: 32500 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-01 16:47:19 iteration: 32600 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-01 16:48:44 iteration: 32700 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-01 16:50:08 iteration: 32800 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-01 16:51:32 iteration: 32900 loss: 0.0003 lr: 1.0000000656873453e-05
+2021-10-01 16:52:56 iteration: 33000 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-01 16:54:21 iteration: 33100 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-01 16:55:45 iteration: 33200 loss: 0.0005 lr: 1.0000000656873453e-05
+2021-10-01 16:57:09 iteration: 33300 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-01 16:58:33 iteration: 33400 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-01 16:59:58 iteration: 33500 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-01 17:01:22 iteration: 33600 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-01 17:02:46 iteration: 33700 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-01 17:04:10 iteration: 33800 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-01 17:05:35 iteration: 33900 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-01 17:06:59 iteration: 34000 loss: 0.0005 lr: 1.0000000656873453e-05
+2021-10-01 17:08:23 iteration: 34100 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-01 17:09:47 iteration: 34200 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-01 17:11:11 iteration: 34300 loss: 0.0005 lr: 1.0000000656873453e-05
+2021-10-01 17:12:35 iteration: 34400 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-01 17:13:59 iteration: 34500 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-01 17:15:24 iteration: 34600 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-01 17:16:48 iteration: 34700 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-01 17:18:12 iteration: 34800 loss: 0.0005 lr: 1.0000000656873453e-05
+2021-10-01 17:19:36 iteration: 34900 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-01 17:21:00 iteration: 35000 loss: 0.0005 lr: 1.0000000656873453e-05
+2021-10-01 17:22:24 iteration: 35100 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-01 17:23:48 iteration: 35200 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-01 17:25:13 iteration: 35300 loss: 0.0005 lr: 1.0000000656873453e-05
+2021-10-01 17:26:37 iteration: 35400 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-01 17:28:01 iteration: 35500 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-01 17:29:25 iteration: 35600 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-01 17:30:49 iteration: 35700 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-01 17:32:13 iteration: 35800 loss: 0.0005 lr: 1.0000000656873453e-05
+2021-10-01 17:33:37 iteration: 35900 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-01 17:35:02 iteration: 36000 loss: 0.0005 lr: 1.0000000656873453e-05
+2021-10-01 17:36:27 iteration: 36100 loss: 0.0005 lr: 1.0000000656873453e-05
+2021-10-01 17:37:51 iteration: 36200 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-01 17:39:15 iteration: 36300 loss: 0.0005 lr: 1.0000000656873453e-05
+2021-10-01 17:40:39 iteration: 36400 loss: 0.0005 lr: 1.0000000656873453e-05
+2021-10-01 17:42:03 iteration: 36500 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-01 17:43:28 iteration: 36600 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-01 17:44:52 iteration: 36700 loss: 0.0005 lr: 1.0000000656873453e-05
+2021-10-01 17:46:16 iteration: 36800 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-01 17:47:40 iteration: 36900 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-01 17:49:05 iteration: 37000 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-01 19:15:04 Config:
+{'all_joints': [[0],
+                [1],
+                [2],
+                [3],
+                [4],
+                [5],
+                [6],
+                [7],
+                [8],
+                [9],
+                [10],
+                [11],
+                [12],
+                [13],
+                [14],
+                [15]],
+ 'all_joints_names': ['earr',
+                      'earl',
+                      'eyer',
+                      'eyel',
+                      'nose',
+                      'throat',
+                      'elbowr',
+                      'elbowl',
+                      'handr',
+                      'handl',
+                      'tailbase',
+                      'tailtip',
+                      'kneer',
+                      'kneel',
+                      'ankler',
+                      'anklel'],
+ 'alpha_r': 0.02,
+ 'apply_prob': 0.5,
+ 'batch_size': 1,
+ 'clahe': True,
+ 'claheratio': 0.1,
+ 'crop_pad': 0,
+ 'crop_sampling': 'hybrid',
+ 'crop_size': [400, 400],
+ 'cropratio': 0.4,
+ 'dataset': 'training-datasets/iteration-0/UnaugmentedDataSet_Simba '
+            'ModifiedAug27/Simba Modified_Hamila95shuffle0.mat',
+ 'dataset_type': 'default',
+ 'decay_steps': 30000,
+ 'deterministic': False,
+ 'display_iters': 1000,
+ 'edge': False,
+ 'emboss': {'alpha': [0.0, 1.0], 'embossratio': 0.1, 'strength': [0.5, 1.5]},
+ 'fg_fraction': 0.25,
+ 'global_scale': 0.8,
+ 'histeq': True,
+ 'histeqratio': 0.1,
+ 'init_weights': '/content/drive/MyDrive/DLC/Simba '
+                 'Modified-Hamila-2021-08-27/dlc-models/iteration-0/Simba '
+                 'ModifiedAug27-trainset95shuffle0/train/snapshot-36000',
+ 'intermediate_supervision': False,
+ 'intermediate_supervision_layer': 12,
+ 'location_refinement': True,
+ 'locref_huber_loss': True,
+ 'locref_loss_weight': 0.05,
+ 'locref_stdev': 7.2801,
+ 'log_dir': 'log',
+ 'lr_init': 0.0005,
+ 'max_input_size': 1500,
+ 'max_shift': 0.4,
+ 'mean_pixel': [123.68, 116.779, 103.939],
+ 'metadataset': 'training-datasets/iteration-0/UnaugmentedDataSet_Simba '
+                'ModifiedAug27/Documentation_data-Simba '
+                'Modified_95shuffle0.pickle',
+ 'min_input_size': 64,
+ 'mirror': False,
+ 'multi_stage': False,
+ 'multi_step': [[0.005, 10000],
+                [0.02, 430000],
+                [0.002, 730000],
+                [0.001, 1030000]],
+ 'net_type': 'efficientnet-b0',
+ 'num_joints': 16,
+ 'optimizer': 'sgd',
+ 'pairwise_huber_loss': False,
+ 'pairwise_predict': False,
+ 'partaffinityfield_predict': False,
+ 'pos_dist_thresh': 17,
+ 'pre_resize': [],
+ 'project_path': '/content/drive/MyDrive/DLC/Simba Modified-Hamila-2021-08-27',
+ 'regularize': False,
+ 'rotation': 25,
+ 'rotratio': 0.4,
+ 'save_iters': 50000,
+ 'scale_jitter_lo': 0.5,
+ 'scale_jitter_up': 1.25,
+ 'scoremap_dir': 'test',
+ 'sharpen': False,
+ 'sharpenratio': 0.3,
+ 'shuffle': True,
+ 'snapshot_prefix': '/content/drive/MyDrive/DLC/Simba '
+                    'Modified-Hamila-2021-08-27/dlc-models/iteration-0/Simba '
+                    'ModifiedAug27-trainset95shuffle0/train/snapshot',
+ 'stride': 8.0,
+ 'weigh_negatives': False,
+ 'weigh_only_present_joints': False,
+ 'weigh_part_predictions': False,
+ 'weight_decay': 0.0001}
+2021-10-01 19:17:36 iteration: 36100 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-01 19:19:07 iteration: 36200 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-01 19:20:37 iteration: 36300 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-01 19:22:08 iteration: 36400 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-01 19:23:38 iteration: 36500 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-01 19:25:09 iteration: 36600 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-01 19:26:39 iteration: 36700 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-01 19:28:10 iteration: 36800 loss: 0.0005 lr: 1.0000000656873453e-05
+2021-10-01 19:29:40 iteration: 36900 loss: 0.0005 lr: 1.0000000656873453e-05
+2021-10-01 19:31:11 iteration: 37000 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-01 19:32:41 iteration: 37100 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-01 19:34:12 iteration: 37200 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-01 19:35:42 iteration: 37300 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-01 19:37:12 iteration: 37400 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-01 19:38:43 iteration: 37500 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-01 19:40:13 iteration: 37600 loss: 0.0003 lr: 1.0000000656873453e-05
+2021-10-01 19:41:44 iteration: 37700 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-01 19:43:14 iteration: 37800 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-01 19:44:44 iteration: 37900 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-01 19:46:14 iteration: 38000 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-01 19:47:45 iteration: 38100 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-01 19:49:15 iteration: 38200 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-01 19:50:45 iteration: 38300 loss: 0.0005 lr: 1.0000000656873453e-05
+2021-10-01 19:52:16 iteration: 38400 loss: 0.0005 lr: 1.0000000656873453e-05
+2021-10-01 19:53:46 iteration: 38500 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-01 19:55:16 iteration: 38600 loss: 0.0005 lr: 1.0000000656873453e-05
+2021-10-01 19:56:47 iteration: 38700 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-01 19:58:17 iteration: 38800 loss: 0.0005 lr: 1.0000000656873453e-05
+2021-10-01 19:59:47 iteration: 38900 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-01 20:01:18 iteration: 39000 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-01 20:02:49 iteration: 39100 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-01 20:04:20 iteration: 39200 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-01 20:05:50 iteration: 39300 loss: 0.0005 lr: 1.0000000656873453e-05
+2021-10-01 20:07:20 iteration: 39400 loss: 0.0005 lr: 1.0000000656873453e-05
+2021-10-01 20:08:51 iteration: 39500 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-01 20:10:21 iteration: 39600 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-01 20:11:51 iteration: 39700 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-01 20:13:21 iteration: 39800 loss: 0.0005 lr: 1.0000000656873453e-05
+2021-10-01 20:14:52 iteration: 39900 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-01 20:16:22 iteration: 40000 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-01 20:17:53 iteration: 40100 loss: 0.0005 lr: 1.0000000656873453e-05
+2021-10-01 20:19:24 iteration: 40200 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-01 20:20:54 iteration: 40300 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-01 20:22:25 iteration: 40400 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-01 20:23:56 iteration: 40500 loss: 0.0005 lr: 1.0000000656873453e-05
+2021-10-01 20:25:26 iteration: 40600 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-01 20:26:57 iteration: 40700 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-01 20:28:27 iteration: 40800 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-01 20:29:58 iteration: 40900 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-01 20:31:29 iteration: 41000 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-01 20:33:00 iteration: 41100 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-01 20:34:30 iteration: 41200 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-01 20:36:01 iteration: 41300 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-01 20:37:32 iteration: 41400 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-01 20:39:02 iteration: 41500 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-01 20:40:33 iteration: 41600 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-01 20:42:03 iteration: 41700 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-01 20:43:33 iteration: 41800 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-01 20:45:04 iteration: 41900 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-01 20:46:34 iteration: 42000 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-01 20:48:05 iteration: 42100 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-01 20:49:36 iteration: 42200 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-01 20:51:06 iteration: 42300 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-01 20:52:37 iteration: 42400 loss: 0.0005 lr: 1.0000000656873453e-05
+2021-10-01 20:54:07 iteration: 42500 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-01 20:55:38 iteration: 42600 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-01 20:57:08 iteration: 42700 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-01 20:58:39 iteration: 42800 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-01 21:00:09 iteration: 42900 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-01 21:01:40 iteration: 43000 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-01 21:03:11 iteration: 43100 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-01 21:04:41 iteration: 43200 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-01 21:06:12 iteration: 43300 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-01 21:07:43 iteration: 43400 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-01 21:09:13 iteration: 43500 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-01 21:10:44 iteration: 43600 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-01 21:12:14 iteration: 43700 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-01 21:13:45 iteration: 43800 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-01 21:15:16 iteration: 43900 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-01 21:16:46 iteration: 44000 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-01 21:18:17 iteration: 44100 loss: 0.0005 lr: 1.0000000656873453e-05
+2021-10-01 21:19:47 iteration: 44200 loss: 0.0005 lr: 1.0000000656873453e-05
+2021-10-01 21:21:18 iteration: 44300 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-01 21:22:48 iteration: 44400 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-01 21:24:18 iteration: 44500 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-01 21:25:49 iteration: 44600 loss: 0.0005 lr: 1.0000000656873453e-05
+2021-10-01 21:27:19 iteration: 44700 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-01 21:28:50 iteration: 44800 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-01 21:30:20 iteration: 44900 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-01 21:31:50 iteration: 45000 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-02 04:54:48 Config:
+{'all_joints': [[0],
+                [1],
+                [2],
+                [3],
+                [4],
+                [5],
+                [6],
+                [7],
+                [8],
+                [9],
+                [10],
+                [11],
+                [12],
+                [13],
+                [14],
+                [15]],
+ 'all_joints_names': ['earr',
+                      'earl',
+                      'eyer',
+                      'eyel',
+                      'nose',
+                      'throat',
+                      'elbowr',
+                      'elbowl',
+                      'handr',
+                      'handl',
+                      'tailbase',
+                      'tailtip',
+                      'kneer',
+                      'kneel',
+                      'ankler',
+                      'anklel'],
+ 'alpha_r': 0.02,
+ 'apply_prob': 0.5,
+ 'batch_size': 1,
+ 'clahe': True,
+ 'claheratio': 0.1,
+ 'crop_pad': 0,
+ 'crop_sampling': 'hybrid',
+ 'crop_size': [400, 400],
+ 'cropratio': 0.4,
+ 'dataset': 'training-datasets/iteration-0/UnaugmentedDataSet_Simba '
+            'ModifiedAug27/Simba Modified_Hamila95shuffle0.mat',
+ 'dataset_type': 'default',
+ 'decay_steps': 30000,
+ 'deterministic': False,
+ 'display_iters': 1000,
+ 'edge': False,
+ 'emboss': {'alpha': [0.0, 1.0], 'embossratio': 0.1, 'strength': [0.5, 1.5]},
+ 'fg_fraction': 0.25,
+ 'global_scale': 0.8,
+ 'histeq': True,
+ 'histeqratio': 0.1,
+ 'init_weights': '/content/drive/MyDrive/DLC/Simba '
+                 'Modified-Hamila-2021-08-27/dlc-models/iteration-0/Simba '
+                 'ModifiedAug27-trainset95shuffle0/train/snapshot-45000',
+ 'intermediate_supervision': False,
+ 'intermediate_supervision_layer': 12,
+ 'location_refinement': True,
+ 'locref_huber_loss': True,
+ 'locref_loss_weight': 0.05,
+ 'locref_stdev': 7.2801,
+ 'log_dir': 'log',
+ 'lr_init': 0.0005,
+ 'max_input_size': 1500,
+ 'max_shift': 0.4,
+ 'mean_pixel': [123.68, 116.779, 103.939],
+ 'metadataset': 'training-datasets/iteration-0/UnaugmentedDataSet_Simba '
+                'ModifiedAug27/Documentation_data-Simba '
+                'Modified_95shuffle0.pickle',
+ 'min_input_size': 64,
+ 'mirror': False,
+ 'multi_stage': False,
+ 'multi_step': [[0.005, 10000],
+                [0.02, 430000],
+                [0.002, 730000],
+                [0.001, 1030000]],
+ 'net_type': 'efficientnet-b0',
+ 'num_joints': 16,
+ 'optimizer': 'sgd',
+ 'pairwise_huber_loss': False,
+ 'pairwise_predict': False,
+ 'partaffinityfield_predict': False,
+ 'pos_dist_thresh': 17,
+ 'pre_resize': [],
+ 'project_path': '/content/drive/MyDrive/DLC/Simba Modified-Hamila-2021-08-27',
+ 'regularize': False,
+ 'rotation': 25,
+ 'rotratio': 0.4,
+ 'save_iters': 50000,
+ 'scale_jitter_lo': 0.5,
+ 'scale_jitter_up': 1.25,
+ 'scoremap_dir': 'test',
+ 'sharpen': False,
+ 'sharpenratio': 0.3,
+ 'shuffle': True,
+ 'snapshot_prefix': '/content/drive/MyDrive/DLC/Simba '
+                    'Modified-Hamila-2021-08-27/dlc-models/iteration-0/Simba '
+                    'ModifiedAug27-trainset95shuffle0/train/snapshot',
+ 'stride': 8.0,
+ 'weigh_negatives': False,
+ 'weigh_only_present_joints': False,
+ 'weigh_part_predictions': False,
+ 'weight_decay': 0.0001}
+2021-10-02 04:57:19 iteration: 45100 loss: 0.0005 lr: 1.0000000656873453e-05
+2021-10-02 04:58:49 iteration: 45200 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-02 05:00:18 iteration: 45300 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-02 05:01:48 iteration: 45400 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-02 05:03:18 iteration: 45500 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-02 05:04:47 iteration: 45600 loss: 0.0005 lr: 1.0000000656873453e-05
+2021-10-02 05:06:17 iteration: 45700 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-02 05:07:47 iteration: 45800 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-02 05:09:16 iteration: 45900 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-02 05:10:46 iteration: 46000 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-02 05:12:16 iteration: 46100 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-02 05:13:45 iteration: 46200 loss: 0.0003 lr: 1.0000000656873453e-05
+2021-10-02 05:15:15 iteration: 46300 loss: 0.0005 lr: 1.0000000656873453e-05
+2021-10-02 05:16:45 iteration: 46400 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-02 05:18:14 iteration: 46500 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-02 05:19:44 iteration: 46600 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-02 05:21:14 iteration: 46700 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-02 05:22:43 iteration: 46800 loss: 0.0005 lr: 1.0000000656873453e-05
+2021-10-02 05:24:12 iteration: 46900 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-02 05:25:41 iteration: 47000 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-02 05:27:10 iteration: 47100 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-02 05:28:38 iteration: 47200 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-02 05:30:07 iteration: 47300 loss: 0.0003 lr: 1.0000000656873453e-05
+2021-10-02 05:31:36 iteration: 47400 loss: 0.0003 lr: 1.0000000656873453e-05
+2021-10-02 05:33:05 iteration: 47500 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-02 05:34:33 iteration: 47600 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-02 05:36:02 iteration: 47700 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-02 05:37:31 iteration: 47800 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-02 05:39:00 iteration: 47900 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-02 05:40:28 iteration: 48000 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-02 05:41:58 iteration: 48100 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-02 05:43:26 iteration: 48200 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-02 05:44:55 iteration: 48300 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-02 05:46:24 iteration: 48400 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-02 05:47:53 iteration: 48500 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-02 05:49:22 iteration: 48600 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-02 05:50:52 iteration: 48700 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-02 05:52:22 iteration: 48800 loss: 0.0003 lr: 1.0000000656873453e-05
+2021-10-02 05:53:51 iteration: 48900 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-02 05:55:20 iteration: 49000 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-02 05:56:50 iteration: 49100 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-02 05:58:20 iteration: 49200 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-02 05:59:49 iteration: 49300 loss: 0.0005 lr: 1.0000000656873453e-05
+2021-10-02 06:01:19 iteration: 49400 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-02 06:02:48 iteration: 49500 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-02 06:04:18 iteration: 49600 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-02 06:05:48 iteration: 49700 loss: 0.0003 lr: 1.0000000656873453e-05
+2021-10-02 06:07:18 iteration: 49800 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-02 06:08:48 iteration: 49900 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-02 06:10:18 iteration: 50000 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-02 06:11:48 iteration: 50100 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-02 06:13:18 iteration: 50200 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-02 06:14:49 iteration: 50300 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-02 06:16:19 iteration: 50400 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-02 06:17:49 iteration: 50500 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-02 06:19:19 iteration: 50600 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-02 06:20:49 iteration: 50700 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-02 06:22:20 iteration: 50800 loss: 0.0005 lr: 1.0000000656873453e-05
+2021-10-02 06:23:51 iteration: 50900 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-02 06:25:21 iteration: 51000 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-02 06:26:52 iteration: 51100 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-02 06:28:22 iteration: 51200 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-02 06:29:52 iteration: 51300 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-02 06:31:23 iteration: 51400 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-02 06:32:52 iteration: 51500 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-02 06:34:23 iteration: 51600 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-02 06:35:53 iteration: 51700 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-02 06:37:23 iteration: 51800 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-02 06:38:53 iteration: 51900 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-02 06:40:24 iteration: 52000 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-02 06:41:54 iteration: 52100 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-02 06:43:24 iteration: 52200 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-02 06:44:54 iteration: 52300 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-02 06:46:25 iteration: 52400 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-02 06:47:55 iteration: 52500 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-02 06:49:25 iteration: 52600 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-02 06:50:55 iteration: 52700 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-02 06:52:26 iteration: 52800 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-02 06:53:56 iteration: 52900 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-02 06:55:27 iteration: 53000 loss: 0.0005 lr: 1.0000000656873453e-05
+2021-10-02 06:56:58 iteration: 53100 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-02 06:58:29 iteration: 53200 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-02 07:00:00 iteration: 53300 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-02 07:01:31 iteration: 53400 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-02 07:03:02 iteration: 53500 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-02 07:04:32 iteration: 53600 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-02 07:06:03 iteration: 53700 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-02 07:07:34 iteration: 53800 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-02 07:09:05 iteration: 53900 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-02 07:10:36 iteration: 54000 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-02 07:12:07 iteration: 54100 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-02 07:13:38 iteration: 54200 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-02 07:15:09 iteration: 54300 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-02 07:16:40 iteration: 54400 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-02 07:18:12 iteration: 54500 loss: 0.0003 lr: 1.0000000656873453e-05
+2021-10-02 07:19:43 iteration: 54600 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-02 07:21:15 iteration: 54700 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-02 07:22:46 iteration: 54800 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-02 07:24:18 iteration: 54900 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-02 07:25:49 iteration: 55000 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-02 07:27:20 iteration: 55100 loss: 0.0005 lr: 1.0000000656873453e-05
+2021-10-02 07:28:52 iteration: 55200 loss: 0.0005 lr: 1.0000000656873453e-05
+2021-10-02 07:30:24 iteration: 55300 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-02 07:31:55 iteration: 55400 loss: 0.0005 lr: 1.0000000656873453e-05
+2021-10-02 07:33:27 iteration: 55500 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-02 07:34:58 iteration: 55600 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-02 07:36:30 iteration: 55700 loss: 0.0003 lr: 1.0000000656873453e-05
+2021-10-02 07:38:02 iteration: 55800 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-02 07:39:33 iteration: 55900 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-02 07:41:04 iteration: 56000 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-02 07:42:35 iteration: 56100 loss: 0.0003 lr: 1.0000000656873453e-05
+2021-10-02 07:44:06 iteration: 56200 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-02 07:45:36 iteration: 56300 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-02 07:47:07 iteration: 56400 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-02 07:48:38 iteration: 56500 loss: 0.0003 lr: 1.0000000656873453e-05
+2021-10-02 07:50:09 iteration: 56600 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-02 07:51:39 iteration: 56700 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-02 07:53:10 iteration: 56800 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-02 07:54:41 iteration: 56900 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-02 07:56:12 iteration: 57000 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-02 07:57:43 iteration: 57100 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-02 07:59:14 iteration: 57200 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-02 08:00:45 iteration: 57300 loss: 0.0003 lr: 1.0000000656873453e-05
+2021-10-02 08:02:16 iteration: 57400 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-02 08:03:46 iteration: 57500 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-02 08:05:17 iteration: 57600 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-02 08:06:48 iteration: 57700 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-02 08:08:19 iteration: 57800 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-02 08:09:49 iteration: 57900 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-02 08:11:20 iteration: 58000 loss: 0.0005 lr: 1.0000000656873453e-05
+2021-10-02 08:12:51 iteration: 58100 loss: 0.0005 lr: 1.0000000656873453e-05
+2021-10-02 08:14:22 iteration: 58200 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-02 08:15:53 iteration: 58300 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-02 08:17:25 iteration: 58400 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-02 08:18:57 iteration: 58500 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-02 08:20:28 iteration: 58600 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-02 08:22:00 iteration: 58700 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-02 08:23:32 iteration: 58800 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-02 08:25:03 iteration: 58900 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-02 08:26:35 iteration: 59000 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-02 08:28:06 iteration: 59100 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-02 08:29:38 iteration: 59200 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-02 08:31:09 iteration: 59300 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-02 08:32:41 iteration: 59400 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-02 08:34:13 iteration: 59500 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-02 08:35:44 iteration: 59600 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-02 08:37:16 iteration: 59700 loss: 0.0005 lr: 1.0000000656873453e-05
+2021-10-02 08:38:48 iteration: 59800 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-02 08:40:20 iteration: 59900 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-02 08:41:51 iteration: 60000 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-02 10:06:35 Config:
+{'all_joints': [[0],
+                [1],
+                [2],
+                [3],
+                [4],
+                [5],
+                [6],
+                [7],
+                [8],
+                [9],
+                [10],
+                [11],
+                [12],
+                [13],
+                [14],
+                [15]],
+ 'all_joints_names': ['earr',
+                      'earl',
+                      'eyer',
+                      'eyel',
+                      'nose',
+                      'throat',
+                      'elbowr',
+                      'elbowl',
+                      'handr',
+                      'handl',
+                      'tailbase',
+                      'tailtip',
+                      'kneer',
+                      'kneel',
+                      'ankler',
+                      'anklel'],
+ 'alpha_r': 0.02,
+ 'apply_prob': 0.5,
+ 'batch_size': 1,
+ 'clahe': True,
+ 'claheratio': 0.1,
+ 'crop_pad': 0,
+ 'crop_sampling': 'hybrid',
+ 'crop_size': [400, 400],
+ 'cropratio': 0.4,
+ 'dataset': 'training-datasets/iteration-0/UnaugmentedDataSet_Simba '
+            'ModifiedAug27/Simba Modified_Hamila95shuffle0.mat',
+ 'dataset_type': 'default',
+ 'decay_steps': 30000,
+ 'deterministic': False,
+ 'display_iters': 1000,
+ 'edge': False,
+ 'emboss': {'alpha': [0.0, 1.0], 'embossratio': 0.1, 'strength': [0.5, 1.5]},
+ 'fg_fraction': 0.25,
+ 'global_scale': 0.8,
+ 'histeq': True,
+ 'histeqratio': 0.1,
+ 'init_weights': '/content/drive/MyDrive/DLC/Simba '
+                 'Modified-Hamila-2021-08-27/dlc-models/iteration-0/Simba '
+                 'ModifiedAug27-trainset95shuffle0/train/snapshot-60000',
+ 'intermediate_supervision': False,
+ 'intermediate_supervision_layer': 12,
+ 'location_refinement': True,
+ 'locref_huber_loss': True,
+ 'locref_loss_weight': 0.05,
+ 'locref_stdev': 7.2801,
+ 'log_dir': 'log',
+ 'lr_init': 0.0005,
+ 'max_input_size': 1500,
+ 'max_shift': 0.4,
+ 'mean_pixel': [123.68, 116.779, 103.939],
+ 'metadataset': 'training-datasets/iteration-0/UnaugmentedDataSet_Simba '
+                'ModifiedAug27/Documentation_data-Simba '
+                'Modified_95shuffle0.pickle',
+ 'min_input_size': 64,
+ 'mirror': False,
+ 'multi_stage': False,
+ 'multi_step': [[0.005, 10000],
+                [0.02, 430000],
+                [0.002, 730000],
+                [0.001, 1030000]],
+ 'net_type': 'efficientnet-b0',
+ 'num_joints': 16,
+ 'optimizer': 'sgd',
+ 'pairwise_huber_loss': False,
+ 'pairwise_predict': False,
+ 'partaffinityfield_predict': False,
+ 'pos_dist_thresh': 17,
+ 'pre_resize': [],
+ 'project_path': '/content/drive/MyDrive/DLC/Simba Modified-Hamila-2021-08-27',
+ 'regularize': False,
+ 'rotation': 25,
+ 'rotratio': 0.4,
+ 'save_iters': 50000,
+ 'scale_jitter_lo': 0.5,
+ 'scale_jitter_up': 1.25,
+ 'scoremap_dir': 'test',
+ 'sharpen': False,
+ 'sharpenratio': 0.3,
+ 'shuffle': True,
+ 'snapshot_prefix': '/content/drive/MyDrive/DLC/Simba '
+                    'Modified-Hamila-2021-08-27/dlc-models/iteration-0/Simba '
+                    'ModifiedAug27-trainset95shuffle0/train/snapshot',
+ 'stride': 8.0,
+ 'weigh_negatives': False,
+ 'weigh_only_present_joints': False,
+ 'weigh_part_predictions': False,
+ 'weight_decay': 0.0001}
+2021-10-02 10:09:07 iteration: 60100 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-02 10:10:37 iteration: 60200 loss: 0.0003 lr: 1.0000000656873453e-05
+2021-10-02 10:12:07 iteration: 60300 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-02 10:13:38 iteration: 60400 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-02 10:15:08 iteration: 60500 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-02 10:16:39 iteration: 60600 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-02 10:18:09 iteration: 60700 loss: 0.0005 lr: 1.0000000656873453e-05
+2021-10-02 10:19:39 iteration: 60800 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-02 10:21:10 iteration: 60900 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-02 10:22:40 iteration: 61000 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-02 10:24:10 iteration: 61100 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-02 10:25:41 iteration: 61200 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-02 10:27:11 iteration: 61300 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-02 10:28:41 iteration: 61400 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-02 10:30:12 iteration: 61500 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-02 10:31:42 iteration: 61600 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-02 10:33:13 iteration: 61700 loss: 0.0003 lr: 1.0000000656873453e-05
+2021-10-02 10:34:43 iteration: 61800 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-02 10:36:14 iteration: 61900 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-02 10:37:44 iteration: 62000 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-02 10:39:14 iteration: 62100 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-02 10:40:45 iteration: 62200 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-02 10:42:15 iteration: 62300 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-02 10:43:46 iteration: 62400 loss: 0.0005 lr: 1.0000000656873453e-05
+2021-10-02 10:45:16 iteration: 62500 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-02 10:46:46 iteration: 62600 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-02 10:48:17 iteration: 62700 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-02 10:49:47 iteration: 62800 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-02 10:51:18 iteration: 62900 loss: 0.0005 lr: 1.0000000656873453e-05
+2021-10-02 10:52:48 iteration: 63000 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-02 10:54:19 iteration: 63100 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-02 10:55:49 iteration: 63200 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-02 10:57:20 iteration: 63300 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-02 10:58:50 iteration: 63400 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-02 11:00:21 iteration: 63500 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-02 11:01:51 iteration: 63600 loss: 0.0003 lr: 1.0000000656873453e-05
+2021-10-02 11:03:22 iteration: 63700 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-02 11:04:52 iteration: 63800 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-02 11:06:22 iteration: 63900 loss: 0.0005 lr: 1.0000000656873453e-05
+2021-10-02 11:07:52 iteration: 64000 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-02 11:09:23 iteration: 64100 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-02 11:10:53 iteration: 64200 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-02 11:12:23 iteration: 64300 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-02 11:13:53 iteration: 64400 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-02 11:15:24 iteration: 64500 loss: 0.0003 lr: 1.0000000656873453e-05
+2021-10-02 11:16:54 iteration: 64600 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-02 11:18:24 iteration: 64700 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-02 11:19:55 iteration: 64800 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-02 11:21:25 iteration: 64900 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-02 11:22:55 iteration: 65000 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-02 11:24:26 iteration: 65100 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-02 11:25:56 iteration: 65200 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-02 11:27:27 iteration: 65300 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-02 11:28:57 iteration: 65400 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-02 11:30:27 iteration: 65500 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-02 11:31:58 iteration: 65600 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-02 11:33:28 iteration: 65700 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-02 11:34:59 iteration: 65800 loss: 0.0005 lr: 1.0000000656873453e-05
+2021-10-02 11:36:29 iteration: 65900 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-02 11:37:59 iteration: 66000 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-02 11:39:30 iteration: 66100 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-02 11:41:01 iteration: 66200 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-02 11:42:31 iteration: 66300 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-02 11:44:01 iteration: 66400 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-02 11:45:32 iteration: 66500 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-02 11:47:02 iteration: 66600 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-02 11:48:32 iteration: 66700 loss: 0.0005 lr: 1.0000000656873453e-05
+2021-10-02 11:50:03 iteration: 66800 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-02 11:51:33 iteration: 66900 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-02 11:53:03 iteration: 67000 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-02 11:54:34 iteration: 67100 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-02 11:56:04 iteration: 67200 loss: 0.0005 lr: 1.0000000656873453e-05
+2021-10-02 11:57:35 iteration: 67300 loss: 0.0003 lr: 1.0000000656873453e-05
+2021-10-02 11:59:05 iteration: 67400 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-02 12:00:35 iteration: 67500 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-02 12:02:06 iteration: 67600 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-02 12:03:36 iteration: 67700 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-02 12:05:07 iteration: 67800 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-02 12:06:37 iteration: 67900 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-02 12:08:07 iteration: 68000 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-02 12:09:38 iteration: 68100 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-02 12:11:08 iteration: 68200 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-02 12:12:38 iteration: 68300 loss: 0.0005 lr: 1.0000000656873453e-05
+2021-10-02 12:14:09 iteration: 68400 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-02 12:15:39 iteration: 68500 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-02 12:17:10 iteration: 68600 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-02 12:18:40 iteration: 68700 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-02 12:20:11 iteration: 68800 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-02 12:21:41 iteration: 68900 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-02 12:23:11 iteration: 69000 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-02 12:24:42 iteration: 69100 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-02 12:26:12 iteration: 69200 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-02 12:27:43 iteration: 69300 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-02 12:29:13 iteration: 69400 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-02 12:30:44 iteration: 69500 loss: 0.0005 lr: 1.0000000656873453e-05
+2021-10-02 12:32:14 iteration: 69600 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-02 12:33:45 iteration: 69700 loss: 0.0005 lr: 1.0000000656873453e-05
+2021-10-02 12:35:15 iteration: 69800 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-02 12:36:45 iteration: 69900 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-02 12:38:16 iteration: 70000 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-02 12:39:46 iteration: 70100 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-02 12:41:16 iteration: 70200 loss: 0.0003 lr: 1.0000000656873453e-05
+2021-10-02 12:42:47 iteration: 70300 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-02 12:44:17 iteration: 70400 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-02 12:45:47 iteration: 70500 loss: 0.0005 lr: 1.0000000656873453e-05
+2021-10-02 12:47:18 iteration: 70600 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-02 12:48:48 iteration: 70700 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-02 12:50:18 iteration: 70800 loss: 0.0003 lr: 1.0000000656873453e-05
+2021-10-02 12:51:49 iteration: 70900 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-02 12:53:19 iteration: 71000 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-02 14:24:06 Config:
+{'all_joints': [[0],
+                [1],
+                [2],
+                [3],
+                [4],
+                [5],
+                [6],
+                [7],
+                [8],
+                [9],
+                [10],
+                [11],
+                [12],
+                [13],
+                [14],
+                [15]],
+ 'all_joints_names': ['earr',
+                      'earl',
+                      'eyer',
+                      'eyel',
+                      'nose',
+                      'throat',
+                      'elbowr',
+                      'elbowl',
+                      'handr',
+                      'handl',
+                      'tailbase',
+                      'tailtip',
+                      'kneer',
+                      'kneel',
+                      'ankler',
+                      'anklel'],
+ 'alpha_r': 0.02,
+ 'apply_prob': 0.5,
+ 'batch_size': 1,
+ 'clahe': True,
+ 'claheratio': 0.1,
+ 'crop_pad': 0,
+ 'crop_sampling': 'hybrid',
+ 'crop_size': [400, 400],
+ 'cropratio': 0.4,
+ 'dataset': 'training-datasets/iteration-0/UnaugmentedDataSet_Simba '
+            'ModifiedAug27/Simba Modified_Hamila95shuffle0.mat',
+ 'dataset_type': 'default',
+ 'decay_steps': 30000,
+ 'deterministic': False,
+ 'display_iters': 1000,
+ 'edge': False,
+ 'emboss': {'alpha': [0.0, 1.0], 'embossratio': 0.1, 'strength': [0.5, 1.5]},
+ 'fg_fraction': 0.25,
+ 'global_scale': 0.8,
+ 'histeq': True,
+ 'histeqratio': 0.1,
+ 'init_weights': '/content/drive/MyDrive/DLC/Simba '
+                 'Modified-Hamila-2021-08-27/dlc-models/iteration-0/Simba '
+                 'ModifiedAug27-trainset95shuffle0/train/snapshot-69000',
+ 'intermediate_supervision': False,
+ 'intermediate_supervision_layer': 12,
+ 'location_refinement': True,
+ 'locref_huber_loss': True,
+ 'locref_loss_weight': 0.05,
+ 'locref_stdev': 7.2801,
+ 'log_dir': 'log',
+ 'lr_init': 0.0005,
+ 'max_input_size': 1500,
+ 'max_shift': 0.4,
+ 'mean_pixel': [123.68, 116.779, 103.939],
+ 'metadataset': 'training-datasets/iteration-0/UnaugmentedDataSet_Simba '
+                'ModifiedAug27/Documentation_data-Simba '
+                'Modified_95shuffle0.pickle',
+ 'min_input_size': 64,
+ 'mirror': False,
+ 'multi_stage': False,
+ 'multi_step': [[0.005, 10000],
+                [0.02, 430000],
+                [0.002, 730000],
+                [0.001, 1030000]],
+ 'net_type': 'efficientnet-b0',
+ 'num_joints': 16,
+ 'optimizer': 'sgd',
+ 'pairwise_huber_loss': False,
+ 'pairwise_predict': False,
+ 'partaffinityfield_predict': False,
+ 'pos_dist_thresh': 17,
+ 'pre_resize': [],
+ 'project_path': '/content/drive/MyDrive/DLC/Simba Modified-Hamila-2021-08-27',
+ 'regularize': False,
+ 'rotation': 25,
+ 'rotratio': 0.4,
+ 'save_iters': 50000,
+ 'scale_jitter_lo': 0.5,
+ 'scale_jitter_up': 1.25,
+ 'scoremap_dir': 'test',
+ 'sharpen': False,
+ 'sharpenratio': 0.3,
+ 'shuffle': True,
+ 'snapshot_prefix': '/content/drive/MyDrive/DLC/Simba '
+                    'Modified-Hamila-2021-08-27/dlc-models/iteration-0/Simba '
+                    'ModifiedAug27-trainset95shuffle0/train/snapshot',
+ 'stride': 8.0,
+ 'weigh_negatives': False,
+ 'weigh_only_present_joints': False,
+ 'weigh_part_predictions': False,
+ 'weight_decay': 0.0001}
+2021-10-02 14:26:38 iteration: 69100 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-02 14:28:10 iteration: 69200 loss: 0.0005 lr: 1.0000000656873453e-05
+2021-10-02 14:29:40 iteration: 69300 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-02 14:31:11 iteration: 69400 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-02 14:32:43 iteration: 69500 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-02 14:34:14 iteration: 69600 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-02 14:35:45 iteration: 69700 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-02 14:37:16 iteration: 69800 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-02 14:38:48 iteration: 69900 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-02 14:40:18 iteration: 70000 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-02 14:41:50 iteration: 70100 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-02 14:43:21 iteration: 70200 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-02 14:44:53 iteration: 70300 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-02 14:46:23 iteration: 70400 loss: 0.0005 lr: 1.0000000656873453e-05
+2021-10-02 14:47:55 iteration: 70500 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-02 14:49:26 iteration: 70600 loss: 0.0005 lr: 1.0000000656873453e-05
+2021-10-02 14:50:58 iteration: 70700 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-02 14:52:29 iteration: 70800 loss: 0.0005 lr: 1.0000000656873453e-05
+2021-10-02 14:54:01 iteration: 70900 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-02 14:55:32 iteration: 71000 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-02 14:57:04 iteration: 71100 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-02 14:58:35 iteration: 71200 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-02 15:00:07 iteration: 71300 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-02 15:01:38 iteration: 71400 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-02 15:03:10 iteration: 71500 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-02 15:04:41 iteration: 71600 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-02 15:06:12 iteration: 71700 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-02 15:07:44 iteration: 71800 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-02 15:09:16 iteration: 71900 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-02 15:10:46 iteration: 72000 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-02 15:12:19 iteration: 72100 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-02 15:13:50 iteration: 72200 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-02 15:15:22 iteration: 72300 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-02 15:16:52 iteration: 72400 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-02 15:18:24 iteration: 72500 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-02 15:19:54 iteration: 72600 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-02 15:21:23 iteration: 72700 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-02 15:22:53 iteration: 72800 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-02 15:24:22 iteration: 72900 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-02 15:25:52 iteration: 73000 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-02 15:27:21 iteration: 73100 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-02 15:28:51 iteration: 73200 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-02 15:30:20 iteration: 73300 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-02 15:31:50 iteration: 73400 loss: 0.0003 lr: 1.0000000656873453e-05
+2021-10-02 15:33:19 iteration: 73500 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-02 15:34:48 iteration: 73600 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-02 15:36:18 iteration: 73700 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-02 15:37:47 iteration: 73800 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-02 15:39:17 iteration: 73900 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-02 15:40:46 iteration: 74000 loss: 0.0003 lr: 1.0000000656873453e-05
+2021-10-02 15:42:15 iteration: 74100 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-02 15:43:45 iteration: 74200 loss: 0.0003 lr: 1.0000000656873453e-05
+2021-10-02 15:45:14 iteration: 74300 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-02 15:46:44 iteration: 74400 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-02 15:48:13 iteration: 74500 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-02 15:49:43 iteration: 74600 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-02 15:51:12 iteration: 74700 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-02 15:52:42 iteration: 74800 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-02 15:54:11 iteration: 74900 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-02 15:55:41 iteration: 75000 loss: 0.0005 lr: 1.0000000656873453e-05
+2021-10-02 15:57:11 iteration: 75100 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-02 15:58:42 iteration: 75200 loss: 0.0003 lr: 1.0000000656873453e-05
+2021-10-02 16:00:12 iteration: 75300 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-02 16:01:42 iteration: 75400 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-02 16:03:12 iteration: 75500 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-02 16:04:42 iteration: 75600 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-02 16:06:12 iteration: 75700 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-02 16:07:41 iteration: 75800 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-02 16:09:11 iteration: 75900 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-02 16:10:41 iteration: 76000 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-02 16:12:10 iteration: 76100 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-02 16:13:40 iteration: 76200 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-02 16:15:10 iteration: 76300 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-02 16:16:40 iteration: 76400 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-02 16:18:10 iteration: 76500 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-02 16:19:40 iteration: 76600 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-02 16:21:10 iteration: 76700 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-02 16:22:40 iteration: 76800 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-02 16:24:09 iteration: 76900 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-02 16:25:40 iteration: 77000 loss: 0.0005 lr: 1.0000000656873453e-05
+2021-10-02 16:27:10 iteration: 77100 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-02 16:28:40 iteration: 77200 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-02 16:30:10 iteration: 77300 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-02 16:31:41 iteration: 77400 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-02 16:33:11 iteration: 77500 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-02 16:34:42 iteration: 77600 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-02 16:36:12 iteration: 77700 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-02 16:37:43 iteration: 77800 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-02 16:39:13 iteration: 77900 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-02 16:40:44 iteration: 78000 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-02 16:42:15 iteration: 78100 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-02 16:43:45 iteration: 78200 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-02 16:45:16 iteration: 78300 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-02 16:46:46 iteration: 78400 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-02 16:48:16 iteration: 78500 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-02 16:49:45 iteration: 78600 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-02 16:51:15 iteration: 78700 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-02 16:52:45 iteration: 78800 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-02 16:54:14 iteration: 78900 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-02 16:55:44 iteration: 79000 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-02 16:57:14 iteration: 79100 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-02 16:58:43 iteration: 79200 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-02 17:00:13 iteration: 79300 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-02 17:01:43 iteration: 79400 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-02 17:03:13 iteration: 79500 loss: 0.0003 lr: 1.0000000656873453e-05
+2021-10-02 17:04:44 iteration: 79600 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-02 17:06:15 iteration: 79700 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-02 17:07:45 iteration: 79800 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-02 17:09:15 iteration: 79900 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-02 17:10:46 iteration: 80000 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-02 17:12:16 iteration: 80100 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-02 17:13:47 iteration: 80200 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-02 17:15:17 iteration: 80300 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-02 17:16:48 iteration: 80400 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-02 17:18:19 iteration: 80500 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-02 17:19:49 iteration: 80600 loss: 0.0003 lr: 1.0000000656873453e-05
+2021-10-02 17:21:20 iteration: 80700 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-02 17:22:50 iteration: 80800 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-02 17:24:21 iteration: 80900 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-02 17:25:51 iteration: 81000 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-02 17:27:23 iteration: 81100 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-02 17:28:53 iteration: 81200 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-02 17:30:24 iteration: 81300 loss: 0.0003 lr: 1.0000000656873453e-05
+2021-10-02 17:31:55 iteration: 81400 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-02 17:33:25 iteration: 81500 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-02 17:34:56 iteration: 81600 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-02 17:36:27 iteration: 81700 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-02 17:37:57 iteration: 81800 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-02 17:39:28 iteration: 81900 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-02 17:40:59 iteration: 82000 loss: 0.0005 lr: 1.0000000656873453e-05
+2021-10-02 17:42:29 iteration: 82100 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-02 17:44:00 iteration: 82200 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-02 17:45:31 iteration: 82300 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-02 17:47:01 iteration: 82400 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-02 17:48:32 iteration: 82500 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-02 17:50:03 iteration: 82600 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-02 17:51:33 iteration: 82700 loss: 0.0003 lr: 1.0000000656873453e-05
+2021-10-02 17:53:04 iteration: 82800 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-02 17:54:35 iteration: 82900 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-02 17:56:05 iteration: 83000 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-02 17:57:36 iteration: 83100 loss: 0.0003 lr: 1.0000000656873453e-05
+2021-10-02 17:59:06 iteration: 83200 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-02 18:00:37 iteration: 83300 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-02 18:02:08 iteration: 83400 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-02 18:03:38 iteration: 83500 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-02 18:05:09 iteration: 83600 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-02 18:06:40 iteration: 83700 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-02 18:08:10 iteration: 83800 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-02 18:09:41 iteration: 83900 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-02 18:11:12 iteration: 84000 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-02 18:12:43 iteration: 84100 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-02 18:14:14 iteration: 84200 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-02 18:15:44 iteration: 84300 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-02 18:17:14 iteration: 84400 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-02 18:18:44 iteration: 84500 loss: 0.0003 lr: 1.0000000656873453e-05
+2021-10-02 18:20:13 iteration: 84600 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-02 18:21:43 iteration: 84700 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-02 18:23:13 iteration: 84800 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-02 18:24:42 iteration: 84900 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-02 18:26:11 iteration: 85000 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-02 18:27:40 iteration: 85100 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-02 18:29:10 iteration: 85200 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-02 18:30:39 iteration: 85300 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-02 18:32:08 iteration: 85400 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-02 18:33:37 iteration: 85500 loss: 0.0003 lr: 1.0000000656873453e-05
+2021-10-02 18:35:07 iteration: 85600 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-02 19:11:17 Config:
+{'all_joints': [[0],
+                [1],
+                [2],
+                [3],
+                [4],
+                [5],
+                [6],
+                [7],
+                [8],
+                [9],
+                [10],
+                [11],
+                [12],
+                [13],
+                [14],
+                [15]],
+ 'all_joints_names': ['earr',
+                      'earl',
+                      'eyer',
+                      'eyel',
+                      'nose',
+                      'throat',
+                      'elbowr',
+                      'elbowl',
+                      'handr',
+                      'handl',
+                      'tailbase',
+                      'tailtip',
+                      'kneer',
+                      'kneel',
+                      'ankler',
+                      'anklel'],
+ 'alpha_r': 0.02,
+ 'apply_prob': 0.5,
+ 'batch_size': 1,
+ 'clahe': True,
+ 'claheratio': 0.1,
+ 'crop_pad': 0,
+ 'crop_sampling': 'hybrid',
+ 'crop_size': [400, 400],
+ 'cropratio': 0.4,
+ 'dataset': 'training-datasets/iteration-0/UnaugmentedDataSet_Simba '
+            'ModifiedAug27/Simba Modified_Hamila95shuffle0.mat',
+ 'dataset_type': 'default',
+ 'decay_steps': 30000,
+ 'deterministic': False,
+ 'display_iters': 1000,
+ 'edge': False,
+ 'emboss': {'alpha': [0.0, 1.0], 'embossratio': 0.1, 'strength': [0.5, 1.5]},
+ 'fg_fraction': 0.25,
+ 'global_scale': 0.8,
+ 'histeq': True,
+ 'histeqratio': 0.1,
+ 'init_weights': '/content/drive/MyDrive/DLC/Simba '
+                 'Modified-Hamila-2021-08-27/dlc-models/iteration-0/Simba '
+                 'ModifiedAug27-trainset95shuffle0/train/snapshot-84000',
+ 'intermediate_supervision': False,
+ 'intermediate_supervision_layer': 12,
+ 'location_refinement': True,
+ 'locref_huber_loss': True,
+ 'locref_loss_weight': 0.05,
+ 'locref_stdev': 7.2801,
+ 'log_dir': 'log',
+ 'lr_init': 0.0005,
+ 'max_input_size': 1500,
+ 'max_shift': 0.4,
+ 'mean_pixel': [123.68, 116.779, 103.939],
+ 'metadataset': 'training-datasets/iteration-0/UnaugmentedDataSet_Simba '
+                'ModifiedAug27/Documentation_data-Simba '
+                'Modified_95shuffle0.pickle',
+ 'min_input_size': 64,
+ 'mirror': False,
+ 'multi_stage': False,
+ 'multi_step': [[0.005, 10000],
+                [0.02, 430000],
+                [0.002, 730000],
+                [0.001, 1030000]],
+ 'net_type': 'efficientnet-b0',
+ 'num_joints': 16,
+ 'optimizer': 'sgd',
+ 'pairwise_huber_loss': False,
+ 'pairwise_predict': False,
+ 'partaffinityfield_predict': False,
+ 'pos_dist_thresh': 17,
+ 'pre_resize': [],
+ 'project_path': '/content/drive/MyDrive/DLC/Simba Modified-Hamila-2021-08-27',
+ 'regularize': False,
+ 'rotation': 25,
+ 'rotratio': 0.4,
+ 'save_iters': 50000,
+ 'scale_jitter_lo': 0.5,
+ 'scale_jitter_up': 1.25,
+ 'scoremap_dir': 'test',
+ 'sharpen': False,
+ 'sharpenratio': 0.3,
+ 'shuffle': True,
+ 'snapshot_prefix': '/content/drive/MyDrive/DLC/Simba '
+                    'Modified-Hamila-2021-08-27/dlc-models/iteration-0/Simba '
+                    'ModifiedAug27-trainset95shuffle0/train/snapshot',
+ 'stride': 8.0,
+ 'weigh_negatives': False,
+ 'weigh_only_present_joints': False,
+ 'weigh_part_predictions': False,
+ 'weight_decay': 0.0001}
+2021-10-02 19:13:49 iteration: 84100 loss: 0.0003 lr: 1.0000000656873453e-05
+2021-10-02 19:15:18 iteration: 84200 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-02 19:16:47 iteration: 84300 loss: 0.0003 lr: 1.0000000656873453e-05
+2021-10-02 19:18:16 iteration: 84400 loss: 0.0003 lr: 1.0000000656873453e-05
+2021-10-02 19:19:45 iteration: 84500 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-02 19:21:14 iteration: 84600 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-02 19:22:44 iteration: 84700 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-02 19:24:13 iteration: 84800 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-02 19:25:42 iteration: 84900 loss: 0.0003 lr: 1.0000000656873453e-05
+2021-10-02 19:27:11 iteration: 85000 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-02 19:28:40 iteration: 85100 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-02 19:30:09 iteration: 85200 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-02 19:31:38 iteration: 85300 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-02 19:33:08 iteration: 85400 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-02 19:34:37 iteration: 85500 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-02 19:36:06 iteration: 85600 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-02 19:37:35 iteration: 85700 loss: 0.0005 lr: 1.0000000656873453e-05
+2021-10-02 19:39:04 iteration: 85800 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-02 19:40:33 iteration: 85900 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-02 19:42:02 iteration: 86000 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-02 19:43:30 iteration: 86100 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-02 19:44:59 iteration: 86200 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-02 19:46:28 iteration: 86300 loss: 0.0005 lr: 1.0000000656873453e-05
+2021-10-02 19:47:57 iteration: 86400 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-02 19:49:26 iteration: 86500 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-02 19:50:55 iteration: 86600 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-02 19:52:24 iteration: 86700 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-02 19:53:53 iteration: 86800 loss: 0.0003 lr: 1.0000000656873453e-05
+2021-10-02 19:55:22 iteration: 86900 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-02 19:56:51 iteration: 87000 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-02 19:58:21 iteration: 87100 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-02 19:59:50 iteration: 87200 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-02 20:01:19 iteration: 87300 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-02 20:02:49 iteration: 87400 loss: 0.0003 lr: 1.0000000656873453e-05
+2021-10-02 20:04:18 iteration: 87500 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-02 20:05:47 iteration: 87600 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-02 20:07:15 iteration: 87700 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-02 20:08:44 iteration: 87800 loss: 0.0003 lr: 1.0000000656873453e-05
+2021-10-02 20:10:13 iteration: 87900 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-02 20:11:42 iteration: 88000 loss: 0.0003 lr: 1.0000000656873453e-05
+2021-10-02 20:13:11 iteration: 88100 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-02 20:14:40 iteration: 88200 loss: 0.0005 lr: 1.0000000656873453e-05
+2021-10-02 20:16:08 iteration: 88300 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-02 20:17:37 iteration: 88400 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-02 20:19:06 iteration: 88500 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-02 20:20:35 iteration: 88600 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-02 20:22:05 iteration: 88700 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-02 20:23:34 iteration: 88800 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-02 20:25:03 iteration: 88900 loss: 0.0003 lr: 1.0000000656873453e-05
+2021-10-02 20:26:32 iteration: 89000 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-02 20:28:01 iteration: 89100 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-02 20:29:30 iteration: 89200 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-02 20:30:59 iteration: 89300 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-02 20:32:28 iteration: 89400 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-02 20:33:57 iteration: 89500 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-02 20:35:27 iteration: 89600 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-02 20:36:56 iteration: 89700 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-02 20:38:25 iteration: 89800 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-02 20:39:54 iteration: 89900 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-02 20:41:23 iteration: 90000 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-02 20:42:52 iteration: 90100 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-02 20:44:21 iteration: 90200 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-02 20:45:50 iteration: 90300 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-02 20:47:18 iteration: 90400 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-02 20:48:47 iteration: 90500 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-02 20:50:16 iteration: 90600 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-02 20:51:45 iteration: 90700 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-02 20:53:14 iteration: 90800 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-02 20:54:42 iteration: 90900 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-02 20:56:11 iteration: 91000 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-02 20:57:41 iteration: 91100 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-02 20:59:10 iteration: 91200 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-02 21:00:40 iteration: 91300 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-02 21:02:09 iteration: 91400 loss: 0.0003 lr: 1.0000000656873453e-05
+2021-10-02 21:03:39 iteration: 91500 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-02 21:05:08 iteration: 91600 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-02 21:06:38 iteration: 91700 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-02 21:08:07 iteration: 91800 loss: 0.0003 lr: 1.0000000656873453e-05
+2021-10-02 21:09:37 iteration: 91900 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-02 21:11:07 iteration: 92000 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-02 21:12:36 iteration: 92100 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-02 21:14:06 iteration: 92200 loss: 0.0003 lr: 1.0000000656873453e-05
+2021-10-02 21:15:36 iteration: 92300 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-02 21:17:05 iteration: 92400 loss: 0.0003 lr: 1.0000000656873453e-05
+2021-10-02 21:18:35 iteration: 92500 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-02 21:20:04 iteration: 92600 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-02 21:21:32 iteration: 92700 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-02 21:23:01 iteration: 92800 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-02 21:24:30 iteration: 92900 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-02 21:25:59 iteration: 93000 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-02 21:27:28 iteration: 93100 loss: 0.0003 lr: 1.0000000656873453e-05
+2021-10-02 21:28:57 iteration: 93200 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-02 21:30:25 iteration: 93300 loss: 0.0003 lr: 1.0000000656873453e-05
+2021-10-02 21:31:54 iteration: 93400 loss: 0.0003 lr: 1.0000000656873453e-05
+2021-10-02 21:33:22 iteration: 93500 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-02 21:34:51 iteration: 93600 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-02 21:36:20 iteration: 93700 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-02 21:37:48 iteration: 93800 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-02 21:39:17 iteration: 93900 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-02 21:40:46 iteration: 94000 loss: 0.0003 lr: 1.0000000656873453e-05
+2021-10-02 21:42:15 iteration: 94100 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-02 21:43:44 iteration: 94200 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-02 21:45:12 iteration: 94300 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-02 21:46:41 iteration: 94400 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-02 21:48:10 iteration: 94500 loss: 0.0005 lr: 1.0000000656873453e-05
+2021-10-02 21:49:39 iteration: 94600 loss: 0.0005 lr: 1.0000000656873453e-05
+2021-10-02 21:51:07 iteration: 94700 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-02 21:52:36 iteration: 94800 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-02 21:54:05 iteration: 94900 loss: 0.0003 lr: 1.0000000656873453e-05
+2021-10-02 21:55:33 iteration: 95000 loss: 0.0003 lr: 1.0000000656873453e-05
+2021-10-02 21:57:02 iteration: 95100 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-02 21:58:31 iteration: 95200 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-02 21:59:59 iteration: 95300 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-02 22:01:28 iteration: 95400 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-02 22:02:57 iteration: 95500 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-02 22:04:25 iteration: 95600 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-02 22:05:54 iteration: 95700 loss: 0.0003 lr: 1.0000000656873453e-05
+2021-10-02 22:07:23 iteration: 95800 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-02 22:08:51 iteration: 95900 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-02 22:10:20 iteration: 96000 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-02 22:11:49 iteration: 96100 loss: 0.0003 lr: 1.0000000656873453e-05
+2021-10-02 22:13:18 iteration: 96200 loss: 0.0003 lr: 1.0000000656873453e-05
+2021-10-02 22:14:47 iteration: 96300 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-02 22:16:17 iteration: 96400 loss: 0.0003 lr: 1.0000000656873453e-05
+2021-10-02 22:17:46 iteration: 96500 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-02 22:19:15 iteration: 96600 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-02 22:20:44 iteration: 96700 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-02 22:22:13 iteration: 96800 loss: 0.0003 lr: 1.0000000656873453e-05
+2021-10-02 22:23:42 iteration: 96900 loss: 0.0005 lr: 1.0000000656873453e-05
+2021-10-02 22:25:12 iteration: 97000 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-02 22:26:41 iteration: 97100 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-02 22:28:10 iteration: 97200 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-02 22:29:39 iteration: 97300 loss: 0.0003 lr: 1.0000000656873453e-05
+2021-10-02 22:31:09 iteration: 97400 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-02 22:32:38 iteration: 97500 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-02 22:34:07 iteration: 97600 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-02 22:35:36 iteration: 97700 loss: 0.0003 lr: 1.0000000656873453e-05
+2021-10-02 22:37:06 iteration: 97800 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-02 22:38:35 iteration: 97900 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-02 22:40:04 iteration: 98000 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-02 22:41:33 iteration: 98100 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-02 22:43:03 iteration: 98200 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-02 22:44:32 iteration: 98300 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-02 22:46:01 iteration: 98400 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-02 22:47:30 iteration: 98500 loss: 0.0003 lr: 1.0000000656873453e-05
+2021-10-02 22:49:00 iteration: 98600 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-02 22:50:29 iteration: 98700 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-02 22:51:58 iteration: 98800 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-02 22:53:28 iteration: 98900 loss: 0.0003 lr: 1.0000000656873453e-05
+2021-10-02 22:54:57 iteration: 99000 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-02 22:56:27 iteration: 99100 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-02 22:57:56 iteration: 99200 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-02 22:59:26 iteration: 99300 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-02 23:00:55 iteration: 99400 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-02 23:02:24 iteration: 99500 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-03 04:05:18 Config:
+{'all_joints': [[0],
+                [1],
+                [2],
+                [3],
+                [4],
+                [5],
+                [6],
+                [7],
+                [8],
+                [9],
+                [10],
+                [11],
+                [12],
+                [13],
+                [14],
+                [15]],
+ 'all_joints_names': ['earr',
+                      'earl',
+                      'eyer',
+                      'eyel',
+                      'nose',
+                      'throat',
+                      'elbowr',
+                      'elbowl',
+                      'handr',
+                      'handl',
+                      'tailbase',
+                      'tailtip',
+                      'kneer',
+                      'kneel',
+                      'ankler',
+                      'anklel'],
+ 'alpha_r': 0.02,
+ 'apply_prob': 0.5,
+ 'batch_size': 1,
+ 'clahe': True,
+ 'claheratio': 0.1,
+ 'crop_pad': 0,
+ 'crop_sampling': 'hybrid',
+ 'crop_size': [400, 400],
+ 'cropratio': 0.4,
+ 'dataset': 'training-datasets/iteration-0/UnaugmentedDataSet_Simba '
+            'ModifiedAug27/Simba Modified_Hamila95shuffle0.mat',
+ 'dataset_type': 'default',
+ 'decay_steps': 30000,
+ 'deterministic': False,
+ 'display_iters': 1000,
+ 'edge': False,
+ 'emboss': {'alpha': [0.0, 1.0], 'embossratio': 0.1, 'strength': [0.5, 1.5]},
+ 'fg_fraction': 0.25,
+ 'global_scale': 0.8,
+ 'histeq': True,
+ 'histeqratio': 0.1,
+ 'init_weights': '/content/drive/MyDrive/DLC/Simba '
+                 'Modified-Hamila-2021-08-27/dlc-models/iteration-0/Simba '
+                 'ModifiedAug27-trainset95shuffle0/train/snapshot-99000',
+ 'intermediate_supervision': False,
+ 'intermediate_supervision_layer': 12,
+ 'location_refinement': True,
+ 'locref_huber_loss': True,
+ 'locref_loss_weight': 0.05,
+ 'locref_stdev': 7.2801,
+ 'log_dir': 'log',
+ 'lr_init': 0.0005,
+ 'max_input_size': 1500,
+ 'max_shift': 0.4,
+ 'mean_pixel': [123.68, 116.779, 103.939],
+ 'metadataset': 'training-datasets/iteration-0/UnaugmentedDataSet_Simba '
+                'ModifiedAug27/Documentation_data-Simba '
+                'Modified_95shuffle0.pickle',
+ 'min_input_size': 64,
+ 'mirror': False,
+ 'multi_stage': False,
+ 'multi_step': [[0.005, 10000],
+                [0.02, 430000],
+                [0.002, 730000],
+                [0.001, 1030000]],
+ 'net_type': 'efficientnet-b0',
+ 'num_joints': 16,
+ 'optimizer': 'sgd',
+ 'pairwise_huber_loss': False,
+ 'pairwise_predict': False,
+ 'partaffinityfield_predict': False,
+ 'pos_dist_thresh': 17,
+ 'pre_resize': [],
+ 'project_path': '/content/drive/MyDrive/DLC/Simba Modified-Hamila-2021-08-27',
+ 'regularize': False,
+ 'rotation': 25,
+ 'rotratio': 0.4,
+ 'save_iters': 50000,
+ 'scale_jitter_lo': 0.5,
+ 'scale_jitter_up': 1.25,
+ 'scoremap_dir': 'test',
+ 'sharpen': False,
+ 'sharpenratio': 0.3,
+ 'shuffle': True,
+ 'snapshot_prefix': '/content/drive/MyDrive/DLC/Simba '
+                    'Modified-Hamila-2021-08-27/dlc-models/iteration-0/Simba '
+                    'ModifiedAug27-trainset95shuffle0/train/snapshot',
+ 'stride': 8.0,
+ 'weigh_negatives': False,
+ 'weigh_only_present_joints': False,
+ 'weigh_part_predictions': False,
+ 'weight_decay': 0.0001}
+2021-10-03 04:07:48 iteration: 99100 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-03 04:09:16 iteration: 99200 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-03 04:10:45 iteration: 99300 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-03 04:12:13 iteration: 99400 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-03 04:13:42 iteration: 99500 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-03 04:15:10 iteration: 99600 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-03 04:16:39 iteration: 99700 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-03 04:18:07 iteration: 99800 loss: 0.0003 lr: 1.0000000656873453e-05
+2021-10-03 04:19:36 iteration: 99900 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-03 04:21:04 iteration: 100000 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-03 04:22:33 iteration: 100100 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-03 04:24:01 iteration: 100200 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-03 04:25:30 iteration: 100300 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-03 04:26:58 iteration: 100400 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-03 04:28:27 iteration: 100500 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-03 04:29:56 iteration: 100600 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-03 04:31:26 iteration: 100700 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-03 04:32:57 iteration: 100800 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-03 04:34:27 iteration: 100900 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-03 04:35:58 iteration: 101000 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-03 04:37:28 iteration: 101100 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-03 04:38:59 iteration: 101200 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-03 04:40:29 iteration: 101300 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-03 04:42:00 iteration: 101400 loss: 0.0003 lr: 1.0000000656873453e-05
+2021-10-03 04:43:30 iteration: 101500 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-03 04:45:00 iteration: 101600 loss: 0.0003 lr: 1.0000000656873453e-05
+2021-10-03 04:46:31 iteration: 101700 loss: 0.0003 lr: 1.0000000656873453e-05
+2021-10-03 04:48:01 iteration: 101800 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-03 04:49:32 iteration: 101900 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-03 04:51:02 iteration: 102000 loss: 0.0003 lr: 1.0000000656873453e-05
+2021-10-03 04:52:34 iteration: 102100 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-03 04:54:04 iteration: 102200 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-03 04:55:35 iteration: 102300 loss: 0.0003 lr: 1.0000000656873453e-05
+2021-10-03 04:57:05 iteration: 102400 loss: 0.0003 lr: 1.0000000656873453e-05
+2021-10-03 04:58:35 iteration: 102500 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-03 05:00:06 iteration: 102600 loss: 0.0003 lr: 1.0000000656873453e-05
+2021-10-03 05:01:36 iteration: 102700 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-03 05:03:07 iteration: 102800 loss: 0.0003 lr: 1.0000000656873453e-05
+2021-10-03 05:04:37 iteration: 102900 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-03 05:06:08 iteration: 103000 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-03 05:07:38 iteration: 103100 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-03 05:09:08 iteration: 103200 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-03 05:10:39 iteration: 103300 loss: 0.0003 lr: 1.0000000656873453e-05
+2021-10-03 05:12:09 iteration: 103400 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-03 05:13:40 iteration: 103500 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-03 05:15:10 iteration: 103600 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-03 05:16:41 iteration: 103700 loss: 0.0003 lr: 1.0000000656873453e-05
+2021-10-03 05:18:11 iteration: 103800 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-03 05:19:42 iteration: 103900 loss: 0.0003 lr: 1.0000000656873453e-05
+2021-10-03 05:21:12 iteration: 104000 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-03 05:22:41 iteration: 104100 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-03 05:24:09 iteration: 104200 loss: 0.0003 lr: 1.0000000656873453e-05
+2021-10-03 05:25:38 iteration: 104300 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-03 05:27:06 iteration: 104400 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-03 05:28:35 iteration: 104500 loss: 0.0003 lr: 1.0000000656873453e-05
+2021-10-03 05:30:04 iteration: 104600 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-03 05:31:32 iteration: 104700 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-03 05:33:01 iteration: 104800 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-03 05:34:29 iteration: 104900 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-03 05:35:58 iteration: 105000 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-03 05:37:27 iteration: 105100 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-03 05:38:55 iteration: 105200 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-03 05:40:24 iteration: 105300 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-03 05:41:52 iteration: 105400 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-03 05:43:21 iteration: 105500 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-03 05:44:49 iteration: 105600 loss: 0.0003 lr: 1.0000000656873453e-05
+2021-10-03 05:46:18 iteration: 105700 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-03 05:47:47 iteration: 105800 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-03 05:49:17 iteration: 105900 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-03 05:50:46 iteration: 106000 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-03 05:52:15 iteration: 106100 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-03 05:53:44 iteration: 106200 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-03 05:55:13 iteration: 106300 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-03 05:56:42 iteration: 106400 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-03 05:58:12 iteration: 106500 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-03 05:59:41 iteration: 106600 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-03 06:01:10 iteration: 106700 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-03 06:02:39 iteration: 106800 loss: 0.0003 lr: 1.0000000656873453e-05
+2021-10-03 06:04:08 iteration: 106900 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-03 06:05:37 iteration: 107000 loss: 0.0003 lr: 1.0000000656873453e-05
+2021-10-03 06:07:06 iteration: 107100 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-03 06:08:35 iteration: 107200 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-03 06:10:05 iteration: 107300 loss: 0.0003 lr: 1.0000000656873453e-05
+2021-10-03 06:11:34 iteration: 107400 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-03 06:13:03 iteration: 107500 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-03 06:14:32 iteration: 107600 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-03 06:16:01 iteration: 107700 loss: 0.0003 lr: 1.0000000656873453e-05
+2021-10-03 06:17:30 iteration: 107800 loss: 0.0003 lr: 1.0000000656873453e-05
+2021-10-03 06:19:00 iteration: 107900 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-03 06:20:29 iteration: 108000 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-03 06:21:58 iteration: 108100 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-03 06:23:27 iteration: 108200 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-03 06:24:56 iteration: 108300 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-03 06:26:26 iteration: 108400 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-03 06:27:55 iteration: 108500 loss: 0.0005 lr: 1.0000000656873453e-05
+2021-10-03 06:29:24 iteration: 108600 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-03 06:30:53 iteration: 108700 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-03 06:32:22 iteration: 108800 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-03 06:33:52 iteration: 108900 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-03 06:35:21 iteration: 109000 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-03 06:36:50 iteration: 109100 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-03 06:38:20 iteration: 109200 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-03 06:39:49 iteration: 109300 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-03 06:41:18 iteration: 109400 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-03 06:42:47 iteration: 109500 loss: 0.0003 lr: 1.0000000656873453e-05
+2021-10-03 06:44:16 iteration: 109600 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-03 07:52:48 Config:
+{'all_joints': [[0],
+                [1],
+                [2],
+                [3],
+                [4],
+                [5],
+                [6],
+                [7],
+                [8],
+                [9],
+                [10],
+                [11],
+                [12],
+                [13],
+                [14],
+                [15]],
+ 'all_joints_names': ['earr',
+                      'earl',
+                      'eyer',
+                      'eyel',
+                      'nose',
+                      'throat',
+                      'elbowr',
+                      'elbowl',
+                      'handr',
+                      'handl',
+                      'tailbase',
+                      'tailtip',
+                      'kneer',
+                      'kneel',
+                      'ankler',
+                      'anklel'],
+ 'alpha_r': 0.02,
+ 'apply_prob': 0.5,
+ 'batch_size': 1,
+ 'clahe': True,
+ 'claheratio': 0.1,
+ 'crop_pad': 0,
+ 'crop_sampling': 'hybrid',
+ 'crop_size': [400, 400],
+ 'cropratio': 0.4,
+ 'dataset': 'training-datasets/iteration-0/UnaugmentedDataSet_Simba '
+            'ModifiedAug27/Simba Modified_Hamila95shuffle0.mat',
+ 'dataset_type': 'default',
+ 'decay_steps': 30000,
+ 'deterministic': False,
+ 'display_iters': 1000,
+ 'edge': False,
+ 'emboss': {'alpha': [0.0, 1.0], 'embossratio': 0.1, 'strength': [0.5, 1.5]},
+ 'fg_fraction': 0.25,
+ 'global_scale': 0.8,
+ 'histeq': True,
+ 'histeqratio': 0.1,
+ 'init_weights': '/content/drive/MyDrive/DLC/Simba '
+                 'Modified-Hamila-2021-08-27/dlc-models/iteration-0/Simba '
+                 'ModifiedAug27-trainset95shuffle0/train/snapshot-108000',
+ 'intermediate_supervision': False,
+ 'intermediate_supervision_layer': 12,
+ 'location_refinement': True,
+ 'locref_huber_loss': True,
+ 'locref_loss_weight': 0.05,
+ 'locref_stdev': 7.2801,
+ 'log_dir': 'log',
+ 'lr_init': 0.0005,
+ 'max_input_size': 1500,
+ 'max_shift': 0.4,
+ 'mean_pixel': [123.68, 116.779, 103.939],
+ 'metadataset': 'training-datasets/iteration-0/UnaugmentedDataSet_Simba '
+                'ModifiedAug27/Documentation_data-Simba '
+                'Modified_95shuffle0.pickle',
+ 'min_input_size': 64,
+ 'mirror': False,
+ 'multi_stage': False,
+ 'multi_step': [[0.005, 10000],
+                [0.02, 430000],
+                [0.002, 730000],
+                [0.001, 1030000]],
+ 'net_type': 'efficientnet-b0',
+ 'num_joints': 16,
+ 'optimizer': 'sgd',
+ 'pairwise_huber_loss': False,
+ 'pairwise_predict': False,
+ 'partaffinityfield_predict': False,
+ 'pos_dist_thresh': 17,
+ 'pre_resize': [],
+ 'project_path': '/content/drive/MyDrive/DLC/Simba Modified-Hamila-2021-08-27',
+ 'regularize': False,
+ 'rotation': 25,
+ 'rotratio': 0.4,
+ 'save_iters': 50000,
+ 'scale_jitter_lo': 0.5,
+ 'scale_jitter_up': 1.25,
+ 'scoremap_dir': 'test',
+ 'sharpen': False,
+ 'sharpenratio': 0.3,
+ 'shuffle': True,
+ 'snapshot_prefix': '/content/drive/MyDrive/DLC/Simba '
+                    'Modified-Hamila-2021-08-27/dlc-models/iteration-0/Simba '
+                    'ModifiedAug27-trainset95shuffle0/train/snapshot',
+ 'stride': 8.0,
+ 'weigh_negatives': False,
+ 'weigh_only_present_joints': False,
+ 'weigh_part_predictions': False,
+ 'weight_decay': 0.0001}
+2021-10-03 07:55:12 iteration: 108100 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-03 07:56:36 iteration: 108200 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-03 07:58:00 iteration: 108300 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-03 07:59:25 iteration: 108400 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-03 08:00:48 iteration: 108500 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-03 08:02:13 iteration: 108600 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-03 08:03:37 iteration: 108700 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-03 08:05:02 iteration: 108800 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-03 08:06:27 iteration: 108900 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-03 08:07:51 iteration: 109000 loss: 0.0003 lr: 1.0000000656873453e-05
+2021-10-03 08:09:16 iteration: 109100 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-03 08:10:41 iteration: 109200 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-03 08:12:05 iteration: 109300 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-03 08:13:30 iteration: 109400 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-03 08:14:54 iteration: 109500 loss: 0.0003 lr: 1.0000000656873453e-05
+2021-10-03 08:16:19 iteration: 109600 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-03 08:17:43 iteration: 109700 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-03 08:19:08 iteration: 109800 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-03 08:20:33 iteration: 109900 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-03 08:21:57 iteration: 110000 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-03 08:23:22 iteration: 110100 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-03 08:24:47 iteration: 110200 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-03 08:26:11 iteration: 110300 loss: 0.0003 lr: 1.0000000656873453e-05
+2021-10-03 08:27:35 iteration: 110400 loss: 0.0003 lr: 1.0000000656873453e-05
+2021-10-03 08:28:59 iteration: 110500 loss: 0.0003 lr: 1.0000000656873453e-05
+2021-10-03 08:30:23 iteration: 110600 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-03 08:31:47 iteration: 110700 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-03 08:33:11 iteration: 110800 loss: 0.0003 lr: 1.0000000656873453e-05
+2021-10-03 08:34:35 iteration: 110900 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-03 08:35:59 iteration: 111000 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-03 08:37:23 iteration: 111100 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-03 08:38:48 iteration: 111200 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-03 08:40:13 iteration: 111300 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-03 08:41:38 iteration: 111400 loss: 0.0003 lr: 1.0000000656873453e-05
+2021-10-03 08:43:02 iteration: 111500 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-03 08:44:27 iteration: 111600 loss: 0.0003 lr: 1.0000000656873453e-05
+2021-10-03 08:45:51 iteration: 111700 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-03 08:47:15 iteration: 111800 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-03 08:48:39 iteration: 111900 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-03 08:50:03 iteration: 112000 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-03 08:51:28 iteration: 112100 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-03 08:52:52 iteration: 112200 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-03 08:54:17 iteration: 112300 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-03 08:55:41 iteration: 112400 loss: 0.0003 lr: 1.0000000656873453e-05
+2021-10-03 08:57:05 iteration: 112500 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-03 08:58:29 iteration: 112600 loss: 0.0003 lr: 1.0000000656873453e-05
+2021-10-03 08:59:53 iteration: 112700 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-03 09:01:17 iteration: 112800 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-03 09:02:41 iteration: 112900 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-03 09:04:05 iteration: 113000 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-03 09:05:29 iteration: 113100 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-03 09:06:53 iteration: 113200 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-03 09:08:16 iteration: 113300 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-03 09:09:40 iteration: 113400 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-03 09:11:04 iteration: 113500 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-03 09:12:28 iteration: 113600 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-03 09:13:52 iteration: 113700 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-03 09:15:16 iteration: 113800 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-03 09:16:40 iteration: 113900 loss: 0.0003 lr: 1.0000000656873453e-05
+2021-10-03 09:18:03 iteration: 114000 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-03 09:19:28 iteration: 114100 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-03 09:20:52 iteration: 114200 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-03 09:22:16 iteration: 114300 loss: 0.0005 lr: 1.0000000656873453e-05
+2021-10-03 09:23:40 iteration: 114400 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-03 09:25:05 iteration: 114500 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-03 09:26:30 iteration: 114600 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-03 09:27:54 iteration: 114700 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-03 09:29:19 iteration: 114800 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-03 09:30:43 iteration: 114900 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-03 09:32:08 iteration: 115000 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-03 09:33:32 iteration: 115100 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-03 09:34:57 iteration: 115200 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-03 09:36:22 iteration: 115300 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-03 09:37:46 iteration: 115400 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-03 09:39:11 iteration: 115500 loss: 0.0003 lr: 1.0000000656873453e-05
+2021-10-03 09:40:35 iteration: 115600 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-03 09:42:00 iteration: 115700 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-03 09:43:24 iteration: 115800 loss: 0.0003 lr: 1.0000000656873453e-05
+2021-10-03 09:44:49 iteration: 115900 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-03 09:46:14 iteration: 116000 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-03 09:47:38 iteration: 116100 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-03 09:49:02 iteration: 116200 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-03 09:50:27 iteration: 116300 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-03 09:51:52 iteration: 116400 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-03 09:53:17 iteration: 116500 loss: 0.0003 lr: 1.0000000656873453e-05
+2021-10-03 09:54:41 iteration: 116600 loss: 0.0003 lr: 1.0000000656873453e-05
+2021-10-03 09:56:06 iteration: 116700 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-03 09:57:31 iteration: 116800 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-03 09:58:56 iteration: 116900 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-03 10:00:20 iteration: 117000 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-03 10:01:45 iteration: 117100 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-03 10:03:10 iteration: 117200 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-03 10:04:35 iteration: 117300 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-03 10:06:00 iteration: 117400 loss: 0.0003 lr: 1.0000000656873453e-05
+2021-10-03 10:07:24 iteration: 117500 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-03 10:08:49 iteration: 117600 loss: 0.0003 lr: 1.0000000656873453e-05
+2021-10-03 10:10:14 iteration: 117700 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-03 10:11:39 iteration: 117800 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-03 10:13:03 iteration: 117900 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-03 10:14:28 iteration: 118000 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-03 10:15:53 iteration: 118100 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-03 10:17:17 iteration: 118200 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-03 10:18:42 iteration: 118300 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-03 10:20:07 iteration: 118400 loss: 0.0003 lr: 1.0000000656873453e-05
+2021-10-03 10:21:31 iteration: 118500 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-03 10:22:56 iteration: 118600 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-03 10:24:20 iteration: 118700 loss: 0.0003 lr: 1.0000000656873453e-05
+2021-10-03 10:25:44 iteration: 118800 loss: 0.0003 lr: 1.0000000656873453e-05
+2021-10-03 10:27:09 iteration: 118900 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-03 10:28:33 iteration: 119000 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-03 10:29:57 iteration: 119100 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-03 10:31:22 iteration: 119200 loss: 0.0003 lr: 1.0000000656873453e-05
+2021-10-03 10:32:46 iteration: 119300 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-03 10:34:10 iteration: 119400 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-03 10:35:34 iteration: 119500 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-03 10:36:58 iteration: 119600 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-03 10:38:23 iteration: 119700 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-03 10:39:47 iteration: 119800 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-03 10:41:11 iteration: 119900 loss: 0.0003 lr: 1.0000000656873453e-05
+2021-10-03 10:42:35 iteration: 120000 loss: 0.0003 lr: 1.0000000656873453e-05
+2021-10-03 10:44:00 iteration: 120100 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-03 10:45:25 iteration: 120200 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-03 10:46:49 iteration: 120300 loss: 0.0003 lr: 1.0000000656873453e-05
+2021-10-03 10:48:13 iteration: 120400 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-03 10:49:38 iteration: 120500 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-03 10:51:02 iteration: 120600 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-03 10:52:26 iteration: 120700 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-03 10:53:51 iteration: 120800 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-03 10:55:15 iteration: 120900 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-03 10:56:39 iteration: 121000 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-03 10:58:03 iteration: 121100 loss: 0.0003 lr: 1.0000000656873453e-05
+2021-10-03 10:59:28 iteration: 121200 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-03 11:00:52 iteration: 121300 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-03 11:02:16 iteration: 121400 loss: 0.0003 lr: 1.0000000656873453e-05
+2021-10-03 11:03:41 iteration: 121500 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-03 11:05:05 iteration: 121600 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-03 11:06:29 iteration: 121700 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-03 11:07:53 iteration: 121800 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-03 11:09:18 iteration: 121900 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-03 11:10:42 iteration: 122000 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-03 11:12:06 iteration: 122100 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-03 11:13:30 iteration: 122200 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-03 11:14:55 iteration: 122300 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-03 11:16:19 iteration: 122400 loss: 0.0003 lr: 1.0000000656873453e-05
+2021-10-03 11:17:43 iteration: 122500 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-03 11:19:08 iteration: 122600 loss: 0.0003 lr: 1.0000000656873453e-05
+2021-10-03 11:20:32 iteration: 122700 loss: 0.0003 lr: 1.0000000656873453e-05
+2021-10-03 11:21:56 iteration: 122800 loss: 0.0003 lr: 1.0000000656873453e-05
+2021-10-03 11:23:21 iteration: 122900 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-03 11:24:45 iteration: 123000 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-03 11:26:10 iteration: 123100 loss: 0.0005 lr: 1.0000000656873453e-05
+2021-10-03 11:27:34 iteration: 123200 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-03 11:28:59 iteration: 123300 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-03 11:30:23 iteration: 123400 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-03 11:31:47 iteration: 123500 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-03 11:33:12 iteration: 123600 loss: 0.0003 lr: 1.0000000656873453e-05
+2021-10-03 11:34:36 iteration: 123700 loss: 0.0003 lr: 1.0000000656873453e-05
+2021-10-03 11:36:01 iteration: 123800 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-03 11:37:25 iteration: 123900 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-03 11:38:49 iteration: 124000 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-03 11:40:14 iteration: 124100 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-03 11:41:38 iteration: 124200 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-03 11:43:02 iteration: 124300 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-03 12:22:29 Config:
+{'all_joints': [[0],
+                [1],
+                [2],
+                [3],
+                [4],
+                [5],
+                [6],
+                [7],
+                [8],
+                [9],
+                [10],
+                [11],
+                [12],
+                [13],
+                [14],
+                [15]],
+ 'all_joints_names': ['earr',
+                      'earl',
+                      'eyer',
+                      'eyel',
+                      'nose',
+                      'throat',
+                      'elbowr',
+                      'elbowl',
+                      'handr',
+                      'handl',
+                      'tailbase',
+                      'tailtip',
+                      'kneer',
+                      'kneel',
+                      'ankler',
+                      'anklel'],
+ 'alpha_r': 0.02,
+ 'apply_prob': 0.5,
+ 'batch_size': 1,
+ 'clahe': True,
+ 'claheratio': 0.1,
+ 'crop_pad': 0,
+ 'crop_sampling': 'hybrid',
+ 'crop_size': [400, 400],
+ 'cropratio': 0.4,
+ 'dataset': 'training-datasets/iteration-0/UnaugmentedDataSet_Simba '
+            'ModifiedAug27/Simba Modified_Hamila95shuffle0.mat',
+ 'dataset_type': 'default',
+ 'decay_steps': 30000,
+ 'deterministic': False,
+ 'display_iters': 1000,
+ 'edge': False,
+ 'emboss': {'alpha': [0.0, 1.0], 'embossratio': 0.1, 'strength': [0.5, 1.5]},
+ 'fg_fraction': 0.25,
+ 'global_scale': 0.8,
+ 'histeq': True,
+ 'histeqratio': 0.1,
+ 'init_weights': '/content/drive/MyDrive/DLC/Simba '
+                 'Modified-Hamila-2021-08-27/dlc-models/iteration-0/Simba '
+                 'ModifiedAug27-trainset95shuffle0/train/snapshot-108000',
+ 'intermediate_supervision': False,
+ 'intermediate_supervision_layer': 12,
+ 'location_refinement': True,
+ 'locref_huber_loss': True,
+ 'locref_loss_weight': 0.05,
+ 'locref_stdev': 7.2801,
+ 'log_dir': 'log',
+ 'lr_init': 0.0005,
+ 'max_input_size': 1500,
+ 'max_shift': 0.4,
+ 'mean_pixel': [123.68, 116.779, 103.939],
+ 'metadataset': 'training-datasets/iteration-0/UnaugmentedDataSet_Simba '
+                'ModifiedAug27/Documentation_data-Simba '
+                'Modified_95shuffle0.pickle',
+ 'min_input_size': 64,
+ 'mirror': False,
+ 'multi_stage': False,
+ 'multi_step': [[0.005, 10000],
+                [0.02, 430000],
+                [0.002, 730000],
+                [0.001, 1030000]],
+ 'net_type': 'efficientnet-b0',
+ 'num_joints': 16,
+ 'optimizer': 'sgd',
+ 'pairwise_huber_loss': False,
+ 'pairwise_predict': False,
+ 'partaffinityfield_predict': False,
+ 'pos_dist_thresh': 17,
+ 'pre_resize': [],
+ 'project_path': '/content/drive/MyDrive/DLC/Simba Modified-Hamila-2021-08-27',
+ 'regularize': False,
+ 'rotation': 25,
+ 'rotratio': 0.4,
+ 'save_iters': 50000,
+ 'scale_jitter_lo': 0.5,
+ 'scale_jitter_up': 1.25,
+ 'scoremap_dir': 'test',
+ 'sharpen': False,
+ 'sharpenratio': 0.3,
+ 'shuffle': True,
+ 'snapshot_prefix': '/content/drive/MyDrive/DLC/Simba '
+                    'Modified-Hamila-2021-08-27/dlc-models/iteration-0/Simba '
+                    'ModifiedAug27-trainset95shuffle0/train/snapshot',
+ 'stride': 8.0,
+ 'weigh_negatives': False,
+ 'weigh_only_present_joints': False,
+ 'weigh_part_predictions': False,
+ 'weight_decay': 0.0001}
+2021-10-03 12:22:51 Config:
+{'all_joints': [[0],
+                [1],
+                [2],
+                [3],
+                [4],
+                [5],
+                [6],
+                [7],
+                [8],
+                [9],
+                [10],
+                [11],
+                [12],
+                [13],
+                [14],
+                [15]],
+ 'all_joints_names': ['earr',
+                      'earl',
+                      'eyer',
+                      'eyel',
+                      'nose',
+                      'throat',
+                      'elbowr',
+                      'elbowl',
+                      'handr',
+                      'handl',
+                      'tailbase',
+                      'tailtip',
+                      'kneer',
+                      'kneel',
+                      'ankler',
+                      'anklel'],
+ 'alpha_r': 0.02,
+ 'apply_prob': 0.5,
+ 'batch_size': 1,
+ 'clahe': True,
+ 'claheratio': 0.1,
+ 'crop_pad': 0,
+ 'crop_sampling': 'hybrid',
+ 'crop_size': [400, 400],
+ 'cropratio': 0.4,
+ 'dataset': 'training-datasets/iteration-0/UnaugmentedDataSet_Simba '
+            'ModifiedAug27/Simba Modified_Hamila95shuffle0.mat',
+ 'dataset_type': 'default',
+ 'decay_steps': 30000,
+ 'deterministic': False,
+ 'display_iters': 1000,
+ 'edge': False,
+ 'emboss': {'alpha': [0.0, 1.0], 'embossratio': 0.1, 'strength': [0.5, 1.5]},
+ 'fg_fraction': 0.25,
+ 'global_scale': 0.8,
+ 'histeq': True,
+ 'histeqratio': 0.1,
+ 'init_weights': '/content/drive/MyDrive/DLC/Simba '
+                 'Modified-Hamila-2021-08-27/dlc-models/iteration-0/Simba '
+                 'ModifiedAug27-trainset95shuffle0/train/snapshot-123000',
+ 'intermediate_supervision': False,
+ 'intermediate_supervision_layer': 12,
+ 'location_refinement': True,
+ 'locref_huber_loss': True,
+ 'locref_loss_weight': 0.05,
+ 'locref_stdev': 7.2801,
+ 'log_dir': 'log',
+ 'lr_init': 0.0005,
+ 'max_input_size': 1500,
+ 'max_shift': 0.4,
+ 'mean_pixel': [123.68, 116.779, 103.939],
+ 'metadataset': 'training-datasets/iteration-0/UnaugmentedDataSet_Simba '
+                'ModifiedAug27/Documentation_data-Simba '
+                'Modified_95shuffle0.pickle',
+ 'min_input_size': 64,
+ 'mirror': False,
+ 'multi_stage': False,
+ 'multi_step': [[0.005, 10000],
+                [0.02, 430000],
+                [0.002, 730000],
+                [0.001, 1030000]],
+ 'net_type': 'efficientnet-b0',
+ 'num_joints': 16,
+ 'optimizer': 'sgd',
+ 'pairwise_huber_loss': False,
+ 'pairwise_predict': False,
+ 'partaffinityfield_predict': False,
+ 'pos_dist_thresh': 17,
+ 'pre_resize': [],
+ 'project_path': '/content/drive/MyDrive/DLC/Simba Modified-Hamila-2021-08-27',
+ 'regularize': False,
+ 'rotation': 25,
+ 'rotratio': 0.4,
+ 'save_iters': 50000,
+ 'scale_jitter_lo': 0.5,
+ 'scale_jitter_up': 1.25,
+ 'scoremap_dir': 'test',
+ 'sharpen': False,
+ 'sharpenratio': 0.3,
+ 'shuffle': True,
+ 'snapshot_prefix': '/content/drive/MyDrive/DLC/Simba '
+                    'Modified-Hamila-2021-08-27/dlc-models/iteration-0/Simba '
+                    'ModifiedAug27-trainset95shuffle0/train/snapshot',
+ 'stride': 8.0,
+ 'weigh_negatives': False,
+ 'weigh_only_present_joints': False,
+ 'weigh_part_predictions': False,
+ 'weight_decay': 0.0001}
+2021-10-03 12:25:23 iteration: 123100 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-03 12:26:56 iteration: 123200 loss: 0.0003 lr: 1.0000000656873453e-05
+2021-10-03 12:28:29 iteration: 123300 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-03 12:30:02 iteration: 123400 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-03 12:31:35 iteration: 123500 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-03 12:33:08 iteration: 123600 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-03 12:34:41 iteration: 123700 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-03 12:36:14 iteration: 123800 loss: 0.0003 lr: 1.0000000656873453e-05
+2021-10-03 12:37:47 iteration: 123900 loss: 0.0003 lr: 1.0000000656873453e-05
+2021-10-03 12:39:19 iteration: 124000 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-03 12:40:52 iteration: 124100 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-03 12:42:25 iteration: 124200 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-03 12:43:58 iteration: 124300 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-03 12:45:32 iteration: 124400 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-03 12:47:06 iteration: 124500 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-03 12:48:40 iteration: 124600 loss: 0.0003 lr: 1.0000000656873453e-05
+2021-10-03 12:50:14 iteration: 124700 loss: 0.0003 lr: 1.0000000656873453e-05
+2021-10-03 12:51:48 iteration: 124800 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-03 12:53:21 iteration: 124900 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-03 12:54:55 iteration: 125000 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-03 12:56:28 iteration: 125100 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-03 12:58:01 iteration: 125200 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-03 12:59:34 iteration: 125300 loss: 0.0005 lr: 1.0000000656873453e-05
+2021-10-03 13:01:06 iteration: 125400 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-03 13:02:40 iteration: 125500 loss: 0.0003 lr: 1.0000000656873453e-05
+2021-10-03 13:04:13 iteration: 125600 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-03 13:05:46 iteration: 125700 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-03 13:07:18 iteration: 125800 loss: 0.0003 lr: 1.0000000656873453e-05
+2021-10-03 13:08:51 iteration: 125900 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-03 13:10:24 iteration: 126000 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-03 13:11:58 iteration: 126100 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-03 13:13:31 iteration: 126200 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-03 13:15:04 iteration: 126300 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-03 13:16:36 iteration: 126400 loss: 0.0003 lr: 1.0000000656873453e-05
+2021-10-03 13:18:09 iteration: 126500 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-03 13:19:42 iteration: 126600 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-03 13:21:14 iteration: 126700 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-03 13:22:47 iteration: 126800 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-03 13:24:20 iteration: 126900 loss: 0.0003 lr: 1.0000000656873453e-05
+2021-10-03 13:25:53 iteration: 127000 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-03 13:27:25 iteration: 127100 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-03 13:28:57 iteration: 127200 loss: 0.0003 lr: 1.0000000656873453e-05
+2021-10-03 13:30:30 iteration: 127300 loss: 0.0003 lr: 1.0000000656873453e-05
+2021-10-03 13:32:01 iteration: 127400 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-03 13:33:33 iteration: 127500 loss: 0.0003 lr: 1.0000000656873453e-05
+2021-10-03 13:35:06 iteration: 127600 loss: 0.0003 lr: 1.0000000656873453e-05
+2021-10-03 13:36:38 iteration: 127700 loss: 0.0003 lr: 1.0000000656873453e-05
+2021-10-03 13:38:10 iteration: 127800 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-03 13:39:43 iteration: 127900 loss: 0.0003 lr: 1.0000000656873453e-05
+2021-10-03 13:41:16 iteration: 128000 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-03 13:42:49 iteration: 128100 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-03 13:44:22 iteration: 128200 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-03 13:45:55 iteration: 128300 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-03 13:47:27 iteration: 128400 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-03 13:49:00 iteration: 128500 loss: 0.0003 lr: 1.0000000656873453e-05
+2021-10-03 13:50:33 iteration: 128600 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-03 13:52:05 iteration: 128700 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-03 13:53:38 iteration: 128800 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-03 13:55:10 iteration: 128900 loss: 0.0003 lr: 1.0000000656873453e-05
+2021-10-03 13:56:43 iteration: 129000 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-03 13:58:16 iteration: 129100 loss: 0.0003 lr: 1.0000000656873453e-05
+2021-10-03 13:59:49 iteration: 129200 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-03 14:01:22 iteration: 129300 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-03 14:02:54 iteration: 129400 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-03 14:04:27 iteration: 129500 loss: 0.0003 lr: 1.0000000656873453e-05
+2021-10-03 14:05:58 iteration: 129600 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-03 14:07:29 iteration: 129700 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-03 14:09:00 iteration: 129800 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-03 14:10:31 iteration: 129900 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-03 14:12:02 iteration: 130000 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-03 14:13:34 iteration: 130100 loss: 0.0003 lr: 1.0000000656873453e-05
+2021-10-03 14:15:06 iteration: 130200 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-03 14:16:38 iteration: 130300 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-03 14:18:11 iteration: 130400 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-03 14:19:43 iteration: 130500 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-03 14:21:16 iteration: 130600 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-03 14:22:49 iteration: 130700 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-03 14:24:21 iteration: 130800 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-03 14:25:53 iteration: 130900 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-03 14:27:25 iteration: 131000 loss: 0.0003 lr: 1.0000000656873453e-05
+2021-10-03 14:28:58 iteration: 131100 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-03 14:30:30 iteration: 131200 loss: 0.0003 lr: 1.0000000656873453e-05
+2021-10-03 14:32:03 iteration: 131300 loss: 0.0005 lr: 1.0000000656873453e-05
+2021-10-03 14:33:35 iteration: 131400 loss: 0.0003 lr: 1.0000000656873453e-05
+2021-10-03 14:35:07 iteration: 131500 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-03 14:36:40 iteration: 131600 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-03 14:38:13 iteration: 131700 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-03 14:39:45 iteration: 131800 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-03 14:41:18 iteration: 131900 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-03 14:42:51 iteration: 132000 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-03 14:44:24 iteration: 132100 loss: 0.0003 lr: 1.0000000656873453e-05
+2021-10-03 14:45:56 iteration: 132200 loss: 0.0003 lr: 1.0000000656873453e-05
+2021-10-03 14:47:29 iteration: 132300 loss: 0.0003 lr: 1.0000000656873453e-05
+2021-10-03 14:49:01 iteration: 132400 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-03 14:50:34 iteration: 132500 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-03 14:52:06 iteration: 132600 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-03 14:53:39 iteration: 132700 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-03 14:55:11 iteration: 132800 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-03 14:56:44 iteration: 132900 loss: 0.0003 lr: 1.0000000656873453e-05
+2021-10-03 14:58:16 iteration: 133000 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-03 14:59:49 iteration: 133100 loss: 0.0003 lr: 1.0000000656873453e-05
+2021-10-03 15:01:21 iteration: 133200 loss: 0.0003 lr: 1.0000000656873453e-05
+2021-10-03 15:02:53 iteration: 133300 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-03 15:04:26 iteration: 133400 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-03 15:07:59 Config:
+{'all_joints': [[0],
+                [1],
+                [2],
+                [3],
+                [4],
+                [5],
+                [6],
+                [7],
+                [8],
+                [9],
+                [10],
+                [11],
+                [12],
+                [13],
+                [14],
+                [15]],
+ 'all_joints_names': ['earr',
+                      'earl',
+                      'eyer',
+                      'eyel',
+                      'nose',
+                      'throat',
+                      'elbowr',
+                      'elbowl',
+                      'handr',
+                      'handl',
+                      'tailbase',
+                      'tailtip',
+                      'kneer',
+                      'kneel',
+                      'ankler',
+                      'anklel'],
+ 'alpha_r': 0.02,
+ 'apply_prob': 0.5,
+ 'batch_size': 1,
+ 'clahe': True,
+ 'claheratio': 0.1,
+ 'crop_pad': 0,
+ 'crop_sampling': 'hybrid',
+ 'crop_size': [400, 400],
+ 'cropratio': 0.4,
+ 'dataset': 'training-datasets/iteration-0/UnaugmentedDataSet_Simba '
+            'ModifiedAug27/Simba Modified_Hamila95shuffle0.mat',
+ 'dataset_type': 'default',
+ 'decay_steps': 30000,
+ 'deterministic': False,
+ 'display_iters': 1000,
+ 'edge': False,
+ 'emboss': {'alpha': [0.0, 1.0], 'embossratio': 0.1, 'strength': [0.5, 1.5]},
+ 'fg_fraction': 0.25,
+ 'global_scale': 0.8,
+ 'histeq': True,
+ 'histeqratio': 0.1,
+ 'init_weights': '/content/drive/MyDrive/DLC/Simba '
+                 'Modified-Hamila-2021-08-27/dlc-models/iteration-0/Simba '
+                 'ModifiedAug27-trainset95shuffle0/train/snapshot-132000',
+ 'intermediate_supervision': False,
+ 'intermediate_supervision_layer': 12,
+ 'location_refinement': True,
+ 'locref_huber_loss': True,
+ 'locref_loss_weight': 0.05,
+ 'locref_stdev': 7.2801,
+ 'log_dir': 'log',
+ 'lr_init': 0.0005,
+ 'max_input_size': 1500,
+ 'max_shift': 0.4,
+ 'mean_pixel': [123.68, 116.779, 103.939],
+ 'metadataset': 'training-datasets/iteration-0/UnaugmentedDataSet_Simba '
+                'ModifiedAug27/Documentation_data-Simba '
+                'Modified_95shuffle0.pickle',
+ 'min_input_size': 64,
+ 'mirror': False,
+ 'multi_stage': False,
+ 'multi_step': [[0.005, 10000],
+                [0.02, 430000],
+                [0.002, 730000],
+                [0.001, 1030000]],
+ 'net_type': 'efficientnet-b0',
+ 'num_joints': 16,
+ 'optimizer': 'sgd',
+ 'pairwise_huber_loss': False,
+ 'pairwise_predict': False,
+ 'partaffinityfield_predict': False,
+ 'pos_dist_thresh': 17,
+ 'pre_resize': [],
+ 'project_path': '/content/drive/MyDrive/DLC/Simba Modified-Hamila-2021-08-27',
+ 'regularize': False,
+ 'rotation': 25,
+ 'rotratio': 0.4,
+ 'save_iters': 50000,
+ 'scale_jitter_lo': 0.5,
+ 'scale_jitter_up': 1.25,
+ 'scoremap_dir': 'test',
+ 'sharpen': False,
+ 'sharpenratio': 0.3,
+ 'shuffle': True,
+ 'snapshot_prefix': '/content/drive/MyDrive/DLC/Simba '
+                    'Modified-Hamila-2021-08-27/dlc-models/iteration-0/Simba '
+                    'ModifiedAug27-trainset95shuffle0/train/snapshot',
+ 'stride': 8.0,
+ 'weigh_negatives': False,
+ 'weigh_only_present_joints': False,
+ 'weigh_part_predictions': False,
+ 'weight_decay': 0.0001}
+2021-10-03 15:10:32 iteration: 132100 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-03 15:12:02 iteration: 132200 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-03 15:13:32 iteration: 132300 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-03 15:15:02 iteration: 132400 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-03 15:16:33 iteration: 132500 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-03 15:18:03 iteration: 132600 loss: 0.0003 lr: 1.0000000656873453e-05
+2021-10-03 15:19:33 iteration: 132700 loss: 0.0003 lr: 1.0000000656873453e-05
+2021-10-03 15:21:04 iteration: 132800 loss: 0.0003 lr: 1.0000000656873453e-05
+2021-10-03 15:22:34 iteration: 132900 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-03 15:24:04 iteration: 133000 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-03 15:25:35 iteration: 133100 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-03 15:27:05 iteration: 133200 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-03 15:28:36 iteration: 133300 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-03 15:30:06 iteration: 133400 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-03 15:31:37 iteration: 133500 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-03 15:33:07 iteration: 133600 loss: 0.0003 lr: 1.0000000656873453e-05
+2021-10-03 15:34:38 iteration: 133700 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-03 15:36:08 iteration: 133800 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-03 15:37:39 iteration: 133900 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-03 15:39:09 iteration: 134000 loss: 0.0003 lr: 1.0000000656873453e-05
+2021-10-03 15:40:40 iteration: 134100 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-03 15:42:10 iteration: 134200 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-03 15:43:40 iteration: 134300 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-03 15:45:09 iteration: 134400 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-03 15:46:39 iteration: 134500 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-03 15:48:09 iteration: 134600 loss: 0.0003 lr: 1.0000000656873453e-05
+2021-10-03 15:49:39 iteration: 134700 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-03 15:51:09 iteration: 134800 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-03 15:52:39 iteration: 134900 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-03 15:54:10 iteration: 135000 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-03 15:55:41 iteration: 135100 loss: 0.0003 lr: 1.0000000656873453e-05
+2021-10-03 15:57:12 iteration: 135200 loss: 0.0003 lr: 1.0000000656873453e-05
+2021-10-03 15:58:42 iteration: 135300 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-03 16:00:12 iteration: 135400 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-03 16:01:42 iteration: 135500 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-03 16:03:12 iteration: 135600 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-03 16:04:42 iteration: 135700 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-03 16:06:12 iteration: 135800 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-03 16:07:42 iteration: 135900 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-03 16:09:12 iteration: 136000 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-03 16:10:42 iteration: 136100 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-03 16:12:13 iteration: 136200 loss: 0.0003 lr: 1.0000000656873453e-05
+2021-10-03 16:13:43 iteration: 136300 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-03 16:15:13 iteration: 136400 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-03 16:16:43 iteration: 136500 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-03 16:18:14 iteration: 136600 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-03 16:19:44 iteration: 136700 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-03 16:21:14 iteration: 136800 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-03 16:22:45 iteration: 136900 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-03 16:24:15 iteration: 137000 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-03 16:25:45 iteration: 137100 loss: 0.0003 lr: 1.0000000656873453e-05
+2021-10-03 16:27:15 iteration: 137200 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-03 16:28:46 iteration: 137300 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-03 16:30:16 iteration: 137400 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-03 16:31:46 iteration: 137500 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-03 16:33:17 iteration: 137600 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-03 16:34:47 iteration: 137700 loss: 0.0003 lr: 1.0000000656873453e-05
+2021-10-03 16:36:17 iteration: 137800 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-03 16:37:48 iteration: 137900 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-03 16:39:18 iteration: 138000 loss: 0.0003 lr: 1.0000000656873453e-05
+2021-10-03 16:40:49 iteration: 138100 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-03 16:42:19 iteration: 138200 loss: 0.0003 lr: 1.0000000656873453e-05
+2021-10-03 16:43:49 iteration: 138300 loss: 0.0003 lr: 1.0000000656873453e-05
+2021-10-03 16:45:20 iteration: 138400 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-03 16:46:50 iteration: 138500 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-03 16:48:20 iteration: 138600 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-03 16:49:50 iteration: 138700 loss: 0.0003 lr: 1.0000000656873453e-05
+2021-10-03 16:51:21 iteration: 138800 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-03 16:52:51 iteration: 138900 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-03 16:54:21 iteration: 139000 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-03 16:55:51 iteration: 139100 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-03 16:57:21 iteration: 139200 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-03 16:58:51 iteration: 139300 loss: 0.0003 lr: 1.0000000656873453e-05
+2021-10-03 17:00:21 iteration: 139400 loss: 0.0003 lr: 1.0000000656873453e-05
+2021-10-03 17:01:52 iteration: 139500 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-03 17:03:22 iteration: 139600 loss: 0.0003 lr: 1.0000000656873453e-05
+2021-10-03 17:04:52 iteration: 139700 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-03 17:06:22 iteration: 139800 loss: 0.0003 lr: 1.0000000656873453e-05
+2021-10-03 17:07:52 iteration: 139900 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-03 17:09:22 iteration: 140000 loss: 0.0003 lr: 1.0000000656873453e-05
+2021-10-03 17:10:52 iteration: 140100 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-03 17:12:23 iteration: 140200 loss: 0.0003 lr: 1.0000000656873453e-05
+2021-10-03 17:13:53 iteration: 140300 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-03 17:15:24 iteration: 140400 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-03 17:16:55 iteration: 140500 loss: 0.0005 lr: 1.0000000656873453e-05
+2021-10-03 17:18:25 iteration: 140600 loss: 0.0003 lr: 1.0000000656873453e-05
+2021-10-03 17:19:56 iteration: 140700 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-03 17:21:27 iteration: 140800 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-03 17:22:58 iteration: 140900 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-03 17:24:28 iteration: 141000 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-03 17:26:00 iteration: 141100 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-03 17:27:30 iteration: 141200 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-03 17:29:01 iteration: 141300 loss: 0.0003 lr: 1.0000000656873453e-05
+2021-10-03 17:30:32 iteration: 141400 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-03 17:32:02 iteration: 141500 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-03 17:33:33 iteration: 141600 loss: 0.0005 lr: 1.0000000656873453e-05
+2021-10-03 17:35:04 iteration: 141700 loss: 0.0003 lr: 1.0000000656873453e-05
+2021-10-03 17:36:34 iteration: 141800 loss: 0.0003 lr: 1.0000000656873453e-05
+2021-10-03 17:38:05 iteration: 141900 loss: 0.0003 lr: 1.0000000656873453e-05
+2021-10-03 17:39:36 iteration: 142000 loss: 0.0003 lr: 1.0000000656873453e-05
+2021-10-03 17:41:06 iteration: 142100 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-03 17:42:37 iteration: 142200 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-03 17:44:08 iteration: 142300 loss: 0.0003 lr: 1.0000000656873453e-05
+2021-10-03 17:45:38 iteration: 142400 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-03 17:47:09 iteration: 142500 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-03 17:48:40 iteration: 142600 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-03 17:50:11 iteration: 142700 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-03 17:51:41 iteration: 142800 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-03 17:53:12 iteration: 142900 loss: 0.0003 lr: 1.0000000656873453e-05
+2021-10-03 17:54:43 iteration: 143000 loss: 0.0003 lr: 1.0000000656873453e-05
+2021-10-03 17:56:13 iteration: 143100 loss: 0.0003 lr: 1.0000000656873453e-05
+2021-10-03 17:57:44 iteration: 143200 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-03 17:59:15 iteration: 143300 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-03 18:00:45 iteration: 143400 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-03 18:02:16 iteration: 143500 loss: 0.0003 lr: 1.0000000656873453e-05
+2021-10-03 18:03:47 iteration: 143600 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-03 18:05:17 iteration: 143700 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-03 18:06:48 iteration: 143800 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-03 18:08:19 iteration: 143900 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-03 18:09:49 iteration: 144000 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-03 18:11:21 iteration: 144100 loss: 0.0003 lr: 1.0000000656873453e-05
+2021-10-03 18:12:51 iteration: 144200 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-03 18:14:22 iteration: 144300 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-03 18:15:53 iteration: 144400 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-03 18:17:23 iteration: 144500 loss: 0.0003 lr: 1.0000000656873453e-05
+2021-10-03 18:18:54 iteration: 144600 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-03 18:20:24 iteration: 144700 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-03 18:21:55 iteration: 144800 loss: 0.0003 lr: 1.0000000656873453e-05
+2021-10-03 18:23:26 iteration: 144900 loss: 0.0003 lr: 1.0000000656873453e-05
+2021-10-03 18:24:57 iteration: 145000 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-03 18:26:27 iteration: 145100 loss: 0.0003 lr: 1.0000000656873453e-05
+2021-10-03 18:27:58 iteration: 145200 loss: 0.0003 lr: 1.0000000656873453e-05
+2021-10-03 18:29:28 iteration: 145300 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-03 18:30:59 iteration: 145400 loss: 0.0003 lr: 1.0000000656873453e-05
+2021-10-03 18:32:30 iteration: 145500 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-03 18:34:01 iteration: 145600 loss: 0.0003 lr: 1.0000000656873453e-05
+2021-10-03 18:35:31 iteration: 145700 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-03 18:37:02 iteration: 145800 loss: 0.0003 lr: 1.0000000656873453e-05
+2021-10-03 18:38:32 iteration: 145900 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-03 18:40:03 iteration: 146000 loss: 0.0003 lr: 1.0000000656873453e-05
+2021-10-03 18:41:33 iteration: 146100 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-03 18:43:04 iteration: 146200 loss: 0.0003 lr: 1.0000000656873453e-05
+2021-10-03 18:44:35 iteration: 146300 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-03 18:46:05 iteration: 146400 loss: 0.0003 lr: 1.0000000656873453e-05
+2021-10-03 18:47:36 iteration: 146500 loss: 0.0003 lr: 1.0000000656873453e-05
+2021-10-03 18:49:06 iteration: 146600 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-03 18:50:37 iteration: 146700 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-03 18:52:08 iteration: 146800 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-03 19:11:09 Config:
+{'all_joints': [[0],
+                [1],
+                [2],
+                [3],
+                [4],
+                [5],
+                [6],
+                [7],
+                [8],
+                [9],
+                [10],
+                [11],
+                [12],
+                [13],
+                [14],
+                [15]],
+ 'all_joints_names': ['earr',
+                      'earl',
+                      'eyer',
+                      'eyel',
+                      'nose',
+                      'throat',
+                      'elbowr',
+                      'elbowl',
+                      'handr',
+                      'handl',
+                      'tailbase',
+                      'tailtip',
+                      'kneer',
+                      'kneel',
+                      'ankler',
+                      'anklel'],
+ 'alpha_r': 0.02,
+ 'apply_prob': 0.5,
+ 'batch_size': 1,
+ 'clahe': True,
+ 'claheratio': 0.1,
+ 'crop_pad': 0,
+ 'crop_sampling': 'hybrid',
+ 'crop_size': [400, 400],
+ 'cropratio': 0.4,
+ 'dataset': 'training-datasets/iteration-0/UnaugmentedDataSet_Simba '
+            'ModifiedAug27/Simba Modified_Hamila95shuffle0.mat',
+ 'dataset_type': 'default',
+ 'decay_steps': 30000,
+ 'deterministic': False,
+ 'display_iters': 1000,
+ 'edge': False,
+ 'emboss': {'alpha': [0.0, 1.0], 'embossratio': 0.1, 'strength': [0.5, 1.5]},
+ 'fg_fraction': 0.25,
+ 'global_scale': 0.8,
+ 'histeq': True,
+ 'histeqratio': 0.1,
+ 'init_weights': '/content/drive/MyDrive/DLC/Simba '
+                 'Modified-Hamila-2021-08-27/dlc-models/iteration-0/Simba '
+                 'ModifiedAug27-trainset95shuffle0/train/snapshot-144000',
+ 'intermediate_supervision': False,
+ 'intermediate_supervision_layer': 12,
+ 'location_refinement': True,
+ 'locref_huber_loss': True,
+ 'locref_loss_weight': 0.05,
+ 'locref_stdev': 7.2801,
+ 'log_dir': 'log',
+ 'lr_init': 0.0005,
+ 'max_input_size': 1500,
+ 'max_shift': 0.4,
+ 'mean_pixel': [123.68, 116.779, 103.939],
+ 'metadataset': 'training-datasets/iteration-0/UnaugmentedDataSet_Simba '
+                'ModifiedAug27/Documentation_data-Simba '
+                'Modified_95shuffle0.pickle',
+ 'min_input_size': 64,
+ 'mirror': False,
+ 'multi_stage': False,
+ 'multi_step': [[0.005, 10000],
+                [0.02, 430000],
+                [0.002, 730000],
+                [0.001, 1030000]],
+ 'net_type': 'efficientnet-b0',
+ 'num_joints': 16,
+ 'optimizer': 'sgd',
+ 'pairwise_huber_loss': False,
+ 'pairwise_predict': False,
+ 'partaffinityfield_predict': False,
+ 'pos_dist_thresh': 17,
+ 'pre_resize': [],
+ 'project_path': '/content/drive/MyDrive/DLC/Simba Modified-Hamila-2021-08-27',
+ 'regularize': False,
+ 'rotation': 25,
+ 'rotratio': 0.4,
+ 'save_iters': 50000,
+ 'scale_jitter_lo': 0.5,
+ 'scale_jitter_up': 1.25,
+ 'scoremap_dir': 'test',
+ 'sharpen': False,
+ 'sharpenratio': 0.3,
+ 'shuffle': True,
+ 'snapshot_prefix': '/content/drive/MyDrive/DLC/Simba '
+                    'Modified-Hamila-2021-08-27/dlc-models/iteration-0/Simba '
+                    'ModifiedAug27-trainset95shuffle0/train/snapshot',
+ 'stride': 8.0,
+ 'weigh_negatives': False,
+ 'weigh_only_present_joints': False,
+ 'weigh_part_predictions': False,
+ 'weight_decay': 0.0001}
+2021-10-03 19:13:35 iteration: 144100 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-03 19:15:00 iteration: 144200 loss: 0.0003 lr: 1.0000000656873453e-05
+2021-10-03 19:16:25 iteration: 144300 loss: 0.0003 lr: 1.0000000656873453e-05
+2021-10-03 19:17:50 iteration: 144400 loss: 0.0003 lr: 1.0000000656873453e-05
+2021-10-03 19:19:14 iteration: 144500 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-03 19:20:39 iteration: 144600 loss: 0.0003 lr: 1.0000000656873453e-05
+2021-10-03 19:22:03 iteration: 144700 loss: 0.0003 lr: 1.0000000656873453e-05
+2021-10-03 19:23:28 iteration: 144800 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-03 19:24:52 iteration: 144900 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-03 19:26:17 iteration: 145000 loss: 0.0003 lr: 1.0000000656873453e-05
+2021-10-03 19:27:41 iteration: 145100 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-03 19:29:06 iteration: 145200 loss: 0.0003 lr: 1.0000000656873453e-05
+2021-10-03 19:30:30 iteration: 145300 loss: 0.0003 lr: 1.0000000656873453e-05
+2021-10-03 19:31:53 iteration: 145400 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-03 19:33:17 iteration: 145500 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-03 19:34:41 iteration: 145600 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-03 19:36:04 iteration: 145700 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-03 19:37:28 iteration: 145800 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-03 19:38:52 iteration: 145900 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-03 19:40:16 iteration: 146000 loss: 0.0003 lr: 1.0000000656873453e-05
+2021-10-03 19:41:39 iteration: 146100 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-03 19:43:03 iteration: 146200 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-03 19:44:27 iteration: 146300 loss: 0.0003 lr: 1.0000000656873453e-05
+2021-10-03 19:45:50 iteration: 146400 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-03 19:47:14 iteration: 146500 loss: 0.0003 lr: 1.0000000656873453e-05
+2021-10-03 19:48:38 iteration: 146600 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-03 19:50:01 iteration: 146700 loss: 0.0003 lr: 1.0000000656873453e-05
+2021-10-03 19:51:25 iteration: 146800 loss: 0.0003 lr: 1.0000000656873453e-05
+2021-10-03 19:52:49 iteration: 146900 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-03 19:54:12 iteration: 147000 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-03 19:55:37 iteration: 147100 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-03 19:57:00 iteration: 147200 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-03 19:58:24 iteration: 147300 loss: 0.0003 lr: 1.0000000656873453e-05
+2021-10-03 19:59:47 iteration: 147400 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-03 20:01:11 iteration: 147500 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-03 20:02:35 iteration: 147600 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-03 20:03:58 iteration: 147700 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-03 20:05:22 iteration: 147800 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-03 20:06:46 iteration: 147900 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-03 20:08:09 iteration: 148000 loss: 0.0003 lr: 1.0000000656873453e-05
+2021-10-03 20:09:33 iteration: 148100 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-03 20:10:57 iteration: 148200 loss: 0.0003 lr: 1.0000000656873453e-05
+2021-10-03 20:12:21 iteration: 148300 loss: 0.0003 lr: 1.0000000656873453e-05
+2021-10-03 20:13:45 iteration: 148400 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-03 20:15:09 iteration: 148500 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-03 20:16:33 iteration: 148600 loss: 0.0003 lr: 1.0000000656873453e-05
+2021-10-03 20:17:57 iteration: 148700 loss: 0.0003 lr: 1.0000000656873453e-05
+2021-10-03 20:19:21 iteration: 148800 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-03 20:20:45 iteration: 148900 loss: 0.0003 lr: 1.0000000656873453e-05
+2021-10-03 20:22:09 iteration: 149000 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-03 20:23:32 iteration: 149100 loss: 0.0003 lr: 1.0000000656873453e-05
+2021-10-03 20:24:56 iteration: 149200 loss: 0.0003 lr: 1.0000000656873453e-05
+2021-10-03 20:26:20 iteration: 149300 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-03 20:27:44 iteration: 149400 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-03 20:29:08 iteration: 149500 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-03 20:30:32 iteration: 149600 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-03 20:31:56 iteration: 149700 loss: 0.0003 lr: 1.0000000656873453e-05
+2021-10-03 20:33:20 iteration: 149800 loss: 0.0003 lr: 1.0000000656873453e-05
+2021-10-03 20:34:44 iteration: 149900 loss: 0.0004 lr: 1.0000000656873453e-05
+2021-10-03 20:36:08 iteration: 150000 loss: 0.0003 lr: 1.0000000656873453e-05
+2021-10-03 20:41:01 NumExpr defaulting to 2 threads.
+2021-10-03 20:41:02 Config:
+{'all_joints': [[0],
+                [1],
+                [2],
+                [3],
+                [4],
+                [5],
+                [6],
+                [7],
+                [8],
+                [9],
+                [10],
+                [11],
+                [12],
+                [13],
+                [14],
+                [15]],
+ 'all_joints_names': ['earr',
+                      'earl',
+                      'eyer',
+                      'eyel',
+                      'nose',
+                      'throat',
+                      'elbowr',
+                      'elbowl',
+                      'handr',
+                      'handl',
+                      'tailbase',
+                      'tailtip',
+                      'kneer',
+                      'kneel',
+                      'ankler',
+                      'anklel'],
+ 'batch_size': 1,
+ 'crop_pad': 0,
+ 'dataset': 'training-datasets/iteration-0/UnaugmentedDataSet_Simba '
+            'ModifiedAug27/Simba Modified_Hamila95shuffle0.mat',
+ 'dataset_type': 'imgaug',
+ 'deterministic': False,
+ 'fg_fraction': 0.25,
+ 'global_scale': 0.8,
+ 'init_weights': '/usr/local/lib/python3.7/dist-packages/deeplabcut/pose_estimation_tensorflow/models/pretrained/efficientnet-b0/model.ckpt',
+ 'intermediate_supervision': False,
+ 'intermediate_supervision_layer': 12,
+ 'location_refinement': True,
+ 'locref_huber_loss': True,
+ 'locref_loss_weight': 1.0,
+ 'locref_stdev': 7.2801,
+ 'log_dir': 'log',
+ 'mean_pixel': [123.68, 116.779, 103.939],
+ 'mirror': False,
+ 'net_type': 'efficientnet-b0',
+ 'num_joints': 16,
+ 'optimizer': 'sgd',
+ 'pairwise_huber_loss': True,
+ 'pairwise_predict': False,
+ 'partaffinityfield_predict': False,
+ 'regularize': False,
+ 'scoremap_dir': 'test',
+ 'shuffle': True,
+ 'snapshot_prefix': '/content/drive/MyDrive/DLC/Simba '
+                    'Modified-Hamila-2021-08-27/dlc-models/iteration-0/Simba '
+                    'ModifiedAug27-trainset95shuffle0/test/snapshot',
+ 'stride': 8.0,
+ 'weigh_negatives': False,
+ 'weigh_only_present_joints': False,
+ 'weigh_part_predictions': False,
+ 'weight_decay': 0.0001}
+2021-10-03 20:41:37 Config:
+{'all_joints': [[0],
+                [1],
+                [2],
+                [3],
+                [4],
+                [5],
+                [6],
+                [7],
+                [8],
+                [9],
+                [10],
+                [11],
+                [12],
+                [13],
+                [14],
+                [15]],
+ 'all_joints_names': ['earr',
+                      'earl',
+                      'eyer',
+                      'eyel',
+                      'nose',
+                      'throat',
+                      'elbowr',
+                      'elbowl',
+                      'handr',
+                      'handl',
+                      'tailbase',
+                      'tailtip',
+                      'kneer',
+                      'kneel',
+                      'ankler',
+                      'anklel'],
+ 'batch_size': 1,
+ 'crop_pad': 0,
+ 'dataset': 'training-datasets/iteration-0/UnaugmentedDataSet_Simba '
+            'ModifiedAug27/Simba Modified_Hamila95shuffle0.mat',
+ 'dataset_type': 'imgaug',
+ 'deterministic': False,
+ 'fg_fraction': 0.25,
+ 'global_scale': 0.8,
+ 'init_weights': '/usr/local/lib/python3.7/dist-packages/deeplabcut/pose_estimation_tensorflow/models/pretrained/efficientnet-b0/model.ckpt',
+ 'intermediate_supervision': False,
+ 'intermediate_supervision_layer': 12,
+ 'location_refinement': True,
+ 'locref_huber_loss': True,
+ 'locref_loss_weight': 1.0,
+ 'locref_stdev': 7.2801,
+ 'log_dir': 'log',
+ 'mean_pixel': [123.68, 116.779, 103.939],
+ 'mirror': False,
+ 'net_type': 'efficientnet-b0',
+ 'num_joints': 16,
+ 'optimizer': 'sgd',
+ 'pairwise_huber_loss': True,
+ 'pairwise_predict': False,
+ 'partaffinityfield_predict': False,
+ 'regularize': False,
+ 'scoremap_dir': 'test',
+ 'shuffle': True,
+ 'snapshot_prefix': '/content/drive/MyDrive/DLC/Simba '
+                    'Modified-Hamila-2021-08-27/dlc-models/iteration-0/Simba '
+                    'ModifiedAug27-trainset95shuffle0/test/snapshot',
+ 'stride': 8.0,
+ 'weigh_negatives': False,
+ 'weigh_only_present_joints': False,
+ 'weigh_part_predictions': False,
+ 'weight_decay': 0.0001}
+2021-10-03 20:42:08 Config:
+{'all_joints': [[0],
+                [1],
+                [2],
+                [3],
+                [4],
+                [5],
+                [6],
+                [7],
+                [8],
+                [9],
+                [10],
+                [11],
+                [12],
+                [13],
+                [14],
+                [15]],
+ 'all_joints_names': ['earr',
+                      'earl',
+                      'eyer',
+                      'eyel',
+                      'nose',
+                      'throat',
+                      'elbowr',
+                      'elbowl',
+                      'handr',
+                      'handl',
+                      'tailbase',
+                      'tailtip',
+                      'kneer',
+                      'kneel',
+                      'ankler',
+                      'anklel'],
+ 'batch_size': 1,
+ 'crop_pad': 0,
+ 'dataset': 'training-datasets/iteration-0/UnaugmentedDataSet_Simba '
+            'ModifiedAug27/Simba Modified_Hamila95shuffle0.mat',
+ 'dataset_type': 'imgaug',
+ 'deterministic': False,
+ 'fg_fraction': 0.25,
+ 'global_scale': 0.8,
+ 'init_weights': '/usr/local/lib/python3.7/dist-packages/deeplabcut/pose_estimation_tensorflow/models/pretrained/efficientnet-b0/model.ckpt',
+ 'intermediate_supervision': False,
+ 'intermediate_supervision_layer': 12,
+ 'location_refinement': True,
+ 'locref_huber_loss': True,
+ 'locref_loss_weight': 1.0,
+ 'locref_stdev': 7.2801,
+ 'log_dir': 'log',
+ 'mean_pixel': [123.68, 116.779, 103.939],
+ 'mirror': False,
+ 'net_type': 'efficientnet-b0',
+ 'num_joints': 16,
+ 'optimizer': 'sgd',
+ 'pairwise_huber_loss': True,
+ 'pairwise_predict': False,
+ 'partaffinityfield_predict': False,
+ 'regularize': False,
+ 'scoremap_dir': 'test',
+ 'shuffle': True,
+ 'snapshot_prefix': '/content/drive/MyDrive/DLC/Simba '
+                    'Modified-Hamila-2021-08-27/dlc-models/iteration-0/Simba '
+                    'ModifiedAug27-trainset95shuffle0/test/snapshot',
+ 'stride': 8.0,
+ 'weigh_negatives': False,
+ 'weigh_only_present_joints': False,
+ 'weigh_part_predictions': False,
+ 'weight_decay': 0.0001}
+2021-10-03 20:42:18 Config:
+{'all_joints': [[0],
+                [1],
+                [2],
+                [3],
+                [4],
+                [5],
+                [6],
+                [7],
+                [8],
+                [9],
+                [10],
+                [11],
+                [12],
+                [13],
+                [14],
+                [15]],
+ 'all_joints_names': ['earr',
+                      'earl',
+                      'eyer',
+                      'eyel',
+                      'nose',
+                      'throat',
+                      'elbowr',
+                      'elbowl',
+                      'handr',
+                      'handl',
+                      'tailbase',
+                      'tailtip',
+                      'kneer',
+                      'kneel',
+                      'ankler',
+                      'anklel'],
+ 'batch_size': 1,
+ 'crop_pad': 0,
+ 'dataset': 'training-datasets/iteration-0/UnaugmentedDataSet_Simba '
+            'ModifiedAug27/Simba Modified_Hamila95shuffle0.mat',
+ 'dataset_type': 'imgaug',
+ 'deterministic': False,
+ 'fg_fraction': 0.25,
+ 'global_scale': 0.8,
+ 'init_weights': '/usr/local/lib/python3.7/dist-packages/deeplabcut/pose_estimation_tensorflow/models/pretrained/efficientnet-b0/model.ckpt',
+ 'intermediate_supervision': False,
+ 'intermediate_supervision_layer': 12,
+ 'location_refinement': True,
+ 'locref_huber_loss': True,
+ 'locref_loss_weight': 1.0,
+ 'locref_stdev': 7.2801,
+ 'log_dir': 'log',
+ 'mean_pixel': [123.68, 116.779, 103.939],
+ 'mirror': False,
+ 'net_type': 'efficientnet-b0',
+ 'num_joints': 16,
+ 'optimizer': 'sgd',
+ 'pairwise_huber_loss': True,
+ 'pairwise_predict': False,
+ 'partaffinityfield_predict': False,
+ 'regularize': False,
+ 'scoremap_dir': 'test',
+ 'shuffle': True,
+ 'snapshot_prefix': '/content/drive/MyDrive/DLC/Simba '
+                    'Modified-Hamila-2021-08-27/dlc-models/iteration-0/Simba '
+                    'ModifiedAug27-trainset95shuffle0/test/snapshot',
+ 'stride': 8.0,
+ 'weigh_negatives': False,
+ 'weigh_only_present_joints': False,
+ 'weigh_part_predictions': False,
+ 'weight_decay': 0.0001}
+2021-10-03 20:57:02 Config:
+{'all_joints': [[0],
+                [1],
+                [2],
+                [3],
+                [4],
+                [5],
+                [6],
+                [7],
+                [8],
+                [9],
+                [10],
+                [11],
+                [12],
+                [13],
+                [14],
+                [15]],
+ 'all_joints_names': ['earr',
+                      'earl',
+                      'eyer',
+                      'eyel',
+                      'nose',
+                      'throat',
+                      'elbowr',
+                      'elbowl',
+                      'handr',
+                      'handl',
+                      'tailbase',
+                      'tailtip',
+                      'kneer',
+                      'kneel',
+                      'ankler',
+                      'anklel'],
+ 'batch_size': 1,
+ 'crop_pad': 0,
+ 'dataset': 'training-datasets/iteration-0/UnaugmentedDataSet_Simba '
+            'ModifiedAug27/Simba Modified_Hamila95shuffle0.mat',
+ 'dataset_type': 'imgaug',
+ 'deterministic': False,
+ 'fg_fraction': 0.25,
+ 'global_scale': 0.8,
+ 'init_weights': '/usr/local/lib/python3.7/dist-packages/deeplabcut/pose_estimation_tensorflow/models/pretrained/efficientnet-b0/model.ckpt',
+ 'intermediate_supervision': False,
+ 'intermediate_supervision_layer': 12,
+ 'location_refinement': True,
+ 'locref_huber_loss': True,
+ 'locref_loss_weight': 1.0,
+ 'locref_stdev': 7.2801,
+ 'log_dir': 'log',
+ 'mean_pixel': [123.68, 116.779, 103.939],
+ 'mirror': False,
+ 'net_type': 'efficientnet-b0',
+ 'num_joints': 16,
+ 'optimizer': 'sgd',
+ 'pairwise_huber_loss': True,
+ 'pairwise_predict': False,
+ 'partaffinityfield_predict': False,
+ 'regularize': False,
+ 'scoremap_dir': 'test',
+ 'shuffle': True,
+ 'snapshot_prefix': '/content/drive/MyDrive/DLC/Simba '
+                    'Modified-Hamila-2021-08-27/dlc-models/iteration-0/Simba '
+                    'ModifiedAug27-trainset95shuffle0/test/snapshot',
+ 'stride': 8.0,
+ 'weigh_negatives': False,
+ 'weigh_only_present_joints': False,
+ 'weigh_part_predictions': False,
+ 'weight_decay': 0.0001}
