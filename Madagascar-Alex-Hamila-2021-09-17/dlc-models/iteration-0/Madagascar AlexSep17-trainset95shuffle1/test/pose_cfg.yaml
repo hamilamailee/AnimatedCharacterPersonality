@@ -1,0 +1,28 @@
+all_joints:
+- [0]
+- [1]
+- [2]
+- [3]
+- [4]
+- [5]
+- [6]
+- [7]
+- [8]
+- [9]
+- [10]
+- [11]
+- [12]
+- [13]
+- [14]
+- [15]
+all_joints_names: [earr, earl, eyer, eyel, nose, throat, elbowr, elbowl, handr, handl,
+  tailbase, tailtip, kneer, kneel, ankler, anklel]
+dataset: training-datasets/iteration-0/UnaugmentedDataSet_Madagascar AlexSep17/Madagascar
+  Alex_Hamila95shuffle1.mat
+global_scale: 0.8
+init_weights: /usr/local/lib/python3.7/dist-packages/deeplabcut/pose_estimation_tensorflow/models/pretrained/efficientnet-b0/model.ckpt
+location_refinement: true
+locref_stdev: 7.2801
+net_type: efficientnet-b0
+num_joints: 16
+scoremap_dir: test

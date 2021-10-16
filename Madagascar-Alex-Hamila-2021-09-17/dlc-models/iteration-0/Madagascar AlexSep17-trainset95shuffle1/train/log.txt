@@ -1,0 +1,1186 @@
+2021-09-19 14:16:34 Config:
+{'all_joints': [[0],
+                [1],
+                [2],
+                [3],
+                [4],
+                [5],
+                [6],
+                [7],
+                [8],
+                [9],
+                [10],
+                [11],
+                [12],
+                [13],
+                [14],
+                [15]],
+ 'all_joints_names': ['earr',
+                      'earl',
+                      'eyer',
+                      'eyel',
+                      'nose',
+                      'throat',
+                      'elbowr',
+                      'elbowl',
+                      'handr',
+                      'handl',
+                      'tailbase',
+                      'tailtip',
+                      'kneer',
+                      'kneel',
+                      'ankler',
+                      'anklel'],
+ 'alpha_r': 0.02,
+ 'apply_prob': 0.5,
+ 'batch_size': 1,
+ 'clahe': True,
+ 'claheratio': 0.1,
+ 'crop_pad': 0,
+ 'crop_sampling': 'hybrid',
+ 'crop_size': [400, 400],
+ 'cropratio': 0.4,
+ 'dataset': 'training-datasets/iteration-0/UnaugmentedDataSet_Madagascar '
+            'AlexSep17/Madagascar Alex_Hamila95shuffle1.mat',
+ 'dataset_type': 'default',
+ 'decay_steps': 30000,
+ 'deterministic': False,
+ 'display_iters': 1000,
+ 'edge': False,
+ 'emboss': {'alpha': [0.0, 1.0], 'embossratio': 0.1, 'strength': [0.5, 1.5]},
+ 'fg_fraction': 0.25,
+ 'global_scale': 0.8,
+ 'histeq': True,
+ 'histeqratio': 0.1,
+ 'init_weights': '/usr/local/lib/python3.7/dist-packages/deeplabcut/pose_estimation_tensorflow/models/pretrained/efficientnet-b0/model.ckpt',
+ 'intermediate_supervision': False,
+ 'intermediate_supervision_layer': 12,
+ 'location_refinement': True,
+ 'locref_huber_loss': True,
+ 'locref_loss_weight': 0.05,
+ 'locref_stdev': 7.2801,
+ 'log_dir': 'log',
+ 'lr_init': 0.0005,
+ 'max_input_size': 1500,
+ 'max_shift': 0.4,
+ 'mean_pixel': [123.68, 116.779, 103.939],
+ 'metadataset': 'training-datasets/iteration-0/UnaugmentedDataSet_Madagascar '
+                'AlexSep17/Documentation_data-Madagascar '
+                'Alex_95shuffle1.pickle',
+ 'min_input_size': 64,
+ 'mirror': False,
+ 'multi_stage': False,
+ 'multi_step': [[0.005, 10000],
+                [0.02, 430000],
+                [0.002, 730000],
+                [0.001, 1030000]],
+ 'net_type': 'efficientnet-b0',
+ 'num_joints': 16,
+ 'optimizer': 'sgd',
+ 'pairwise_huber_loss': False,
+ 'pairwise_predict': False,
+ 'partaffinityfield_predict': False,
+ 'pos_dist_thresh': 17,
+ 'pre_resize': [],
+ 'project_path': '/content/drive/MyDrive/DLC/Madagascar Alex-Hamila-2021-09-17',
+ 'regularize': False,
+ 'rotation': 25,
+ 'rotratio': 0.4,
+ 'save_iters': 50000,
+ 'scale_jitter_lo': 0.5,
+ 'scale_jitter_up': 1.25,
+ 'scoremap_dir': 'test',
+ 'sharpen': False,
+ 'sharpenratio': 0.3,
+ 'shuffle': True,
+ 'snapshot_prefix': '/content/drive/MyDrive/DLC/Madagascar '
+                    'Alex-Hamila-2021-09-17/dlc-models/iteration-0/Madagascar '
+                    'AlexSep17-trainset95shuffle1/train/snapshot',
+ 'stride': 8.0,
+ 'weigh_negatives': False,
+ 'weigh_only_present_joints': False,
+ 'weigh_part_predictions': False,
+ 'weight_decay': 0.0001}
+2021-09-19 14:18:58 iteration: 100 loss: 0.0468 lr: 0.0004999865777790546
+2021-09-19 14:20:24 iteration: 200 loss: 0.0198 lr: 0.0004999462980777025
+2021-09-19 14:21:50 iteration: 300 loss: 0.0151 lr: 0.0004998791264370084
+2021-09-19 14:23:16 iteration: 400 loss: 0.0122 lr: 0.0004997851210646331
+2021-09-19 14:24:42 iteration: 500 loss: 0.0101 lr: 0.0004996642819605768
+2021-09-19 14:26:08 iteration: 600 loss: 0.0096 lr: 0.0004995165509171784
+2021-09-19 14:27:35 iteration: 700 loss: 0.0075 lr: 0.0004993421025574207
+2021-09-19 14:29:01 iteration: 800 loss: 0.0076 lr: 0.000499140762258321
+2021-09-19 14:30:27 iteration: 900 loss: 0.0064 lr: 0.0004989127046428621
+2021-09-19 14:31:53 iteration: 1000 loss: 0.0058 lr: 0.0004986578715033829
+2021-09-19 14:33:19 iteration: 1100 loss: 0.0049 lr: 0.0004983763210475445
+2021-09-19 14:34:45 iteration: 1200 loss: 0.0047 lr: 0.0004980681696906686
+2021-09-19 14:36:11 iteration: 1300 loss: 0.0049 lr: 0.0004977332428097725
+2021-09-19 14:37:37 iteration: 1400 loss: 0.0045 lr: 0.0004973717732354999
+2021-09-19 14:39:03 iteration: 1500 loss: 0.0044 lr: 0.0004969836445525289
+2021-09-19 14:40:29 iteration: 1600 loss: 0.0043 lr: 0.0004965690313838422
+2021-09-19 14:41:55 iteration: 1700 loss: 0.0040 lr: 0.00049612793372944
+2021-09-19 14:43:21 iteration: 1800 loss: 0.0034 lr: 0.000495660409796983
+2021-09-19 14:44:47 iteration: 1900 loss: 0.0035 lr: 0.0004951664595864713
+2021-09-19 14:46:13 iteration: 2000 loss: 0.0038 lr: 0.0004946461995132267
+2021-09-19 14:47:39 iteration: 2100 loss: 0.0033 lr: 0.0004940996295772493
+2021-09-19 14:49:05 iteration: 2200 loss: 0.0037 lr: 0.0004935268661938608
+2021-09-19 14:50:32 iteration: 2300 loss: 0.0033 lr: 0.0004929279093630612
+2021-09-19 14:51:58 iteration: 2400 loss: 0.0034 lr: 0.0004923028755001724
+2021-09-19 14:53:24 iteration: 2500 loss: 0.0028 lr: 0.0004916518810205162
+2021-09-19 14:54:50 iteration: 2600 loss: 0.0031 lr: 0.0004909748095087707
+2021-09-19 14:56:16 iteration: 2700 loss: 0.0030 lr: 0.0004902720102109015
+2021-09-19 17:24:27 Config:
+{'all_joints': [[0],
+                [1],
+                [2],
+                [3],
+                [4],
+                [5],
+                [6],
+                [7],
+                [8],
+                [9],
+                [10],
+                [11],
+                [12],
+                [13],
+                [14],
+                [15]],
+ 'all_joints_names': ['earr',
+                      'earl',
+                      'eyer',
+                      'eyel',
+                      'nose',
+                      'throat',
+                      'elbowr',
+                      'elbowl',
+                      'handr',
+                      'handl',
+                      'tailbase',
+                      'tailtip',
+                      'kneer',
+                      'kneel',
+                      'ankler',
+                      'anklel'],
+ 'alpha_r': 0.02,
+ 'apply_prob': 0.5,
+ 'batch_size': 1,
+ 'clahe': True,
+ 'claheratio': 0.1,
+ 'crop_pad': 0,
+ 'crop_sampling': 'hybrid',
+ 'crop_size': [400, 400],
+ 'cropratio': 0.4,
+ 'dataset': 'training-datasets/iteration-0/UnaugmentedDataSet_Madagascar '
+            'AlexSep17/Madagascar Alex_Hamila95shuffle1.mat',
+ 'dataset_type': 'default',
+ 'decay_steps': 30000,
+ 'deterministic': False,
+ 'display_iters': 1000,
+ 'edge': False,
+ 'emboss': {'alpha': [0.0, 1.0], 'embossratio': 0.1, 'strength': [0.5, 1.5]},
+ 'fg_fraction': 0.25,
+ 'global_scale': 0.8,
+ 'histeq': True,
+ 'histeqratio': 0.1,
+ 'init_weights': '/usr/local/lib/python3.7/dist-packages/deeplabcut/pose_estimation_tensorflow/models/pretrained/efficientnet-b0/model.ckpt',
+ 'intermediate_supervision': False,
+ 'intermediate_supervision_layer': 12,
+ 'location_refinement': True,
+ 'locref_huber_loss': True,
+ 'locref_loss_weight': 0.05,
+ 'locref_stdev': 7.2801,
+ 'log_dir': 'log',
+ 'lr_init': 0.0005,
+ 'max_input_size': 1500,
+ 'max_shift': 0.4,
+ 'mean_pixel': [123.68, 116.779, 103.939],
+ 'metadataset': 'training-datasets/iteration-0/UnaugmentedDataSet_Madagascar '
+                'AlexSep17/Documentation_data-Madagascar '
+                'Alex_95shuffle1.pickle',
+ 'min_input_size': 64,
+ 'mirror': False,
+ 'multi_stage': False,
+ 'multi_step': [[0.005, 10000],
+                [0.02, 430000],
+                [0.002, 730000],
+                [0.001, 1030000]],
+ 'net_type': 'efficientnet-b0',
+ 'num_joints': 16,
+ 'optimizer': 'sgd',
+ 'pairwise_huber_loss': False,
+ 'pairwise_predict': False,
+ 'partaffinityfield_predict': False,
+ 'pos_dist_thresh': 17,
+ 'pre_resize': [],
+ 'project_path': '/content/drive/MyDrive/DLC/Madagascar Alex-Hamila-2021-09-17',
+ 'regularize': False,
+ 'rotation': 25,
+ 'rotratio': 0.4,
+ 'save_iters': 50000,
+ 'scale_jitter_lo': 0.5,
+ 'scale_jitter_up': 1.25,
+ 'scoremap_dir': 'test',
+ 'sharpen': False,
+ 'sharpenratio': 0.3,
+ 'shuffle': True,
+ 'snapshot_prefix': '/content/drive/MyDrive/DLC/Madagascar '
+                    'Alex-Hamila-2021-09-17/dlc-models/iteration-0/Madagascar '
+                    'AlexSep17-trainset95shuffle1/train/snapshot',
+ 'stride': 8.0,
+ 'weigh_negatives': False,
+ 'weigh_only_present_joints': False,
+ 'weigh_part_predictions': False,
+ 'weight_decay': 0.0001}
+2021-09-19 17:25:04 NumExpr defaulting to 2 threads.
+2021-09-19 17:25:37 Config:
+{'all_joints': [[0],
+                [1],
+                [2],
+                [3],
+                [4],
+                [5],
+                [6],
+                [7],
+                [8],
+                [9],
+                [10],
+                [11],
+                [12],
+                [13],
+                [14],
+                [15]],
+ 'all_joints_names': ['earr',
+                      'earl',
+                      'eyer',
+                      'eyel',
+                      'nose',
+                      'throat',
+                      'elbowr',
+                      'elbowl',
+                      'handr',
+                      'handl',
+                      'tailbase',
+                      'tailtip',
+                      'kneer',
+                      'kneel',
+                      'ankler',
+                      'anklel'],
+ 'alpha_r': 0.02,
+ 'apply_prob': 0.5,
+ 'batch_size': 1,
+ 'clahe': True,
+ 'claheratio': 0.1,
+ 'crop_pad': 0,
+ 'crop_sampling': 'hybrid',
+ 'crop_size': [400, 400],
+ 'cropratio': 0.4,
+ 'dataset': 'training-datasets/iteration-0/UnaugmentedDataSet_Madagascar '
+            'AlexSep17/Madagascar Alex_Hamila95shuffle1.mat',
+ 'dataset_type': 'default',
+ 'decay_steps': 30000,
+ 'deterministic': False,
+ 'display_iters': 1000,
+ 'edge': False,
+ 'emboss': {'alpha': [0.0, 1.0], 'embossratio': 0.1, 'strength': [0.5, 1.5]},
+ 'fg_fraction': 0.25,
+ 'global_scale': 0.8,
+ 'histeq': True,
+ 'histeqratio': 0.1,
+ 'init_weights': '/usr/local/lib/python3.7/dist-packages/deeplabcut/pose_estimation_tensorflow/models/pretrained/efficientnet-b0/model.ckpt',
+ 'intermediate_supervision': False,
+ 'intermediate_supervision_layer': 12,
+ 'location_refinement': True,
+ 'locref_huber_loss': True,
+ 'locref_loss_weight': 0.05,
+ 'locref_stdev': 7.2801,
+ 'log_dir': 'log',
+ 'lr_init': 0.0005,
+ 'max_input_size': 1500,
+ 'max_shift': 0.4,
+ 'mean_pixel': [123.68, 116.779, 103.939],
+ 'metadataset': 'training-datasets/iteration-0/UnaugmentedDataSet_Madagascar '
+                'AlexSep17/Documentation_data-Madagascar '
+                'Alex_95shuffle1.pickle',
+ 'min_input_size': 64,
+ 'mirror': False,
+ 'multi_stage': False,
+ 'multi_step': [[0.005, 10000],
+                [0.02, 430000],
+                [0.002, 730000],
+                [0.001, 1030000]],
+ 'net_type': 'efficientnet-b0',
+ 'num_joints': 16,
+ 'optimizer': 'sgd',
+ 'pairwise_huber_loss': False,
+ 'pairwise_predict': False,
+ 'partaffinityfield_predict': False,
+ 'pos_dist_thresh': 17,
+ 'pre_resize': [],
+ 'project_path': '/content/drive/MyDrive/DLC/Madagascar Alex-Hamila-2021-09-17',
+ 'regularize': False,
+ 'rotation': 25,
+ 'rotratio': 0.4,
+ 'save_iters': 50000,
+ 'scale_jitter_lo': 0.5,
+ 'scale_jitter_up': 1.25,
+ 'scoremap_dir': 'test',
+ 'sharpen': False,
+ 'sharpenratio': 0.3,
+ 'shuffle': True,
+ 'snapshot_prefix': '/content/drive/MyDrive/DLC/Madagascar '
+                    'Alex-Hamila-2021-09-17/dlc-models/iteration-0/Madagascar '
+                    'AlexSep17-trainset95shuffle1/train/snapshot',
+ 'stride': 8.0,
+ 'weigh_negatives': False,
+ 'weigh_only_present_joints': False,
+ 'weigh_part_predictions': False,
+ 'weight_decay': 0.0001}
+2021-09-19 18:40:52 Config:
+{'all_joints': [[0],
+                [1],
+                [2],
+                [3],
+                [4],
+                [5],
+                [6],
+                [7],
+                [8],
+                [9],
+                [10],
+                [11],
+                [12],
+                [13],
+                [14],
+                [15]],
+ 'all_joints_names': ['earr',
+                      'earl',
+                      'eyer',
+                      'eyel',
+                      'nose',
+                      'throat',
+                      'elbowr',
+                      'elbowl',
+                      'handr',
+                      'handl',
+                      'tailbase',
+                      'tailtip',
+                      'kneer',
+                      'kneel',
+                      'ankler',
+                      'anklel'],
+ 'alpha_r': 0.02,
+ 'apply_prob': 0.5,
+ 'batch_size': 1,
+ 'clahe': True,
+ 'claheratio': 0.1,
+ 'crop_pad': 0,
+ 'crop_sampling': 'hybrid',
+ 'crop_size': [400, 400],
+ 'cropratio': 0.4,
+ 'dataset': 'training-datasets/iteration-0/UnaugmentedDataSet_Madagascar '
+            'AlexSep17/Madagascar Alex_Hamila95shuffle1.mat',
+ 'dataset_type': 'default',
+ 'decay_steps': 30000,
+ 'deterministic': False,
+ 'display_iters': 1000,
+ 'edge': False,
+ 'emboss': {'alpha': [0.0, 1.0], 'embossratio': 0.1, 'strength': [0.5, 1.5]},
+ 'fg_fraction': 0.25,
+ 'global_scale': 0.8,
+ 'histeq': True,
+ 'histeqratio': 0.1,
+ 'init_weights': '/usr/local/lib/python3.7/dist-packages/deeplabcut/pose_estimation_tensorflow/models/pretrained/efficientnet-b0/model.ckpt',
+ 'intermediate_supervision': False,
+ 'intermediate_supervision_layer': 12,
+ 'location_refinement': True,
+ 'locref_huber_loss': True,
+ 'locref_loss_weight': 0.05,
+ 'locref_stdev': 7.2801,
+ 'log_dir': 'log',
+ 'lr_init': 0.0005,
+ 'max_input_size': 1500,
+ 'max_shift': 0.4,
+ 'mean_pixel': [123.68, 116.779, 103.939],
+ 'metadataset': 'training-datasets/iteration-0/UnaugmentedDataSet_Madagascar '
+                'AlexSep17/Documentation_data-Madagascar '
+                'Alex_95shuffle1.pickle',
+ 'min_input_size': 64,
+ 'mirror': False,
+ 'multi_stage': False,
+ 'multi_step': [[0.005, 10000],
+                [0.02, 430000],
+                [0.002, 730000],
+                [0.001, 1030000]],
+ 'net_type': 'efficientnet-b0',
+ 'num_joints': 16,
+ 'optimizer': 'sgd',
+ 'pairwise_huber_loss': False,
+ 'pairwise_predict': False,
+ 'partaffinityfield_predict': False,
+ 'pos_dist_thresh': 17,
+ 'pre_resize': [],
+ 'project_path': '/content/drive/MyDrive/DLC/Madagascar Alex-Hamila-2021-09-17',
+ 'regularize': False,
+ 'rotation': 25,
+ 'rotratio': 0.4,
+ 'save_iters': 50000,
+ 'scale_jitter_lo': 0.5,
+ 'scale_jitter_up': 1.25,
+ 'scoremap_dir': 'test',
+ 'sharpen': False,
+ 'sharpenratio': 0.3,
+ 'shuffle': True,
+ 'snapshot_prefix': '/content/drive/MyDrive/DLC/Madagascar '
+                    'Alex-Hamila-2021-09-17/dlc-models/iteration-0/Madagascar '
+                    'AlexSep17-trainset95shuffle1/train/snapshot',
+ 'stride': 8.0,
+ 'weigh_negatives': False,
+ 'weigh_only_present_joints': False,
+ 'weigh_part_predictions': False,
+ 'weight_decay': 0.0001}
+2021-09-20 04:22:53 Config:
+{'all_joints': [[0],
+                [1],
+                [2],
+                [3],
+                [4],
+                [5],
+                [6],
+                [7],
+                [8],
+                [9],
+                [10],
+                [11],
+                [12],
+                [13],
+                [14],
+                [15]],
+ 'all_joints_names': ['earr',
+                      'earl',
+                      'eyer',
+                      'eyel',
+                      'nose',
+                      'throat',
+                      'elbowr',
+                      'elbowl',
+                      'handr',
+                      'handl',
+                      'tailbase',
+                      'tailtip',
+                      'kneer',
+                      'kneel',
+                      'ankler',
+                      'anklel'],
+ 'alpha_r': 0.02,
+ 'apply_prob': 0.5,
+ 'batch_size': 1,
+ 'clahe': True,
+ 'claheratio': 0.1,
+ 'crop_pad': 0,
+ 'crop_sampling': 'hybrid',
+ 'crop_size': [400, 400],
+ 'cropratio': 0.4,
+ 'dataset': 'training-datasets/iteration-0/UnaugmentedDataSet_Madagascar '
+            'AlexSep17/Madagascar Alex_Hamila95shuffle1.mat',
+ 'dataset_type': 'default',
+ 'decay_steps': 30000,
+ 'deterministic': False,
+ 'display_iters': 1000,
+ 'edge': False,
+ 'emboss': {'alpha': [0.0, 1.0], 'embossratio': 0.1, 'strength': [0.5, 1.5]},
+ 'fg_fraction': 0.25,
+ 'global_scale': 0.8,
+ 'histeq': True,
+ 'histeqratio': 0.1,
+ 'init_weights': '/usr/local/lib/python3.7/dist-packages/deeplabcut/pose_estimation_tensorflow/models/pretrained/efficientnet-b0/model.ckpt',
+ 'intermediate_supervision': False,
+ 'intermediate_supervision_layer': 12,
+ 'location_refinement': True,
+ 'locref_huber_loss': True,
+ 'locref_loss_weight': 0.05,
+ 'locref_stdev': 7.2801,
+ 'log_dir': 'log',
+ 'lr_init': 0.0005,
+ 'max_input_size': 1500,
+ 'max_shift': 0.4,
+ 'mean_pixel': [123.68, 116.779, 103.939],
+ 'metadataset': 'training-datasets/iteration-0/UnaugmentedDataSet_Madagascar '
+                'AlexSep17/Documentation_data-Madagascar '
+                'Alex_95shuffle1.pickle',
+ 'min_input_size': 64,
+ 'mirror': False,
+ 'multi_stage': False,
+ 'multi_step': [[0.005, 10000],
+                [0.02, 430000],
+                [0.002, 730000],
+                [0.001, 1030000]],
+ 'net_type': 'efficientnet-b0',
+ 'num_joints': 16,
+ 'optimizer': 'sgd',
+ 'pairwise_huber_loss': False,
+ 'pairwise_predict': False,
+ 'partaffinityfield_predict': False,
+ 'pos_dist_thresh': 17,
+ 'pre_resize': [],
+ 'project_path': '/content/drive/MyDrive/DLC/Madagascar Alex-Hamila-2021-09-17',
+ 'regularize': False,
+ 'rotation': 25,
+ 'rotratio': 0.4,
+ 'save_iters': 50000,
+ 'scale_jitter_lo': 0.5,
+ 'scale_jitter_up': 1.25,
+ 'scoremap_dir': 'test',
+ 'sharpen': False,
+ 'sharpenratio': 0.3,
+ 'shuffle': True,
+ 'snapshot_prefix': '/content/drive/MyDrive/DLC/Madagascar '
+                    'Alex-Hamila-2021-09-17/dlc-models/iteration-0/Madagascar '
+                    'AlexSep17-trainset95shuffle1/train/snapshot',
+ 'stride': 8.0,
+ 'weigh_negatives': False,
+ 'weigh_only_present_joints': False,
+ 'weigh_part_predictions': False,
+ 'weight_decay': 0.0001}
+2021-09-20 04:25:23 iteration: 100 loss: 0.0491 lr: 0.0004999865777790546
+2021-09-20 04:26:52 iteration: 200 loss: 0.0204 lr: 0.0004999462980777025
+2021-09-20 04:28:22 iteration: 300 loss: 0.0155 lr: 0.0004998791264370084
+2021-09-20 04:29:51 iteration: 400 loss: 0.0123 lr: 0.0004997851210646331
+2021-09-20 04:31:21 iteration: 500 loss: 0.0099 lr: 0.0004996642819605768
+2021-09-20 04:32:50 iteration: 600 loss: 0.0086 lr: 0.0004995165509171784
+2021-09-20 04:34:20 iteration: 700 loss: 0.0078 lr: 0.0004993421025574207
+2021-09-20 04:35:49 iteration: 800 loss: 0.0067 lr: 0.000499140762258321
+2021-09-20 04:37:19 iteration: 900 loss: 0.0056 lr: 0.0004989127046428621
+2021-09-20 04:38:48 iteration: 1000 loss: 0.0057 lr: 0.0004986578715033829
+2021-09-20 04:40:18 iteration: 1100 loss: 0.0051 lr: 0.0004983763210475445
+2021-09-20 04:41:48 iteration: 1200 loss: 0.0047 lr: 0.0004980681696906686
+2021-09-20 04:43:17 iteration: 1300 loss: 0.0046 lr: 0.0004977332428097725
+2021-09-20 04:44:47 iteration: 1400 loss: 0.0043 lr: 0.0004973717732354999
+2021-09-20 04:46:17 iteration: 1500 loss: 0.0041 lr: 0.0004969836445525289
+2021-09-20 04:47:47 iteration: 1600 loss: 0.0043 lr: 0.0004965690313838422
+2021-09-20 04:49:16 iteration: 1700 loss: 0.0038 lr: 0.00049612793372944
+2021-09-20 04:50:46 iteration: 1800 loss: 0.0036 lr: 0.000495660409796983
+2021-09-20 04:52:16 iteration: 1900 loss: 0.0039 lr: 0.0004951664595864713
+2021-09-20 04:53:46 iteration: 2000 loss: 0.0039 lr: 0.0004946461995132267
+2021-09-20 04:55:16 iteration: 2100 loss: 0.0037 lr: 0.0004940996295772493
+2021-09-20 04:56:46 iteration: 2200 loss: 0.0036 lr: 0.0004935268661938608
+2021-09-20 04:58:15 iteration: 2300 loss: 0.0034 lr: 0.0004929279093630612
+2021-09-20 04:59:45 iteration: 2400 loss: 0.0031 lr: 0.0004923028755001724
+2021-09-20 05:01:15 iteration: 2500 loss: 0.0032 lr: 0.0004916518810205162
+2021-09-20 05:02:45 iteration: 2600 loss: 0.0033 lr: 0.0004909748095087707
+2021-09-20 05:04:14 iteration: 2700 loss: 0.0031 lr: 0.0004902720102109015
+2021-09-20 05:05:44 iteration: 2800 loss: 0.0030 lr: 0.0004895433085039258
+2021-09-20 05:07:13 iteration: 2900 loss: 0.0029 lr: 0.0004887888790108263
+2021-09-20 05:08:43 iteration: 3000 loss: 0.0029 lr: 0.00048800883814692497
+2021-09-20 05:10:13 iteration: 3100 loss: 0.0030 lr: 0.0004872033023275435
+2021-09-20 05:11:43 iteration: 3200 loss: 0.0029 lr: 0.000486372213345021
+2021-09-20 05:13:12 iteration: 3300 loss: 0.0026 lr: 0.0004855158331338316
+2021-09-20 05:14:41 iteration: 3400 loss: 0.0027 lr: 0.0004846341034863144
+2021-09-20 05:16:11 iteration: 3500 loss: 0.0028 lr: 0.00048372719902545214
+2021-09-20 05:17:40 iteration: 3600 loss: 0.0028 lr: 0.00048279526527039707
+2021-09-20 05:19:10 iteration: 3700 loss: 0.0025 lr: 0.00048183833132497966
+2021-09-20 05:20:39 iteration: 3800 loss: 0.0023 lr: 0.0004808564845006913
+2021-09-20 05:22:09 iteration: 3900 loss: 0.0023 lr: 0.0004798498994205147
+2021-09-20 05:23:38 iteration: 4000 loss: 0.0025 lr: 0.00047881866339594126
+2021-09-20 05:25:08 iteration: 4100 loss: 0.0023 lr: 0.0004777628928422928
+2021-09-20 05:26:37 iteration: 4200 loss: 0.0023 lr: 0.0004766826459672302
+2021-09-20 05:28:07 iteration: 4300 loss: 0.0023 lr: 0.00047557815560139716
+2021-09-20 05:29:36 iteration: 4400 loss: 0.0021 lr: 0.00047444942174479365
+2021-09-20 05:31:06 iteration: 4500 loss: 0.0020 lr: 0.00047329661902040243
+2021-09-20 05:32:35 iteration: 4600 loss: 0.0023 lr: 0.0004721198929473758
+2021-09-20 05:34:05 iteration: 4700 loss: 0.0024 lr: 0.00047091938904486597
+2021-09-20 05:35:34 iteration: 4800 loss: 0.0022 lr: 0.0004696951655205339
+2021-09-20 05:37:03 iteration: 4900 loss: 0.0020 lr: 0.00046844742610119283
+2021-09-20 05:38:33 iteration: 5000 loss: 0.0018 lr: 0.0004671762580983341
+2021-09-20 05:40:02 iteration: 5100 loss: 0.0020 lr: 0.0004658818361349404
+2021-09-20 05:41:32 iteration: 5200 loss: 0.0022 lr: 0.0004645642766263336
+2021-09-20 05:43:01 iteration: 5300 loss: 0.0021 lr: 0.000463223725091666
+2021-09-20 05:44:31 iteration: 5400 loss: 0.0019 lr: 0.0004618603561539203
+2021-09-20 05:46:00 iteration: 5500 loss: 0.0018 lr: 0.0004604743153322488
+2021-09-20 05:47:30 iteration: 5600 loss: 0.0018 lr: 0.00045906571904197335
+2021-09-20 05:48:59 iteration: 5700 loss: 0.0017 lr: 0.0004576347710099071
+2021-09-20 05:50:29 iteration: 5800 loss: 0.0017 lr: 0.00045618158765137196
+2021-09-20 05:51:58 iteration: 5900 loss: 0.0019 lr: 0.0004547063435893506
+2021-09-20 05:53:28 iteration: 6000 loss: 0.0020 lr: 0.0004532091843429953
+2021-09-20 05:54:59 iteration: 6100 loss: 0.0020 lr: 0.00045169031363911927
+2021-09-20 05:56:29 iteration: 6200 loss: 0.0017 lr: 0.0004501498769968748
+2021-09-20 05:57:58 iteration: 6300 loss: 0.0016 lr: 0.0004485879617277533
+2021-09-20 05:59:28 iteration: 6400 loss: 0.0017 lr: 0.0004470049461815506
+2021-09-20 06:00:58 iteration: 6500 loss: 0.0018 lr: 0.0004454008012544364
+2021-09-20 06:02:28 iteration: 6600 loss: 0.0014 lr: 0.0004437757597770542
+2021-09-20 06:03:58 iteration: 6700 loss: 0.0016 lr: 0.0004421300545800477
+2021-09-20 06:05:28 iteration: 6800 loss: 0.0016 lr: 0.00044046377297490835
+2021-09-20 06:06:58 iteration: 6900 loss: 0.0017 lr: 0.0004387772351037711
+2021-09-20 06:08:27 iteration: 7000 loss: 0.0015 lr: 0.0004370704700704664
+2021-09-20 06:09:57 iteration: 7100 loss: 0.0017 lr: 0.00043534382712095976
+2021-09-20 06:11:27 iteration: 7200 loss: 0.0017 lr: 0.00043359730625525117
+2021-09-20 06:12:56 iteration: 7300 loss: 0.0013 lr: 0.00043183128582313657
+2021-09-20 06:14:25 iteration: 7400 loss: 0.0014 lr: 0.00043004582403227687
+2021-09-20 06:15:54 iteration: 7500 loss: 0.0016 lr: 0.0004282411828171462
+2021-09-20 06:17:22 iteration: 7600 loss: 0.0016 lr: 0.00042641753680072725
+2021-09-20 06:18:51 iteration: 7700 loss: 0.0013 lr: 0.0004245751188136637
+2021-09-20 06:20:20 iteration: 7800 loss: 0.0013 lr: 0.00042271404527127743
+2021-09-20 06:21:49 iteration: 7900 loss: 0.0013 lr: 0.00042083460721187294
+2021-09-20 06:23:17 iteration: 8000 loss: 0.0013 lr: 0.00041893700836226344
+2021-09-20 06:24:46 iteration: 8100 loss: 0.0013 lr: 0.0004170214233454317
+2021-09-20 06:26:15 iteration: 8200 loss: 0.0013 lr: 0.0004150880849920213
+2021-09-20 06:27:44 iteration: 8300 loss: 0.0013 lr: 0.0004131371679250151
+2021-09-20 06:29:12 iteration: 8400 loss: 0.0013 lr: 0.00041116890497505665
+2021-09-20 06:30:41 iteration: 8500 loss: 0.0014 lr: 0.00040918352897278965
+2021-09-20 06:32:10 iteration: 8600 loss: 0.0012 lr: 0.0004071812145411968
+2021-09-20 06:33:39 iteration: 8700 loss: 0.0015 lr: 0.0004051622236147523
+2021-09-20 06:35:07 iteration: 8800 loss: 0.0014 lr: 0.00040312675992026925
+2021-09-20 06:36:36 iteration: 8900 loss: 0.0013 lr: 0.0004010750853922218
+2021-09-20 06:38:05 iteration: 9000 loss: 0.0013 lr: 0.00039900740375742316
+2021-09-20 06:39:34 iteration: 9100 loss: 0.0011 lr: 0.00039692388963885605
+2021-09-20 06:41:03 iteration: 9200 loss: 0.0013 lr: 0.00039482483407482505
+2021-09-20 06:42:32 iteration: 9300 loss: 0.0015 lr: 0.00039271044079214334
+2021-09-20 06:44:01 iteration: 9400 loss: 0.0014 lr: 0.00039058091351762414
+2021-09-20 06:45:29 iteration: 9500 loss: 0.0013 lr: 0.00038843657239340246
+2021-09-20 06:46:58 iteration: 9600 loss: 0.0014 lr: 0.0003862775338348001
+2021-09-20 06:48:27 iteration: 9700 loss: 0.0012 lr: 0.00038410420529544353
+2021-09-20 06:49:55 iteration: 9800 loss: 0.0013 lr: 0.00038191667408682406
+2021-09-20 06:51:24 iteration: 9900 loss: 0.0012 lr: 0.0003797151439357549
+2021-09-20 06:52:53 iteration: 10000 loss: 0.0011 lr: 0.00037750002229586244
+2021-09-20 06:54:22 iteration: 10100 loss: 0.0011 lr: 0.0003752714255824685
+2021-09-20 06:55:50 iteration: 10200 loss: 0.0011 lr: 0.0003730296448338777
+2021-09-20 06:57:19 iteration: 10300 loss: 0.0012 lr: 0.00037077494198456407
+2021-09-20 06:58:48 iteration: 10400 loss: 0.0010 lr: 0.0003685075498651713
+2021-09-20 07:00:17 iteration: 10500 loss: 0.0011 lr: 0.0003662276722025126
+2021-09-20 07:01:46 iteration: 10600 loss: 0.0009 lr: 0.000363935629138723
+2021-09-20 07:03:15 iteration: 10700 loss: 0.0009 lr: 0.0003616316244006157
+2021-09-20 07:04:43 iteration: 10800 loss: 0.0010 lr: 0.0003593159490264952
+2021-09-20 07:06:12 iteration: 10900 loss: 0.0010 lr: 0.0003569888067431748
+2021-09-20 07:07:41 iteration: 11000 loss: 0.0010 lr: 0.000354650488588959
+2021-09-20 07:09:09 iteration: 11100 loss: 0.0011 lr: 0.0003523012564983219
+2021-09-20 07:10:38 iteration: 11200 loss: 0.0010 lr: 0.0003499413433019072
+2021-09-20 07:12:07 iteration: 11300 loss: 0.0010 lr: 0.00034757101093418896
+2021-09-20 07:13:36 iteration: 11400 loss: 0.0010 lr: 0.00034519052132964134
+2021-09-20 07:15:04 iteration: 11500 loss: 0.0012 lr: 0.0003428001655265689
+2021-09-20 07:16:33 iteration: 11600 loss: 0.0010 lr: 0.0003404001472517848
+2021-09-20 07:18:02 iteration: 11700 loss: 0.0010 lr: 0.00033799081575125456
+2021-09-20 07:19:30 iteration: 11800 loss: 0.0011 lr: 0.0003355723456479609
+2021-09-20 07:20:59 iteration: 11900 loss: 0.0010 lr: 0.0003331450279802084
+2021-09-20 07:22:27 iteration: 12000 loss: 0.0011 lr: 0.00033070918289013207
+2021-09-20 07:23:57 iteration: 12100 loss: 0.0010 lr: 0.00032826498500071466
+2021-09-20 07:25:25 iteration: 12200 loss: 0.0009 lr: 0.0003258128126617521
+2021-09-20 07:26:54 iteration: 12300 loss: 0.0009 lr: 0.00032335284049622715
+2021-09-20 07:28:23 iteration: 12400 loss: 0.0009 lr: 0.0003208853886462748
+2021-09-20 07:29:52 iteration: 12500 loss: 0.0010 lr: 0.0003184106608387083
+2021-09-20 07:31:20 iteration: 12600 loss: 0.0010 lr: 0.0003159290354233235
+2021-09-20 07:32:49 iteration: 12700 loss: 0.0009 lr: 0.0003134407161269337
+2021-09-20 07:34:19 iteration: 12800 loss: 0.0009 lr: 0.00031094596488401294
+2021-09-20 07:35:49 iteration: 12900 loss: 0.0008 lr: 0.00030844510183669627
+2021-09-20 07:37:19 iteration: 13000 loss: 0.0010 lr: 0.00030593835981562734
+2021-09-20 07:38:49 iteration: 13100 loss: 0.0010 lr: 0.00030342605896294117
+2021-09-20 07:40:19 iteration: 13200 loss: 0.0010 lr: 0.0003009084321092814
+2021-09-20 07:41:49 iteration: 13300 loss: 0.0009 lr: 0.0002983857411891222
+2021-09-20 07:43:18 iteration: 13400 loss: 0.0008 lr: 0.00029585836455225945
+2021-09-20 07:44:48 iteration: 13500 loss: 0.0009 lr: 0.00029332644771784544
+2021-09-20 07:46:18 iteration: 13600 loss: 0.0008 lr: 0.00029079033993184566
+2021-09-20 07:47:48 iteration: 13700 loss: 0.0009 lr: 0.00028825030312873423
+2021-09-20 07:49:18 iteration: 13800 loss: 0.0009 lr: 0.00028570665745064616
+2021-09-20 07:50:48 iteration: 13900 loss: 0.0009 lr: 0.00028315960662439466
+2021-09-20 07:52:18 iteration: 14000 loss: 0.0009 lr: 0.00028060947079211473
+2021-09-20 07:53:48 iteration: 14100 loss: 0.0008 lr: 0.00027805654099211097
+2021-09-20 07:55:18 iteration: 14200 loss: 0.0008 lr: 0.000275501050055027
+2021-09-20 07:56:48 iteration: 14300 loss: 0.0008 lr: 0.00027294334722682834
+2021-09-20 07:58:18 iteration: 14400 loss: 0.0007 lr: 0.00027038369444198906
+2021-09-20 07:59:48 iteration: 14500 loss: 0.0008 lr: 0.0002678222954273224
+2021-09-20 08:01:18 iteration: 14600 loss: 0.0008 lr: 0.00026525952853262424
+2021-09-20 08:02:48 iteration: 14700 loss: 0.0007 lr: 0.0002626956265885383
+2021-09-20 08:04:18 iteration: 14800 loss: 0.0008 lr: 0.0002601308806333691
+2021-09-20 08:05:48 iteration: 14900 loss: 0.0009 lr: 0.0002575655817054212
+2021-09-20 08:07:18 iteration: 15000 loss: 0.0009 lr: 0.0002550000208429992
+2021-09-20 08:08:48 iteration: 15100 loss: 0.0008 lr: 0.0002524344017729163
+2021-09-20 08:11:52 Config:
+{'all_joints': [[0],
+                [1],
+                [2],
+                [3],
+                [4],
+                [5],
+                [6],
+                [7],
+                [8],
+                [9],
+                [10],
+                [11],
+                [12],
+                [13],
+                [14],
+                [15]],
+ 'all_joints_names': ['earr',
+                      'earl',
+                      'eyer',
+                      'eyel',
+                      'nose',
+                      'throat',
+                      'elbowr',
+                      'elbowl',
+                      'handr',
+                      'handl',
+                      'tailbase',
+                      'tailtip',
+                      'kneer',
+                      'kneel',
+                      'ankler',
+                      'anklel'],
+ 'alpha_r': 0.02,
+ 'apply_prob': 0.5,
+ 'batch_size': 1,
+ 'clahe': True,
+ 'claheratio': 0.1,
+ 'crop_pad': 0,
+ 'crop_sampling': 'hybrid',
+ 'crop_size': [400, 400],
+ 'cropratio': 0.4,
+ 'dataset': 'training-datasets/iteration-0/UnaugmentedDataSet_Madagascar '
+            'AlexSep17/Madagascar Alex_Hamila95shuffle1.mat',
+ 'dataset_type': 'default',
+ 'decay_steps': 30000,
+ 'deterministic': False,
+ 'display_iters': 1000,
+ 'edge': False,
+ 'emboss': {'alpha': [0.0, 1.0], 'embossratio': 0.1, 'strength': [0.5, 1.5]},
+ 'fg_fraction': 0.25,
+ 'global_scale': 0.8,
+ 'histeq': True,
+ 'histeqratio': 0.1,
+ 'init_weights': '/content/drive/MyDrive/DLC/Madagascar '
+                 'Alex-Hamila-2021-09-17/dlc-models/iteration-0/Madagascar '
+                 'AlexSep17-trainset95shuffle1/train/snapshot-15000',
+ 'intermediate_supervision': False,
+ 'intermediate_supervision_layer': 12,
+ 'location_refinement': True,
+ 'locref_huber_loss': True,
+ 'locref_loss_weight': 0.05,
+ 'locref_stdev': 7.2801,
+ 'log_dir': 'log',
+ 'lr_init': 0.0005,
+ 'max_input_size': 1500,
+ 'max_shift': 0.4,
+ 'mean_pixel': [123.68, 116.779, 103.939],
+ 'metadataset': 'training-datasets/iteration-0/UnaugmentedDataSet_Madagascar '
+                'AlexSep17/Documentation_data-Madagascar '
+                'Alex_95shuffle1.pickle',
+ 'min_input_size': 64,
+ 'mirror': False,
+ 'multi_stage': False,
+ 'multi_step': [[0.005, 10000],
+                [0.02, 430000],
+                [0.002, 730000],
+                [0.001, 1030000]],
+ 'net_type': 'efficientnet-b0',
+ 'num_joints': 16,
+ 'optimizer': 'sgd',
+ 'pairwise_huber_loss': False,
+ 'pairwise_predict': False,
+ 'partaffinityfield_predict': False,
+ 'pos_dist_thresh': 17,
+ 'pre_resize': [],
+ 'project_path': '/content/drive/MyDrive/DLC/Madagascar Alex-Hamila-2021-09-17',
+ 'regularize': False,
+ 'rotation': 25,
+ 'rotratio': 0.4,
+ 'save_iters': 50000,
+ 'scale_jitter_lo': 0.5,
+ 'scale_jitter_up': 1.25,
+ 'scoremap_dir': 'test',
+ 'sharpen': False,
+ 'sharpenratio': 0.3,
+ 'shuffle': True,
+ 'snapshot_prefix': '/content/drive/MyDrive/DLC/Madagascar '
+                    'Alex-Hamila-2021-09-17/dlc-models/iteration-0/Madagascar '
+                    'AlexSep17-trainset95shuffle1/train/snapshot',
+ 'stride': 8.0,
+ 'weigh_negatives': False,
+ 'weigh_only_present_joints': False,
+ 'weigh_part_predictions': False,
+ 'weight_decay': 0.0001}
+2021-09-20 08:14:21 iteration: 15100 loss: 0.0009 lr: 0.0002524344017729163
+2021-09-20 08:15:50 iteration: 15200 loss: 0.0007 lr: 0.00024986910284496844
+2021-09-20 08:17:19 iteration: 15300 loss: 0.0007 lr: 0.0002473043859936297
+2021-09-20 08:18:48 iteration: 15400 loss: 0.0008 lr: 0.00024474048404954374
+2021-09-20 08:20:17 iteration: 15500 loss: 0.0007 lr: 0.00024217768805101514
+2021-09-20 08:21:47 iteration: 15600 loss: 0.0007 lr: 0.00023961633269209415
+2021-09-20 08:23:16 iteration: 15700 loss: 0.0009 lr: 0.00023705665080342442
+2021-09-20 08:24:45 iteration: 15800 loss: 0.0007 lr: 0.00023449896252714097
+2021-09-20 08:26:15 iteration: 15900 loss: 0.0007 lr: 0.00023194347159005702
+2021-09-20 08:27:44 iteration: 16000 loss: 0.0007 lr: 0.00022939054179005325
+2021-09-20 08:29:13 iteration: 16100 loss: 0.0006 lr: 0.00022684040595777333
+2021-09-20 08:30:43 iteration: 16200 loss: 0.0006 lr: 0.00022429335513152182
+2021-09-20 08:32:13 iteration: 16300 loss: 0.0007 lr: 0.00022174970945343375
+2021-09-20 08:33:42 iteration: 16400 loss: 0.0007 lr: 0.00021920967265032232
+2021-09-20 08:35:12 iteration: 16500 loss: 0.0007 lr: 0.00021667356486432254
+2021-09-20 08:36:42 iteration: 16600 loss: 0.0007 lr: 0.00021414166258182377
+2021-09-20 08:38:11 iteration: 16700 loss: 0.0007 lr: 0.00021161424228921533
+2021-09-20 08:39:41 iteration: 16800 loss: 0.0007 lr: 0.0002090915950248018
+2021-09-20 08:41:11 iteration: 16900 loss: 0.0008 lr: 0.0002065739536192268
+2021-09-20 08:42:41 iteration: 17000 loss: 0.0007 lr: 0.00020406165276654065
+2021-09-20 08:44:11 iteration: 17100 loss: 0.0006 lr: 0.00020155493984930217
+2021-09-20 08:45:41 iteration: 17200 loss: 0.0006 lr: 0.00019905403314623982
+2021-09-20 08:47:11 iteration: 17300 loss: 0.0007 lr: 0.00019655931100714952
+2021-09-20 08:48:40 iteration: 17400 loss: 0.0007 lr: 0.0001940709917107597
+2021-09-20 08:50:10 iteration: 17500 loss: 0.0006 lr: 0.00019158933719154447
+2021-09-20 08:51:40 iteration: 17600 loss: 0.0007 lr: 0.0001891146384878084
+2021-09-20 08:53:09 iteration: 17700 loss: 0.0006 lr: 0.0001866472011897713
+2021-09-20 08:54:39 iteration: 17800 loss: 0.0006 lr: 0.00018418724357616156
+2021-09-20 08:56:08 iteration: 17900 loss: 0.0006 lr: 0.00018173499847762287
+2021-09-20 08:57:37 iteration: 18000 loss: 0.0006 lr: 0.00017929084424395114
+2021-09-20 08:59:08 iteration: 18100 loss: 0.0006 lr: 0.00017685497005004436
+2021-09-20 09:00:38 iteration: 18200 loss: 0.0006 lr: 0.00017442766693420708
+2021-09-20 09:02:07 iteration: 18300 loss: 0.0006 lr: 0.00017200921138282865
+2021-09-20 09:03:36 iteration: 18400 loss: 0.0006 lr: 0.00016959985077846795
+2021-09-20 09:05:06 iteration: 18500 loss: 0.0006 lr: 0.0001671998470555991
+2021-09-20 09:06:36 iteration: 18600 loss: 0.0006 lr: 0.00016480949125252664
+2021-09-20 09:08:05 iteration: 18700 loss: 0.0006 lr: 0.00016242901619989425
+2021-09-20 09:09:35 iteration: 18800 loss: 0.0007 lr: 0.00016005871293600649
+2021-09-20 09:11:04 iteration: 18900 loss: 0.0007 lr: 0.00015769877063576132
+2021-09-20 09:12:33 iteration: 19000 loss: 0.0006 lr: 0.000155349523993209
+2021-09-20 09:29:44 Config:
+{'all_joints': [[0],
+                [1],
+                [2],
+                [3],
+                [4],
+                [5],
+                [6],
+                [7],
+                [8],
+                [9],
+                [10],
+                [11],
+                [12],
+                [13],
+                [14],
+                [15]],
+ 'all_joints_names': ['earr',
+                      'earl',
+                      'eyer',
+                      'eyel',
+                      'nose',
+                      'throat',
+                      'elbowr',
+                      'elbowl',
+                      'handr',
+                      'handl',
+                      'tailbase',
+                      'tailtip',
+                      'kneer',
+                      'kneel',
+                      'ankler',
+                      'anklel'],
+ 'alpha_r': 0.02,
+ 'apply_prob': 0.5,
+ 'batch_size': 1,
+ 'clahe': True,
+ 'claheratio': 0.1,
+ 'crop_pad': 0,
+ 'crop_sampling': 'hybrid',
+ 'crop_size': [400, 400],
+ 'cropratio': 0.4,
+ 'dataset': 'training-datasets/iteration-0/UnaugmentedDataSet_Madagascar '
+            'AlexSep17/Madagascar Alex_Hamila95shuffle1.mat',
+ 'dataset_type': 'default',
+ 'decay_steps': 30000,
+ 'deterministic': False,
+ 'display_iters': 1000,
+ 'edge': False,
+ 'emboss': {'alpha': [0.0, 1.0], 'embossratio': 0.1, 'strength': [0.5, 1.5]},
+ 'fg_fraction': 0.25,
+ 'global_scale': 0.8,
+ 'histeq': True,
+ 'histeqratio': 0.1,
+ 'init_weights': '/content/drive/MyDrive/DLC/Madagascar '
+                 'Alex-Hamila-2021-09-17/dlc-models/iteration-0/Madagascar '
+                 'AlexSep17-trainset95shuffle1/train/snapshot-18000',
+ 'intermediate_supervision': False,
+ 'intermediate_supervision_layer': 12,
+ 'location_refinement': True,
+ 'locref_huber_loss': True,
+ 'locref_loss_weight': 0.05,
+ 'locref_stdev': 7.2801,
+ 'log_dir': 'log',
+ 'lr_init': 0.0005,
+ 'max_input_size': 1500,
+ 'max_shift': 0.4,
+ 'mean_pixel': [123.68, 116.779, 103.939],
+ 'metadataset': 'training-datasets/iteration-0/UnaugmentedDataSet_Madagascar '
+                'AlexSep17/Documentation_data-Madagascar '
+                'Alex_95shuffle1.pickle',
+ 'min_input_size': 64,
+ 'mirror': False,
+ 'multi_stage': False,
+ 'multi_step': [[0.005, 10000],
+                [0.02, 430000],
+                [0.002, 730000],
+                [0.001, 1030000]],
+ 'net_type': 'efficientnet-b0',
+ 'num_joints': 16,
+ 'optimizer': 'sgd',
+ 'pairwise_huber_loss': False,
+ 'pairwise_predict': False,
+ 'partaffinityfield_predict': False,
+ 'pos_dist_thresh': 17,
+ 'pre_resize': [],
+ 'project_path': '/content/drive/MyDrive/DLC/Madagascar Alex-Hamila-2021-09-17',
+ 'regularize': False,
+ 'rotation': 25,
+ 'rotratio': 0.4,
+ 'save_iters': 50000,
+ 'scale_jitter_lo': 0.5,
+ 'scale_jitter_up': 1.25,
+ 'scoremap_dir': 'test',
+ 'sharpen': False,
+ 'sharpenratio': 0.3,
+ 'shuffle': True,
+ 'snapshot_prefix': '/content/drive/MyDrive/DLC/Madagascar '
+                    'Alex-Hamila-2021-09-17/dlc-models/iteration-0/Madagascar '
+                    'AlexSep17-trainset95shuffle1/train/snapshot',
+ 'stride': 8.0,
+ 'weigh_negatives': False,
+ 'weigh_only_present_joints': False,
+ 'weigh_part_predictions': False,
+ 'weight_decay': 0.0001}
+2021-09-20 09:32:14 iteration: 18100 loss: 0.0007 lr: 0.00017685497005004436
+2021-09-20 09:33:43 iteration: 18200 loss: 0.0006 lr: 0.00017442766693420708
+2021-09-20 09:35:11 iteration: 18300 loss: 0.0007 lr: 0.00017200921138282865
+2021-09-20 09:36:40 iteration: 18400 loss: 0.0007 lr: 0.00016959985077846795
+2021-09-20 09:38:09 iteration: 18500 loss: 0.0007 lr: 0.0001671998470555991
+2021-09-20 09:39:38 iteration: 18600 loss: 0.0007 lr: 0.00016480949125252664
+2021-09-20 09:41:07 iteration: 18700 loss: 0.0006 lr: 0.00016242901619989425
+2021-09-20 09:42:36 iteration: 18800 loss: 0.0006 lr: 0.00016005871293600649
+2021-09-20 09:44:04 iteration: 18900 loss: 0.0006 lr: 0.00015769877063576132
+2021-09-20 09:45:33 iteration: 19000 loss: 0.0007 lr: 0.000155349523993209
+2021-09-20 09:47:03 iteration: 19100 loss: 0.0006 lr: 0.00015301122039090842
+2021-09-20 09:48:31 iteration: 19200 loss: 0.0006 lr: 0.000150684078107588
+2021-09-20 09:50:00 iteration: 19300 loss: 0.0006 lr: 0.00014836841728538275
+2021-09-20 09:51:29 iteration: 19400 loss: 0.0005 lr: 0.00014606441254727542
+2021-09-20 09:52:58 iteration: 19500 loss: 0.0007 lr: 0.00014377232582774013
+2021-09-20 09:54:27 iteration: 19600 loss: 0.0006 lr: 0.00014149249182082713
+2021-09-20 09:55:56 iteration: 19700 loss: 0.0006 lr: 0.00013922508514951915
+2021-09-20 09:57:25 iteration: 19800 loss: 0.0006 lr: 0.00013697033864445984
+2021-09-20 09:58:54 iteration: 19900 loss: 0.0005 lr: 0.0001347286015516147
+2021-09-20 10:00:22 iteration: 20000 loss: 0.0006 lr: 0.00013250000483822078
+2021-09-20 10:01:51 iteration: 20100 loss: 0.0006 lr: 0.00013028483954258263
+2021-09-20 10:03:20 iteration: 20200 loss: 0.0005 lr: 0.00012808339670300484
+2021-09-20 10:04:49 iteration: 20300 loss: 0.0005 lr: 0.0001258958363905549
+2021-09-20 10:06:18 iteration: 20400 loss: 0.0005 lr: 0.00012372240598779172
+2021-09-20 10:07:47 iteration: 20500 loss: 0.0005 lr: 0.00012156344018876553
+2021-09-20 10:09:16 iteration: 20600 loss: 0.0005 lr: 0.00011941904813284054
+2021-09-20 10:10:45 iteration: 20700 loss: 0.0005 lr: 0.00011728954268619418
+2021-09-20 10:12:14 iteration: 20800 loss: 0.0006 lr: 0.00011517517850734293
+2021-09-20 10:13:42 iteration: 20900 loss: 0.0005 lr: 0.00011307609383948147
+2021-09-20 10:15:11 iteration: 21000 loss: 0.0005 lr: 0.00011099257972091436
+2021-09-20 10:16:41 iteration: 21100 loss: 0.0006 lr: 0.00010892489808611572
+2021-09-20 10:18:10 iteration: 21200 loss: 0.0006 lr: 0.0001068731871782802
+2021-09-20 10:19:39 iteration: 21300 loss: 0.0005 lr: 0.00010483778169145808
+2021-09-20 10:21:08 iteration: 21400 loss: 0.0006 lr: 0.00010281879076501355
+2021-09-20 10:22:37 iteration: 21500 loss: 0.0005 lr: 0.00010081647633342072
+2021-09-20 10:24:06 iteration: 21600 loss: 0.0005 lr: 9.883112943498418e-05
+2021-09-20 10:25:35 iteration: 21700 loss: 0.0005 lr: 9.686285920906812e-05
+2021-09-20 10:27:03 iteration: 21800 loss: 0.0005 lr: 9.491192031418905e-05
+2021-09-20 10:28:32 iteration: 21900 loss: 0.0006 lr: 9.297859651269391e-05
+2021-09-20 10:30:01 iteration: 22000 loss: 0.0005 lr: 9.106298966798931e-05
+2021-09-20 10:31:30 iteration: 22100 loss: 0.0004 lr: 8.916534716263413e-05
+2021-09-20 10:32:59 iteration: 22200 loss: 0.0005 lr: 8.728595275897533e-05
+2021-09-20 10:34:27 iteration: 22300 loss: 0.0005 lr: 8.542490104446188e-05
+2021-09-20 10:35:56 iteration: 22400 loss: 0.0005 lr: 8.358245395356789e-05
+2021-09-20 10:37:25 iteration: 22500 loss: 0.0005 lr: 8.175884431693703e-05
+2021-09-20 10:38:54 iteration: 22600 loss: 0.0005 lr: 7.995417399797589e-05
+2021-09-20 10:40:23 iteration: 22700 loss: 0.0005 lr: 7.816872675903141e-05
+2021-09-20 10:41:51 iteration: 22800 loss: 0.0005 lr: 7.640269177500159e-05
+2021-09-20 10:43:20 iteration: 22900 loss: 0.0005 lr: 7.465620001312345e-05
+2021-09-20 10:44:49 iteration: 23000 loss: 0.0005 lr: 7.292948430404067e-05
+2021-09-20 10:46:17 iteration: 23100 loss: 0.0005 lr: 7.12227847543545e-05
+2021-09-20 10:47:46 iteration: 23200 loss: 0.0005 lr: 6.953619595151395e-05
+2021-09-20 10:49:15 iteration: 23300 loss: 0.0004 lr: 6.78699798299931e-05
+2021-09-20 10:50:43 iteration: 23400 loss: 0.0005 lr: 6.622424552915618e-05
+2021-09-20 10:52:12 iteration: 23500 loss: 0.0005 lr: 6.459922587964684e-05
+2021-09-20 10:53:41 iteration: 23600 loss: 0.0005 lr: 6.299511733232066e-05
+2021-09-20 10:55:10 iteration: 23700 loss: 0.0004 lr: 6.141201447462663e-05
+2021-09-20 10:56:38 iteration: 23800 loss: 0.0004 lr: 5.98501501372084e-05
+2021-09-20 10:58:07 iteration: 23900 loss: 0.0005 lr: 5.830972077092156e-05
+2021-09-20 10:59:36 iteration: 24000 loss: 0.0005 lr: 5.679082460119389e-05
+2021-09-20 11:01:05 iteration: 24100 loss: 0.0004 lr: 5.5293665354838595e-05
+2021-09-20 11:02:34 iteration: 24200 loss: 0.0005 lr: 5.381844312069006e-05
+2021-09-20 11:04:03 iteration: 24300 loss: 0.0005 lr: 5.236525248619728e-05
+2021-09-20 11:05:31 iteration: 24400 loss: 0.0004 lr: 5.09342789882794e-05
+2021-09-20 11:07:00 iteration: 24500 loss: 0.0005 lr: 4.952571907779202e-05
+2021-09-20 11:08:29 iteration: 24600 loss: 0.0004 lr: 4.8139649152290076e-05
+2021-09-20 11:09:58 iteration: 24700 loss: 0.0004 lr: 4.677626566262916e-05
+2021-09-20 11:11:26 iteration: 24800 loss: 0.0004 lr: 4.543575778370723e-05
+2021-09-20 11:12:55 iteration: 24900 loss: 0.0004 lr: 4.4118190999142826e-05
+2021-09-20 11:14:24 iteration: 25000 loss: 0.0004 lr: 4.282375448383391e-05
+2021-09-20 11:15:53 iteration: 25100 loss: 0.0004 lr: 4.1552604670869187e-05
+2021-09-20 11:17:21 iteration: 25200 loss: 0.0004 lr: 4.030483978567645e-05
+2021-09-20 11:18:50 iteration: 25300 loss: 0.0005 lr: 3.9080663555068895e-05
+2021-09-20 11:20:19 iteration: 25400 loss: 0.0004 lr: 3.7880123272771016e-05
+2021-09-20 11:21:47 iteration: 25500 loss: 0.0004 lr: 3.670338628580794e-05
+2021-09-20 11:23:16 iteration: 25600 loss: 0.0004 lr: 3.5550619941204786e-05
+2021-09-20 11:24:45 iteration: 25700 loss: 0.0004 lr: 3.4421896998537704e-05
+2021-09-20 12:49:31 Config:
+{'all_joints': [[0],
+                [1],
+                [2],
+                [3],
+                [4],
+                [5],
+                [6],
+                [7],
+                [8],
+                [9],
+                [10],
+                [11],
+                [12],
+                [13],
+                [14],
+                [15]],
+ 'all_joints_names': ['earr',
+                      'earl',
+                      'eyer',
+                      'eyel',
+                      'nose',
+                      'throat',
+                      'elbowr',
+                      'elbowl',
+                      'handr',
+                      'handl',
+                      'tailbase',
+                      'tailtip',
+                      'kneer',
+                      'kneel',
+                      'ankler',
+                      'anklel'],
+ 'alpha_r': 0.02,
+ 'apply_prob': 0.5,
+ 'batch_size': 1,
+ 'clahe': True,
+ 'claheratio': 0.1,
+ 'crop_pad': 0,
+ 'crop_sampling': 'hybrid',
+ 'crop_size': [400, 400],
+ 'cropratio': 0.4,
+ 'dataset': 'training-datasets/iteration-0/UnaugmentedDataSet_Madagascar '
+            'AlexSep17/Madagascar Alex_Hamila95shuffle1.mat',
+ 'dataset_type': 'default',
+ 'decay_steps': 30000,
+ 'deterministic': False,
+ 'display_iters': 1000,
+ 'edge': False,
+ 'emboss': {'alpha': [0.0, 1.0], 'embossratio': 0.1, 'strength': [0.5, 1.5]},
+ 'fg_fraction': 0.25,
+ 'global_scale': 0.8,
+ 'histeq': True,
+ 'histeqratio': 0.1,
+ 'init_weights': '/content/drive/MyDrive/DLC/Madagascar '
+                 'Alex-Hamila-2021-09-17/dlc-models/iteration-0/Madagascar '
+                 'AlexSep17-trainset95shuffle1/train/snapshot-24000',
+ 'intermediate_supervision': False,
+ 'intermediate_supervision_layer': 12,
+ 'location_refinement': True,
+ 'locref_huber_loss': True,
+ 'locref_loss_weight': 0.05,
+ 'locref_stdev': 7.2801,
+ 'log_dir': 'log',
+ 'lr_init': 0.0005,
+ 'max_input_size': 1500,
+ 'max_shift': 0.4,
+ 'mean_pixel': [123.68, 116.779, 103.939],
+ 'metadataset': 'training-datasets/iteration-0/UnaugmentedDataSet_Madagascar '
+                'AlexSep17/Documentation_data-Madagascar '
+                'Alex_95shuffle1.pickle',
+ 'min_input_size': 64,
+ 'mirror': False,
+ 'multi_stage': False,
+ 'multi_step': [[0.005, 10000],
+                [0.02, 430000],
+                [0.002, 730000],
+                [0.001, 1030000]],
+ 'net_type': 'efficientnet-b0',
+ 'num_joints': 16,
+ 'optimizer': 'sgd',
+ 'pairwise_huber_loss': False,
+ 'pairwise_predict': False,
+ 'partaffinityfield_predict': False,
+ 'pos_dist_thresh': 17,
+ 'pre_resize': [],
+ 'project_path': '/content/drive/MyDrive/DLC/Madagascar Alex-Hamila-2021-09-17',
+ 'regularize': False,
+ 'rotation': 25,
+ 'rotratio': 0.4,
+ 'save_iters': 50000,
+ 'scale_jitter_lo': 0.5,
+ 'scale_jitter_up': 1.25,
+ 'scoremap_dir': 'test',
+ 'sharpen': False,
+ 'sharpenratio': 0.3,
+ 'shuffle': True,
+ 'snapshot_prefix': '/content/drive/MyDrive/DLC/Madagascar '
+                    'Alex-Hamila-2021-09-17/dlc-models/iteration-0/Madagascar '
+                    'AlexSep17-trainset95shuffle1/train/snapshot',
+ 'stride': 8.0,
+ 'weigh_negatives': False,
+ 'weigh_only_present_joints': False,
+ 'weigh_part_predictions': False,
+ 'weight_decay': 0.0001}
+2021-09-20 12:52:00 iteration: 24100 loss: 0.0005 lr: 5.5293665354838595e-05
+2021-09-20 12:53:29 iteration: 24200 loss: 0.0005 lr: 5.381844312069006e-05
+2021-09-20 12:54:58 iteration: 24300 loss: 0.0005 lr: 5.236525248619728e-05
+2021-09-20 12:56:27 iteration: 24400 loss: 0.0005 lr: 5.09342789882794e-05
+2021-09-20 12:57:56 iteration: 24500 loss: 0.0005 lr: 4.952571907779202e-05
+2021-09-20 12:59:25 iteration: 24600 loss: 0.0005 lr: 4.8139649152290076e-05
+2021-09-20 13:00:54 iteration: 24700 loss: 0.0005 lr: 4.677626566262916e-05
+2021-09-20 13:02:23 iteration: 24800 loss: 0.0005 lr: 4.543575778370723e-05
+2021-09-20 13:03:52 iteration: 24900 loss: 0.0004 lr: 4.4118190999142826e-05
+2021-09-20 13:05:21 iteration: 25000 loss: 0.0005 lr: 4.282375448383391e-05
+2021-09-20 13:06:50 iteration: 25100 loss: 0.0004 lr: 4.1552604670869187e-05
+2021-09-20 13:08:18 iteration: 25200 loss: 0.0005 lr: 4.030483978567645e-05
+2021-09-20 13:09:47 iteration: 25300 loss: 0.0004 lr: 3.9080663555068895e-05
+2021-09-20 13:11:16 iteration: 25400 loss: 0.0004 lr: 3.7880123272771016e-05
+2021-09-20 13:12:45 iteration: 25500 loss: 0.0004 lr: 3.670338628580794e-05
+2021-09-20 13:14:14 iteration: 25600 loss: 0.0004 lr: 3.5550619941204786e-05
+2021-09-20 13:15:43 iteration: 25700 loss: 0.0004 lr: 3.4421896998537704e-05
+2021-09-20 13:17:11 iteration: 25800 loss: 0.0005 lr: 3.331735933898017e-05
+2021-09-20 13:18:40 iteration: 25900 loss: 0.0004 lr: 3.223715248168446e-05
+2021-09-20 13:20:09 iteration: 26000 loss: 0.0005 lr: 3.118135646218434e-05
+2021-09-20 13:21:38 iteration: 26100 loss: 0.0004 lr: 3.0150098609738052e-05
+2021-09-20 13:23:06 iteration: 26200 loss: 0.0004 lr: 2.9143531719455495e-05
+2021-09-20 13:24:35 iteration: 26300 loss: 0.0004 lr: 2.816170672303997e-05
+2021-09-20 13:26:04 iteration: 26400 loss: 0.0005 lr: 2.7204747311770916e-05
+2021-09-20 13:27:32 iteration: 26500 loss: 0.0004 lr: 2.62727899098536e-05
+2021-09-20 13:29:01 iteration: 26600 loss: 0.0005 lr: 2.536590545787476e-05
+2021-09-20 13:30:30 iteration: 26700 loss: 0.0004 lr: 2.4484195819240995e-05
+2021-09-20 13:31:59 iteration: 26800 loss: 0.0004 lr: 2.3627781047252938e-05
+2021-09-20 13:33:28 iteration: 26900 loss: 0.0004 lr: 2.2796730263507925e-05
+2021-09-20 13:34:56 iteration: 27000 loss: 0.0004 lr: 2.1991134417476133e-05
+2021-09-20 13:36:26 iteration: 27100 loss: 0.0004 lr: 2.1211122657405213e-05
+2021-09-20 13:37:55 iteration: 27200 loss: 0.0004 lr: 2.0456709535210393e-05
+2021-09-20 13:39:24 iteration: 27300 loss: 0.0004 lr: 1.972805694094859e-05
+2021-09-20 13:40:52 iteration: 27400 loss: 0.0004 lr: 1.90251630556304e-05
+2021-09-20 13:42:21 iteration: 27500 loss: 0.0004 lr: 1.8348162484471686e-05
+2021-09-20 13:43:50 iteration: 27600 loss: 0.0004 lr: 1.769712434906978e-05
+2021-09-20 13:45:19 iteration: 27700 loss: 0.0004 lr: 1.707209594314918e-05
+2021-09-20 13:46:47 iteration: 27800 loss: 0.0004 lr: 1.647316457820125e-05
+2021-09-20 13:48:16 iteration: 27900 loss: 0.0004 lr: 1.5900397556833923e-05
+2021-09-20 13:49:45 iteration: 28000 loss: 0.0004 lr: 1.5353833077824675e-05
+2021-09-20 13:51:13 iteration: 28100 loss: 0.0004 lr: 1.483355117670726e-05
+2021-09-20 13:52:42 iteration: 28200 loss: 0.0004 lr: 1.4339630070026033e-05
+2021-09-20 13:54:11 iteration: 28300 loss: 0.0004 lr: 1.3872066119802184e-05
+2021-09-20 13:55:40 iteration: 28400 loss: 0.0004 lr: 1.343096391792642e-05
+2021-09-20 13:57:08 iteration: 28500 loss: 0.0004 lr: 1.3016350749239791e-05
+2021-09-20 13:58:37 iteration: 28600 loss: 0.0004 lr: 1.262827299797209e-05
+2021-09-20 14:00:06 iteration: 28700 loss: 0.0005 lr: 1.2266772500879597e-05
+2021-09-20 14:01:34 iteration: 28800 loss: 0.0004 lr: 1.1931892913707998e-05
+2021-09-20 14:03:03 iteration: 28900 loss: 0.0004 lr: 1.162366424978245e-05
+2021-09-20 14:04:32 iteration: 29000 loss: 0.0004 lr: 1.1342131074343342e-05
+2021-09-20 14:06:01 iteration: 29100 loss: 0.0004 lr: 1.1087321581726428e-05
+2021-09-20 14:07:30 iteration: 29200 loss: 0.0005 lr: 1.0859248504857533e-05
+2021-09-20 14:08:59 iteration: 29300 loss: 0.0004 lr: 1.0657959137461148e-05
+2021-09-20 14:10:27 iteration: 29400 loss: 0.0004 lr: 1.0483451660547871e-05
+2021-09-20 14:11:56 iteration: 29500 loss: 0.0004 lr: 1.033575608744286e-05
+2021-09-20 14:13:25 iteration: 29600 loss: 0.0004 lr: 1.0214899702987168e-05
+2021-09-20 14:14:53 iteration: 29700 loss: 0.0004 lr: 1.0120899787580129e-05
+2021-09-20 14:16:22 iteration: 29800 loss: 0.0004 lr: 1.0053725418401882e-05
+2021-09-20 14:17:50 iteration: 29900 loss: 0.0004 lr: 1.0013435712608043e-05
+2021-09-20 14:19:19 iteration: 30000 loss: 0.0004 lr: 1.0000000656873453e-05
