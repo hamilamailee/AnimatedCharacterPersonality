@@ -1,0 +1,102 @@
+    # Project definitions (do not edit)
+Task: Simba
+scorer: Hamila
+date: Aug9
+multianimalproject: false
+identity:
+
+    # Project path (change when moving around)
+project_path: /content/drive/MyDrive/DLC/Simba-Hamila-2021-08-09
+
+    # Annotation data set configuration (and individual video cropping parameters)
+video_sets:
+  /Users/apple/Desktop/Cleaned/Computer Animation/DLC/Simba-Hamila-2021-08-09/videos/p1.mp4:
+    crop: 0, 1920, 0, 1080
+  /Users/apple/Desktop/Cleaned/Computer Animation/DLC/Simba-Hamila-2021-08-09/videos/p2.mp4:
+    crop: 0, 1920, 0, 1080
+bodyparts:
+- earr
+- earl
+- eyer
+- eyel
+- nose
+- throat
+- elbowr
+- elbowl
+- handr
+- handl
+- tailbase
+- tailtip
+- kneer
+- kneel
+- ankler
+- anklel
+start: 0
+stop: 1
+numframes2pick: 20
+
+    # Plotting configuration
+skeleton:
+- - earr
+  - eyer
+- - earl
+  - eyel
+- - eyel
+  - eyer
+- - nose
+  - eyer
+- - nose
+  - eyel
+- - throat
+  - eyer
+- - throat
+  - eyel
+- - throat
+  - elbowr
+- - throat
+  - elbowl
+- - throat
+  - tailbase
+- - handr
+  - elbowr
+- - handl
+  - elbowl
+- - tailtip
+  - tailbase
+- - kneer
+  - tailbase
+- - kneel
+  - tailbase
+- - kneel
+  - anklel
+- - kneer
+  - ankler
+skeleton_color: gray
+pcutoff: 0.6
+dotsize: 16
+alphavalue: 1
+colormap: rainbow
+
+    # Training,Evaluation and Analysis configuration
+TrainingFraction:
+- 0.95
+iteration: 0
+default_net_type: resnet_50
+default_augmenter: default
+snapshotindex: all
+batch_size: 8
+
+    # Cropping Parameters (for analysis and outlier frame detection)
+cropping: false
+croppedtraining: false
+    #if cropping is true for analysis, then set the values here:
+x1: 0
+x2: 640
+y1: 277
+y2: 624
+
+    # Refinement configuration (parameters from annotation dataset configuration also relevant in this stage)
+corner2move2:
+- 50
+- 50
+move2corner: true
