@@ -1,18 +1,49 @@
 import yaml
 import numpy as np
+from numpy.linalg import norm
 from asyncio.windows_events import NULL
 import pandas as pd
 pd.options.mode.chained_assignment = None  # default='warn'
 
 
 all_joints = []
+all_bones = []
+
+
+def has_nan(array) -> bool:
+    return np.isnan(np.sum(array))
+
+
+class Bone:
+    def __init__(self, joint1, joint2) -> None:
+        self.joint1 = joint1
+        self.joint2 = joint2
+        self.bone_length()
+        all_bones.append(self)
+
+    def bone_length(self) -> None:
+        cords1 = self.joint1.cords.to_numpy()[:, :3]
+        cords2 = self.joint2.cords.to_numpy()[:, :3]
+        dist = []
+        for i in range(len(cords1)):
+            if np.isnan(norm(cords1[i] - cords2[i])):
+                continue
+            dist.append(norm(cords1[i] - cords2[i]))
+        self.length = np.average(dist)
+
+    def print_bone(self) -> None:
+        string = "({bone1} , {bone2}) -> length: {length}".format(
+            bone1=self.joint1.name,
+            bone2=self.joint2.name,
+            length=self.length)
+        print(string)
 
 
 class Joint:
     def __init__(self, name) -> None:
         self.name = name
         self.connected_joints = []
-        self.add_joint()
+        all_joints.append(self)
 
     def get_joint(name):
         for j in all_joints:
@@ -25,22 +56,22 @@ class Joint:
         j2 = Joint.get_joint(bone[1])
         j1.connected_joints.append(j2)
         j2.connected_joints.append(j1)
+        Bone(j1, j2)
 
     def get_cords_from_df(self, df) -> None:
-        model = df[self.name]
+        model = df[self.name].astype(np.float64)
         model.columns = ['x', 'y', 'z']
-        model['z'] = 0
+        model.loc[model['z'] < 0.4, :] = np.NaN
+        model.loc[model['z'] >= 0.4, 'z'] = 0
         self.cords = model
         self.cords['frame'] = self.cords.index - 1
-
-    def add_joint(self) -> None:
-        all_joints.append(self)
 
     def print_joint(self) -> None:
         print("name : ", self.name)
         print("connected joints : ")
         for i in range(len(self.connected_joints)):
-            print(self.connected_joints[i].name)
+            print(self.connected_joints[i].name, end=" - ")
+        print()
 
 
 # file_path = input("Enter the path of your csv file: ")
@@ -65,5 +96,5 @@ with open(conf_path) as file:
     for bone in skeleton:
         Joint.connect_joints(bone)
 
-for i in all_joints:
-    i.print_joint()
+for b in all_bones:
+    b.print_bone()
