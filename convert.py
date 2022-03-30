@@ -1,3 +1,5 @@
+from cmath import acos, pi, sqrt
+from statistics import mode
 import yaml
 import numpy as np
 from numpy.linalg import norm
@@ -8,10 +10,30 @@ pd.options.mode.chained_assignment = None  # default='warn'
 
 all_joints = []
 all_bones = []
+fc = 0
 
 
 def has_nan(array) -> bool:
     return np.isnan(np.sum(array))
+
+
+def degy(vec12y) -> np.double:
+    cos_theta = vec12y[0] / sqrt(vec12y[0] ** 2 + vec12y[2] ** 2)
+    if vec12y[2] <= 0:
+        return np.real(acos(cos_theta) * 180 / pi)
+    else:
+        return np.real(acos(cos_theta) * -180 / pi)
+
+
+def degz(vec12z) -> np.double:
+    cos_theta = sqrt(vec12z[0] ** 2 + vec12z[2] ** 2) / \
+        sqrt(vec12z[0] ** 2 + vec12z[1] ** 2+vec12z[2] ** 2)
+    if vec12z[1] > 0:
+        return np.real(acos(cos_theta) * 180 / pi)
+    elif vec12z[1] == 0:
+        return 0.0
+    else:
+        return np.real(acos(cos_theta) * -180 / pi)
 
 
 class Bone:
@@ -21,9 +43,24 @@ class Bone:
         self.bone_length()
         all_bones.append(self)
 
+    def get_angles() -> np.array:
+        all_rotations = np.empty((fc, 0))
+        for b in all_bones:
+            b.print_bone()
+            vec1 = b.joint1.cords[:, :3]
+            vec2 = b.joint2.cords[:, :3]
+            vec = vec2 - vec1
+            col1 = np.apply_along_axis(degy, 1, vec)
+            col2 = np.apply_along_axis(degz, 1, vec)
+            col3 = np.zeros_like(col1)
+            rotation_angles = np.column_stack((col1, col2, col3))
+            all_rotations = np.concatenate(
+                (all_rotations, rotation_angles), axis=1)
+        return all_rotations
+
     def bone_length(self) -> None:
-        cords1 = self.joint1.cords.to_numpy()[:, :3]
-        cords2 = self.joint2.cords.to_numpy()[:, :3]
+        cords1 = self.joint1.cords[:, :3]
+        cords2 = self.joint2.cords[:, :3]
         dist = []
         for i in range(len(cords1)):
             if np.isnan(norm(cords1[i] - cords2[i])):
@@ -63,8 +100,8 @@ class Joint:
         model.columns = ['x', 'y', 'z']
         model.loc[model['z'] < 0.4, :] = np.NaN
         model.loc[model['z'] >= 0.4, 'z'] = 0
-        self.cords = model
-        self.cords['frame'] = self.cords.index - 1
+        model['frame'] = model.index - 1
+        self.cords = model.to_numpy()
 
     def print_joint(self) -> None:
         print("name : ", self.name)
@@ -83,6 +120,7 @@ conf_path = "config.yaml"
 df = pd.read_csv(file_path)
 df.columns = df[df['scorer'] == 'bodyparts'].to_numpy().tolist()
 df = df.drop([0, 1], axis=0)
+fc = len(df)
 
 for i in np.unique(list(df.columns)):
     if i != "bodyparts":
@@ -96,5 +134,4 @@ with open(conf_path) as file:
     for bone in skeleton:
         Joint.connect_joints(bone)
 
-for b in all_bones:
-    b.print_bone()
+print(Bone.get_angles().shape)
