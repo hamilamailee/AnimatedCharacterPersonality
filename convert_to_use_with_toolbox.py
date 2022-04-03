@@ -1,5 +1,6 @@
 from cmath import acos, pi, sqrt
 from statistics import mode
+from unicodedata import name
 import yaml
 import numpy as np
 from numpy.linalg import norm
@@ -41,19 +42,20 @@ class Bone:
         self.joint1 = joint1
         self.joint2 = joint2
         self.bone_length()
-        all_bones.append(self)
 
     def get_angles() -> np.array:
-        all_rotations = np.empty((fc, 0))
+        all_rotations = np.empty((fc + 1, 0))
         for b in all_bones:
-            b.print_bone()
             vec1 = b.joint1.cords[:, :3]
             vec2 = b.joint2.cords[:, :3]
             vec = vec2 - vec1
+            info = np.array(
+                [[b.joint1.name+".y", b.joint1.name+".z", b.joint1.name+".x"]])
             col1 = np.apply_along_axis(degy, 1, vec)
             col2 = np.apply_along_axis(degz, 1, vec)
             col3 = np.zeros_like(col1)
             rotation_angles = np.column_stack((col1, col2, col3))
+            rotation_angles = np.row_stack((info, rotation_angles))
             all_rotations = np.concatenate(
                 (all_rotations, rotation_angles), axis=1)
         return all_rotations
@@ -143,7 +145,61 @@ with open(conf_path) as file:
     for bone in skeleton:
         Joint.connect_joints(bone)
 
-all_rotations = Bone.get_angles()
-# print(all_rotations[:, :3])
+root = Joint.get_root()
 
-print(Joint.get_root())
+# hierarchy
+
+
+def traverse(hierarchy, parent):
+    if parent.name == root:
+        hierarchy = np.row_stack(
+            (hierarchy, np.array([root, "", 0, 0, 0])))
+    index = initial_frame_index()
+    for c in parent.connected_joints:
+        if c.name not in hierarchy:
+            all_bones.append(Bone(parent, c))
+            cord = (c.cords[index] - parent.cords[index])[:3]
+            bone = np.array([c.name, parent.name])
+            cord = np.concatenate((bone, cord))
+            hierarchy = np.row_stack((hierarchy, cord))
+            hierarchy = traverse(hierarchy, c)
+    return hierarchy
+
+
+def initial_frame_index() -> int:
+    for f in range(fc):
+        found = True
+        for j in all_joints:
+            if has_nan(j.cords[f][:3]):
+                found = False
+        if found:
+            return f
+
+
+hierarchy = np.empty((0, 5))
+hierarchy = traverse(hierarchy, Joint.get_joint(root))
+df = pd.DataFrame(
+    hierarchy, columns=['joint', 'parent', 'offset.x', 'offset.y', 'offset.z'])
+df.to_csv(file_path.split(
+    ".")[0]+"_hierarchy.csv", index=False)
+
+
+# positions
+
+df = pd.DataFrame(range(fc), columns=['time'])
+df['time'] = df['time'] * 1 / 60
+for j in all_joints:
+    df[j.name+".x"] = j.cords[:, 0]
+    df[j.name+".y"] = j.cords[:, 1]
+    df[j.name+".z"] = j.cords[:, 2]
+df.to_csv(file_path.split(
+    ".")[0]+"_pos.csv", index=False)
+
+# rotations
+
+angles = Bone.get_angles()
+df = pd.DataFrame(angles[1:, :], columns=angles[0])
+df['time'] = list(range(fc))
+df['time'] = df['time'] * 1 / 60
+df.to_csv(file_path.split(
+    ".")[0]+"_rot.csv", index=False)
