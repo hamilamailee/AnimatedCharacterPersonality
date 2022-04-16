@@ -106,12 +106,13 @@ class Joint:
         j2.connected_joints.append(j1)
         Bone(j1, j2)
 
-    def get_cords_from_df(self, df) -> None:
+    def get_cords_from_df(self, df, alpha, dime) -> None:
         model = df[self.name].astype(np.float64)
         model.columns = ['x', 'y', 'z']
-        model.loc[model['z'] < 0.4, :] = np.NaN
-        model.loc[model['z'] >= 0.4, 'z'] = 0
+        model.loc[model['z'] < alpha, :] = np.NaN
+        model.loc[model['z'] >= alpha, 'z'] = 0
         model['frame'] = model.index - 1
+        model['y'] = -model['y']
         self.cords = model.to_numpy()
 
     def print_joint(self) -> None:
@@ -124,8 +125,9 @@ class Joint:
 
 # file_path = input("Enter the path of your csv file: ")
 # conf_path = input("Enter the path of your config.yaml file: ")
+# vid name
 
-file_path = "p1DLC_effnet_b0_Simba ModifiedAug27shuffle0_150000.csv"
+file_path = "test\p1DLC_effnet_b0_Simba ModifiedAug27shuffle0_150000.csv"
 conf_path = "config.yaml"
 
 df = pd.read_csv(file_path)
@@ -137,13 +139,21 @@ for i in np.unique(list(df.columns)):
     if i != "bodyparts":
         Joint(i)
 
-for j in all_joints:
-    j.get_cords_from_df(df)
 
+alpha = 0.7
 with open(conf_path) as file:
-    skeleton = yaml.load(file, Loader=yaml.FullLoader)['skeleton']
-    for bone in skeleton:
-        Joint.connect_joints(bone)
+    conf = yaml.load(file, Loader=yaml.FullLoader)
+    alpha = conf['alphavalue']
+    skeleton = conf['skeleton']
+    for k, v in conf['video_sets'].items():
+        dime = [int(i) for i in v['crop'].split(",")]
+        break
+
+for j in all_joints:
+    j.get_cords_from_df(df, alpha, dime)
+
+for bone in skeleton:
+    Joint.connect_joints(bone)
 
 root = Joint.get_root()
 

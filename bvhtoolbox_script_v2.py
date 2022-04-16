@@ -1,3 +1,4 @@
+from unittest import loader
 import yaml
 import numpy as np
 from numpy.linalg import norm
@@ -107,11 +108,15 @@ class Joint:
         j2.children.append(j1.name)
         Bone(j1, j2)
 
-    def get_cords_from_df(self, df) -> None:
+    def get_cords_from_df(self, df, conf) -> None:
+        with open(conf) as cf:
+            y = yaml.load(cf, Loader=yaml.FullLoader)
+            alpha = y['alphavalue']
         model = df[self.name].astype(np.float64)
         model.columns = ['x', 'y', 'z']
-        model.loc[model['z'] < 0.4, :] = np.NaN
-        model.loc[model['z'] >= 0.4, 'z'] = 0
+        model['y'] = - model['y']
+        model.loc[model['z'] < alpha, :] = np.NaN
+        model.loc[model['z'] >= alpha, 'z'] = 0
         model['frame'] = model.index - 1
         self.cords = model.to_numpy()
 
@@ -146,13 +151,11 @@ class Hierarchy:
         index = initial_frame_index()
         for j in all_joints:
             if j.name != self.root.name:
-                print(j.name)
                 parent = Joint.get_joint(j.parent)
                 cords = (j.cords[index] - parent.cords[index])[:3]
                 bone = np.array([j.name, j.parent])
                 cords = np.concatenate((bone, cords))
                 hierarchy = np.row_stack((hierarchy, cords))
-        print(hierarchy)
         df = pd.DataFrame(
             hierarchy, columns=['joint', 'parent', 'offset.x', 'offset.y', 'offset.z'])
         df.to_csv(self.file_path.split(
@@ -175,7 +178,7 @@ for i in np.unique(list(df.columns)):
         Joint(i)
 
 for j in all_joints:
-    j.get_cords_from_df(df)
+    j.get_cords_from_df(df, conf_path)
 
 with open(conf_path) as file:
     skeleton = yaml.load(file, Loader=yaml.FullLoader)['skeleton']
