@@ -1,11 +1,8 @@
+from __future__ import annotations
 from cmath import acos, pi, sqrt
-from statistics import mode
-from time import sleep
-from unicodedata import name
 import yaml
 import numpy as np
 from numpy.linalg import norm
-from asyncio.windows_events import NULL
 import pandas as pd
 pd.options.mode.chained_assignment = None  # default='warn'
 
@@ -18,15 +15,13 @@ fc = 0
 def has_nan(array) -> bool:
     return np.isnan(np.sum(array))
 
-
 def degy(vec12y) -> np.double:
     cos_theta = vec12y[0] / sqrt(vec12y[0] ** 2 + vec12y[2] ** 2)
     if vec12y[2] <= 0:
         return np.real(acos(cos_theta) * 180 / pi)
     else:
         return np.real(acos(cos_theta) * -180 / pi)
-
-
+    
 def degz(vec12z) -> np.double:
     cos_theta = sqrt(vec12z[0] ** 2 + vec12z[2] ** 2) / \
         sqrt(vec12z[0] ** 2 + vec12z[1] ** 2+vec12z[2] ** 2)
@@ -37,13 +32,43 @@ def degz(vec12z) -> np.double:
     else:
         return np.real(acos(cos_theta) * -180 / pi)
 
+class BVH:
+    def __init__(self, file_path: str, conf_path: str, root: str) -> None:
+        self.df = self.read_file(file_path)
+        fc = len(self.df)
+        with open(conf_path) as file:
+            self.conf = yaml.load(file, Loader=yaml.FullLoader)
+        self.root = root
+    
+    def read_file(self, file_path) -> pd.DataFrame:
+        df = pd.read_csv(file_path)
+        df.columns = df[df['scorer'] == 'bodyparts'].to_numpy().tolist()
+        return df.drop([0, 1], axis=0)
+        
+    def write_hierarchy_file(self):
+        self.dfs()
+        for j, joint in all_joints.items():
+            if len(joint.connected_joints) == 0:
+                joint.is_end = True
+            joint.get_cords_from_df(self.df, self.conf['alphavalue'])
+        
+    def dfs(self):
+        root_j = Joint.get_joint(self.root)
+        for j in root_j.connected_joints:
+            if root_j in j.connected_joints:
+                Bone(j, root_j)
+                j.connected_joints.remove(root_j)
+        for j in root_j.connected_joints:
+            self.dfs(j.name)        
+    
+
 
 class Bone:
-    def __init__(self, joint1, joint2) -> None:
-        self.joint1 = joint1
-        self.joint2 = joint2
-        self.bone_length()
-
+    def __init__(self, child: Joint, parent: Joint) -> None:
+        self.child = child
+        self.parent = parent
+        all_bones.append(self)
+        
     def get_angles() -> np.array:
         all_rotations = np.empty((fc + 1, 0))
         for b in all_bones:
@@ -72,21 +97,18 @@ class Bone:
         self.length = np.average(dist)
 
     def print_bone(self) -> None:
-        string = "({bone1} , {bone2}) -> length: {length}".format(
-            bone1=self.joint1.name,
-            bone2=self.joint2.name,
-            length=self.length)
+        string = f"(parent : {self.parent.name} , child : {self.child.name}) -> length: -"
         print(string)
 
 
 class Joint:
-
     def __init__(self, name):
         self.name = name
         self.connected_joints = []
+        self.is_end = False
         all_joints[name] = self
 
-    def get_joint(name: str):
+    def get_joint(name: str) -> Joint:
         if name not in all_joints:
             return None
         return all_joints[name]
@@ -106,7 +128,7 @@ class Joint:
         j1.connected_joints.append(j2)
         j2.connected_joints.append(j1)
 
-    def get_cords_from_df(self, df, alpha, dime) -> None:
+    def get_cords_from_df(self, df, alpha) -> None:
         model = df[self.name].astype(np.float64)
         model.columns = ['x', 'y', 'z']
         model.loc[model['z'] < alpha, :] = np.NaN
@@ -120,42 +142,36 @@ class Joint:
         print("connected joints : ")
         for i in range(len(self.connected_joints)):
             print(self.connected_joints[i].name, end=" - ")
-        print()
+        print("\n___________________________________")
 
 
 # file_path = input("Enter the path of your csv file: ")
 # conf_path = input("Enter the path of your config.yaml file: ")
-# vid name
+# root = input("Enter the name of your root: ")
 
 file_path = "test\walk_cycle_dlc.csv"
 conf_path = "config2.yaml"
+root = "Hips"
 
-df = pd.read_csv(file_path)
-df.columns = df[df['scorer'] == 'bodyparts'].to_numpy().tolist()
-df = df.drop([0, 1], axis=0)
-fc = len(df)
 
-alpha = 0.7
-with open(conf_path) as file:
-    conf = yaml.load(file, Loader=yaml.FullLoader)
-    alpha = conf['alphavalue']
-    skeleton = conf['skeleton']
-    for k, v in conf['video_sets'].items():
-        dime = [int(i) for i in v['crop'].split(",")]
-        break
+file_path = "test\p1DLC_effnet_b0_Simba ModifiedAug27shuffle0_150000.csv"
+conf_path = "config.yaml"
+root = "tailbase"
+
+
+gen_bvh = BVH(file_path, conf_path, root)
+skeleton = gen_bvh.conf['skeleton']
 
 for bone in skeleton:
-    print(bone[0])
-    b0 = Joint(bone[0])
-    b1 = Joint(bone[1])
+    if bone[0] not in all_joints:
+        Joint(bone[0])
+    if bone[1] not in all_joints:
+        Joint(bone[1])
     Joint.connect_joints(bone[0], bone[1])
 
-for j in all_joints:
-    j.print_joint()
-
-for j in all_joints:
-    j.get_cords_from_df(df, alpha, dime)
-
+gen_bvh.write_hierarchy_file()
+        
+"""
 for bone in skeleton:
     Joint.connect_joints(bone)
 
@@ -217,3 +233,4 @@ df['time'] = list(range(fc))
 df['time'] = df['time'] * 1 / 60
 df.to_csv(file_path.split(
     ".")[0]+"_rot.csv", index=False)
+"""
