@@ -1,5 +1,6 @@
 from cmath import acos, pi, sqrt
 from statistics import mode
+from time import sleep
 from unicodedata import name
 import yaml
 import numpy as np
@@ -9,7 +10,7 @@ import pandas as pd
 pd.options.mode.chained_assignment = None  # default='warn'
 
 
-all_joints = []
+all_joints = dict()
 all_bones = []
 fc = 0
 
@@ -79,16 +80,16 @@ class Bone:
 
 
 class Joint:
-    def __init__(self, name) -> None:
+
+    def __init__(self, name):
         self.name = name
         self.connected_joints = []
-        all_joints.append(self)
+        all_joints[name] = self
 
-    def get_joint(name):
-        for j in all_joints:
-            if j.name == name:
-                return j
-        return None
+    def get_joint(name: str):
+        if name not in all_joints:
+            return None
+        return all_joints[name]
 
     def get_root() -> str:
         count = len(all_joints[0].connected_joints)
@@ -99,12 +100,11 @@ class Joint:
                 name = j.name
         return name
 
-    def connect_joints(bone) -> None:
-        j1 = Joint.get_joint(bone[0])
-        j2 = Joint.get_joint(bone[1])
+    def connect_joints(joint1: str, joint2: str ) -> None:
+        j1 = Joint.get_joint(joint1)
+        j2 = Joint.get_joint(joint2)
         j1.connected_joints.append(j2)
         j2.connected_joints.append(j1)
-        Bone(j1, j2)
 
     def get_cords_from_df(self, df, alpha, dime) -> None:
         model = df[self.name].astype(np.float64)
@@ -127,18 +127,13 @@ class Joint:
 # conf_path = input("Enter the path of your config.yaml file: ")
 # vid name
 
-file_path = "test\p1DLC_effnet_b0_Simba ModifiedAug27shuffle0_150000.csv"
-conf_path = "config.yaml"
+file_path = "test\walk_cycle_dlc.csv"
+conf_path = "config2.yaml"
 
 df = pd.read_csv(file_path)
 df.columns = df[df['scorer'] == 'bodyparts'].to_numpy().tolist()
 df = df.drop([0, 1], axis=0)
 fc = len(df)
-
-for i in np.unique(list(df.columns)):
-    if i != "bodyparts":
-        Joint(i)
-
 
 alpha = 0.7
 with open(conf_path) as file:
@@ -148,6 +143,15 @@ with open(conf_path) as file:
     for k, v in conf['video_sets'].items():
         dime = [int(i) for i in v['crop'].split(",")]
         break
+
+for bone in skeleton:
+    print(bone[0])
+    b0 = Joint(bone[0])
+    b1 = Joint(bone[1])
+    Joint.connect_joints(bone[0], bone[1])
+
+for j in all_joints:
+    j.print_joint()
 
 for j in all_joints:
     j.get_cords_from_df(df, alpha, dime)

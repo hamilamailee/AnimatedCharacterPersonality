@@ -1,0 +1,129 @@
+--- 
+Task: "Simba Modified"
+TrainingFraction: 
+  - 0.95
+alphavalue: 0.7
+batch_size: 8
+bodyparts: 
+  - Hips
+  - Ab
+  - Chest
+  - LeftCollar
+  - LeftShoulder
+  - LeftElbow
+  - LeftWrist
+  - Neck
+  - Head
+  - RightCollar
+  - RightShoulder
+  - RightElbow
+  - RightWrist
+  - LeftHip
+  - LeftKnee
+  - LeftAnkle
+  - RightHip
+  - RightKnee
+  - RightAnkle
+colormap: rainbow
+corner2move2: 
+  - 50
+  - 50
+croppedtraining: false
+cropping: false
+date: Aug27
+default_augmenter: default
+default_net_type: resnet_50
+dotsize: 16
+identity: ~
+iteration: 0
+move2corner: true
+multianimalproject: false
+numframes2pick: 30
+pcutoff: 0.6
+project_path: "/content/drive/MyDrive/DLC/Simba Modified-Hamila-2021-08-27"
+scorer: Hamila
+skeleton: 
+  - 
+    - Ab
+    - Hips
+  - 
+    - Chest
+    - Ab
+  - 
+    - LeftCollar
+    - Chest
+  - 
+    - LeftShoulder
+    - LeftCollar
+  - 
+    - LeftElbow
+    - LeftShoulder
+  - 
+    - LeftWrist
+    - LeftElbow
+  - 
+    - LeftWrist_End
+    - LeftWrist
+  - 
+    - Neck
+    - Chest
+  - 
+    - Head
+    - Neck
+  - 
+    - Head_End
+    - Head
+  - 
+    - RightCollar
+    - Chest
+  - 
+    - RightShoulder
+    - RightCollar
+  - 
+    - RightElbow
+    - RightShoulder
+  - 
+    - RightWrist
+    - RightElbow
+  - 
+    - RightWrist_End
+    - RightWrist
+  - 
+    - LeftHip
+    - Hips
+  - 
+    - LeftKnee
+    - LeftHip
+  - 
+    - LeftAnkle
+    - LeftKnee
+  - 
+    - LeftAnkle_End
+    - LeftAnkle
+  - 
+    - RightHip
+    - Hips
+  - 
+    - RightKnee
+    - RightHip
+  - 
+    - RightAnkle
+    - RightKnee
+  - 
+    - RightAnkle_End
+    - RightAnkle
+skeleton_color: gray
+snapshotindex: all
+start: 0
+stop: 1
+video_sets: 
+  ? "/Users/apple/Desktop/Cleaned/Computer Animation/DLC/Simba Modified-Hamila-2021-08-27/videos/p1.mp4"
+  : 
+    crop: "0, 1920, 0, 1080"
+  ? "/Users/apple/Desktop/Cleaned/Computer Animation/DLC/Simba Modified-Hamila-2021-08-27/videos/p2.mp4"
+  : 
+    crop: "0, 1920, 0, 1080"
+x1: 0
+x2: 640
+y1: 277
+y2: 624
