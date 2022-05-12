@@ -1,5 +1,11 @@
 from __future__ import annotations
 from cmath import acos, pi, sqrt
+from ntpath import join
+from re import L
+from select import select
+from time import sleep
+from traceback import print_tb
+from matplotlib.pyplot import prism
 import yaml
 import numpy as np
 from numpy.linalg import norm
@@ -15,13 +21,15 @@ fc = 0
 def has_nan(array) -> bool:
     return np.isnan(np.sum(array))
 
+
 def degy(vec12y) -> np.double:
     cos_theta = vec12y[0] / sqrt(vec12y[0] ** 2 + vec12y[2] ** 2)
     if vec12y[2] <= 0:
         return np.real(acos(cos_theta) * 180 / pi)
     else:
         return np.real(acos(cos_theta) * -180 / pi)
-    
+
+
 def degz(vec12z) -> np.double:
     cos_theta = sqrt(vec12z[0] ** 2 + vec12z[2] ** 2) / \
         sqrt(vec12z[0] ** 2 + vec12z[1] ** 2+vec12z[2] ** 2)
@@ -32,35 +40,63 @@ def degz(vec12z) -> np.double:
     else:
         return np.real(acos(cos_theta) * -180 / pi)
 
+
 class BVH:
     def __init__(self, file_path: str, conf_path: str, root: str) -> None:
         self.df = self.read_file(file_path)
-        fc = len(self.df)
+        self.fc = len(self.df)
         with open(conf_path) as file:
             self.conf = yaml.load(file, Loader=yaml.FullLoader)
         self.root = root
-    
+
+    def initial_frame_index(self) -> int:
+        for f in range(self.fc):
+            found = True
+            for j, joint in all_joints.items():
+                if joint.cords is not None:
+                    if has_nan(joint.cords[f][:3]):
+                        found = False
+            if found:
+                return f
+        return None
+
     def read_file(self, file_path) -> pd.DataFrame:
         df = pd.read_csv(file_path)
         df.columns = df[df['scorer'] == 'bodyparts'].to_numpy().tolist()
         return df.drop([0, 1], axis=0)
-        
-    def write_hierarchy_file(self):
-        self.dfs()
+
+    def write_hierarchy_file(self, file_path: str):
+        self.dfs(self.root)
+        hierarchy = np.empty((0, 5))
+        hierarchy = self.offset_and_cord(hierarchy)
+        df = pd.DataFrame(hierarchy, columns=[
+                          'joint', 'parent', 'offset.x', 'offset.y', 'offset.z'])
+        df.to_csv(file_path.split(".")[0]+"_hierarchy.csv", index=False)
+
+    def offset_and_cord(self, hierarchy: np.array):
         for j, joint in all_joints.items():
-            if len(joint.connected_joints) == 0:
-                joint.is_end = True
             joint.get_cords_from_df(self.df, self.conf['alphavalue'])
-        
-    def dfs(self):
-        root_j = Joint.get_joint(self.root)
+        index = self.initial_frame_index()
+        hierarchy = np.row_stack(
+            (hierarchy, np.array([self.root, "", 0, 0, 0])))
+        for b in all_bones:
+            if b.child.name in hierarchy[:, 0]:
+                all_bones.remove(b)
+                continue
+            cord = (b.child.cords[index] - b.parent.cords[index])[:3]
+            bone = np.array([b.child.name, b.parent.name])
+            cord = np.concatenate((bone, cord))
+            hierarchy = np.row_stack((hierarchy, cord))
+        return hierarchy
+
+    def dfs(self, root: str):
+        root_j = Joint.get_joint(root)
         for j in root_j.connected_joints:
             if root_j in j.connected_joints:
                 Bone(j, root_j)
                 j.connected_joints.remove(root_j)
         for j in root_j.connected_joints:
-            self.dfs(j.name)        
-    
+            self.dfs(j.name)
 
 
 class Bone:
@@ -68,7 +104,7 @@ class Bone:
         self.child = child
         self.parent = parent
         all_bones.append(self)
-        
+
     def get_angles() -> np.array:
         all_rotations = np.empty((fc + 1, 0))
         for b in all_bones:
@@ -105,7 +141,7 @@ class Joint:
     def __init__(self, name):
         self.name = name
         self.connected_joints = []
-        self.is_end = False
+        self.cords = None
         all_joints[name] = self
 
     def get_joint(name: str) -> Joint:
@@ -122,20 +158,21 @@ class Joint:
                 name = j.name
         return name
 
-    def connect_joints(joint1: str, joint2: str ) -> None:
+    def connect_joints(joint1: str, joint2: str) -> None:
         j1 = Joint.get_joint(joint1)
         j2 = Joint.get_joint(joint2)
         j1.connected_joints.append(j2)
         j2.connected_joints.append(j1)
 
     def get_cords_from_df(self, df, alpha) -> None:
-        model = df[self.name].astype(np.float64)
-        model.columns = ['x', 'y', 'z']
-        model.loc[model['z'] < alpha, :] = np.NaN
-        model.loc[model['z'] >= alpha, 'z'] = 0
-        model['frame'] = model.index - 1
-        model['y'] = -model['y']
-        self.cords = model.to_numpy()
+        if self.name in df.columns:
+            model = df[self.name].astype(np.float64)
+            model.columns = ['x', 'y', 'z']
+            model.loc[model['z'] < alpha, :] = np.NaN
+            model.loc[model['z'] >= alpha, 'z'] = 0
+            model['frame'] = model.index - 1
+            model['y'] = -model['y']
+            self.cords = model.to_numpy()
 
     def print_joint(self) -> None:
         print("name : ", self.name)
@@ -169,8 +206,8 @@ for bone in skeleton:
         Joint(bone[1])
     Joint.connect_joints(bone[0], bone[1])
 
-gen_bvh.write_hierarchy_file()
-        
+gen_bvh.write_hierarchy_file(file_path)
+
 """
 for bone in skeleton:
     Joint.connect_joints(bone)
