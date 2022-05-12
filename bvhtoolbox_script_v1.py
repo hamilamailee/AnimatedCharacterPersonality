@@ -2,14 +2,12 @@ from __future__ import annotations
 from cmath import acos, pi, sqrt
 import yaml
 import numpy as np
-from numpy.linalg import norm
+from bvhtoolbox.convert import csv2bvh_file
 import pandas as pd
 pd.options.mode.chained_assignment = None  # default='warn'
 
 
 all_joints = dict()
-all_bones = []
-fc = 0
 
 
 def has_nan(array) -> bool:
@@ -25,8 +23,11 @@ def degy(vec12y) -> np.double:
 
 
 def degz(vec12z) -> np.double:
-    cos_theta = sqrt(vec12z[0] ** 2 + vec12z[2] ** 2) / \
-        sqrt(vec12z[0] ** 2 + vec12z[1] ** 2+vec12z[2] ** 2)
+    try:
+        cos_theta = sqrt(vec12z[0] ** 2 + vec12z[2] ** 2) / \
+            sqrt(vec12z[0] ** 2 + vec12z[1] ** 2+vec12z[2] ** 2)
+    except:
+        return 0
     if vec12z[1] > 0:
         return np.real(acos(cos_theta) * 180 / pi)
     elif vec12z[1] == 0:
@@ -35,13 +36,40 @@ def degz(vec12z) -> np.double:
         return np.real(acos(cos_theta) * -180 / pi)
 
 
+def bfs(main_root: str, root: str):
+    root_j = Joint.get_joint(root)
+    if root == main_root:
+        Bone(root_j, root_j)
+    for j in root_j.connected_joints:
+        if root_j in j.connected_joints:
+            Bone(j, root_j)
+            j.connected_joints.remove(root_j)
+    for j in root_j.connected_joints:
+        bfs(main_root, j.name)
+
+
+def dfs(bone: Bone, ordered: list):
+    if bone not in ordered:
+        ordered.append(bone)
+        for b in Bone.all_bones:
+            if b.parent.name == bone.child.name:
+                dfs(b, ordered)
+    return ordered
+
+
+def read_file(file_path) -> pd.DataFrame:
+    df = pd.read_csv(file_path)
+    df.columns = df[df['scorer'] == 'bodyparts'].to_numpy().tolist()
+    return df.drop([0, 1], axis=0)
+
+
 class BVH:
     def __init__(self, file_path: str, conf_path: str, root: str) -> None:
-        self.df = self.read_file(file_path)
+        self.df = read_file(file_path)
         self.fc = len(self.df)
+        self.root = root
         with open(conf_path) as file:
             self.conf = yaml.load(file, Loader=yaml.FullLoader)
-        self.root = root
 
     def initial_frame_index(self) -> int:
         for f in range(self.fc):
@@ -53,38 +81,41 @@ class BVH:
                 return f
         return None
 
-    def read_file(self, file_path) -> pd.DataFrame:
-        df = pd.read_csv(file_path)
-        df.columns = df[df['scorer'] == 'bodyparts'].to_numpy().tolist()
-        return df.drop([0, 1], axis=0)
+    def get_angles(self) -> np.array:
+        all_rotations = np.empty((self.fc + 1, 0))
+        for b in Bone.all_bones:
+            vec1 = b.parent.cords[:, :3]
+            vec2 = b.child.cords[:, :3]
+            vec = vec2 - vec1
+            info = np.array(
+                [[b.parent.name+".y", b.parent.name+".z", b.parent.name+".x"]])
+            col1 = np.apply_along_axis(degy, 1, vec)
+            col2 = np.apply_along_axis(degz, 1, vec)
+            col3 = np.zeros_like(col1)
+            rotation_angles = np.column_stack((col1, col2, col3))
+            rotation_angles = np.row_stack((info, rotation_angles))
+            all_rotations = np.concatenate(
+                (all_rotations, rotation_angles), axis=1)
+        return all_rotations
 
     def offset_and_cord(self, hierarchy: np.array):
         for j, joint in all_joints.items():
             joint.get_cords_from_df(self.df, self.conf['alphavalue'])
         index = self.initial_frame_index()
-        hierarchy = np.row_stack(
-            (hierarchy, np.array([self.root, "", 0, 0, 0])))
-        for b in all_bones:
-            if b.child.name in hierarchy[:, 0]:
-                all_bones.remove(b)
-                continue
+        for b in Bone.all_bones:
             cord = (b.child.cords[index] - b.parent.cords[index])[:3]
-            bone = np.array([b.child.name, b.parent.name])
+            if b.child.name == self.root:
+                bone = np.array([b.child.name, ""])
+            else:
+                bone = np.array([b.child.name, b.parent.name])
             cord = np.concatenate((bone, cord))
             hierarchy = np.row_stack((hierarchy, cord))
         return hierarchy
 
-    def dfs(self, root: str):
-        root_j = Joint.get_joint(root)
-        for j in root_j.connected_joints:
-            if root_j in j.connected_joints:
-                Bone(j, root_j)
-                j.connected_joints.remove(root_j)
-        for j in root_j.connected_joints:
-            self.dfs(j.name)
-
     def write_hierarchy_file(self, file_path: str):
-        self.dfs(self.root)
+        bfs(self.root, self.root)
+        Bone.clean_hierarchy()
+        Bone.all_bones = dfs(Bone.all_bones[0], [])
         hierarchy = np.empty((0, 5))
         hierarchy = self.offset_and_cord(hierarchy)
         df = pd.DataFrame(hierarchy, columns=[
@@ -103,49 +134,39 @@ class BVH:
         df.to_csv(file_path.split(".")[0]+"_pos.csv", index=False)
         return file_path.split(".")[0]+"_pos.csv"
 
+    def write_rotation_file(self, file_path: str):
+        angles = self.get_angles()
+        df = pd.DataFrame(angles[1:, :], columns=angles[0])
+        df['time'] = list(range(self.fc))
+        df['time'] = df['time'] * 1 / 60
+        df.to_csv(file_path.split(".")[0]+"_rot.csv", index=False)
+        return file_path.split(".")[0]+"_rot.csv"
+
 
 class Bone:
+    all_bones = []
+
     def __init__(self, child: Joint, parent: Joint) -> None:
         self.child = child
         self.parent = parent
-        all_bones.append(self)
-
-    def get_angles() -> np.array:
-        all_rotations = np.empty((fc + 1, 0))
-        for b in all_bones:
-            vec1 = b.joint1.cords[:, :3]
-            vec2 = b.joint2.cords[:, :3]
-            vec = vec2 - vec1
-            info = np.array(
-                [[b.joint1.name+".y", b.joint1.name+".z", b.joint1.name+".x"]])
-            col1 = np.apply_along_axis(degy, 1, vec)
-            col2 = np.apply_along_axis(degz, 1, vec)
-            col3 = np.zeros_like(col1)
-            rotation_angles = np.column_stack((col1, col2, col3))
-            rotation_angles = np.row_stack((info, rotation_angles))
-            all_rotations = np.concatenate(
-                (all_rotations, rotation_angles), axis=1)
-        return all_rotations
-
-    def bone_length(self) -> None:
-        cords1 = self.joint1.cords[:, :3]
-        cords2 = self.joint2.cords[:, :3]
-        dist = []
-        for i in range(len(cords1)):
-            if np.isnan(norm(cords1[i] - cords2[i])):
-                continue
-            dist.append(norm(cords1[i] - cords2[i]))
-        self.length = np.average(dist)
+        Bone.all_bones.append(self)
 
     def print_bone(self) -> None:
         string = f"(parent : {self.parent.name} , child : {self.child.name}) -> length: -"
         print(string)
+
+    def clean_hierarchy():
+        for bi in Bone.all_bones:
+            for bj in Bone.all_bones:
+                if bi != bj and bi.child.name == bj.child.name:
+                    Bone.all_bones.remove(bj)
 
 
 class Joint:
     def __init__(self, name):
         self.name = name
         self.connected_joints = []
+        self.children = []
         self.cords = None
         all_joints[name] = self
 
@@ -153,15 +174,6 @@ class Joint:
         if name not in all_joints:
             return None
         return all_joints[name]
-
-    def get_root() -> str:
-        count = len(all_joints[0].connected_joints)
-        name = None
-        for j in all_joints:
-            if len(j.connected_joints) > count:
-                count = len(j.connected_joints)
-                name = j.name
-        return name
 
     def connect_joints(joint1: str, joint2: str) -> None:
         j1 = Joint.get_joint(joint1)
@@ -191,11 +203,6 @@ class Joint:
 # conf_path = input("Enter the path of your config.yaml file: ")
 # root = input("Enter the name of your root: ")
 
-file_path = "test\walk_cycle_dlc.csv"
-conf_path = "config2.yaml"
-root = "Hips"
-
-
 file_path = "test\p1DLC_effnet_b0_Simba ModifiedAug27shuffle0_150000.csv"
 conf_path = "config.yaml"
 root = "tailbase"
@@ -213,28 +220,6 @@ for bone in skeleton:
 
 hierarchy = gen_bvh.write_hierarchy_file(file_path)
 position = gen_bvh.write_position_file(file_path)
+rotation = gen_bvh.write_rotation_file(file_path)
 
-
-"""
-
-
-# positions
-
-df = pd.DataFrame(range(fc), columns=['time'])
-df['time'] = df['time'] * 1 / 60
-for j in all_joints:
-    df[j.name+".x"] = j.cords[:, 0]
-    df[j.name+".y"] = j.cords[:, 1]
-    df[j.name+".z"] = j.cords[:, 2]
-df.to_csv(file_path.split(
-    ".")[0]+"_pos.csv", index=False)
-
-# rotations
-
-angles = Bone.get_angles()
-df = pd.DataFrame(angles[1:, :], columns=angles[0])
-df['time'] = list(range(fc))
-df['time'] = df['time'] * 1 / 60
-df.to_csv(file_path.split(
-    ".")[0]+"_rot.csv", index=False)
-"""
+csv2bvh_file(hierarchy, position, rotation, "test/dest.bvh")
