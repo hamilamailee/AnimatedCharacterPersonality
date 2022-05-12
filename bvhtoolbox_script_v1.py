@@ -1,11 +1,5 @@
 from __future__ import annotations
 from cmath import acos, pi, sqrt
-from ntpath import join
-from re import L
-from select import select
-from time import sleep
-from traceback import print_tb
-from matplotlib.pyplot import prism
 import yaml
 import numpy as np
 from numpy.linalg import norm
@@ -53,9 +47,8 @@ class BVH:
         for f in range(self.fc):
             found = True
             for j, joint in all_joints.items():
-                if joint.cords is not None:
-                    if has_nan(joint.cords[f][:3]):
-                        found = False
+                if joint.cords is not None and has_nan(joint.cords[f][:3]):
+                    found = False
             if found:
                 return f
         return None
@@ -64,14 +57,6 @@ class BVH:
         df = pd.read_csv(file_path)
         df.columns = df[df['scorer'] == 'bodyparts'].to_numpy().tolist()
         return df.drop([0, 1], axis=0)
-
-    def write_hierarchy_file(self, file_path: str):
-        self.dfs(self.root)
-        hierarchy = np.empty((0, 5))
-        hierarchy = self.offset_and_cord(hierarchy)
-        df = pd.DataFrame(hierarchy, columns=[
-                          'joint', 'parent', 'offset.x', 'offset.y', 'offset.z'])
-        df.to_csv(file_path.split(".")[0]+"_hierarchy.csv", index=False)
 
     def offset_and_cord(self, hierarchy: np.array):
         for j, joint in all_joints.items():
@@ -97,6 +82,26 @@ class BVH:
                 j.connected_joints.remove(root_j)
         for j in root_j.connected_joints:
             self.dfs(j.name)
+
+    def write_hierarchy_file(self, file_path: str):
+        self.dfs(self.root)
+        hierarchy = np.empty((0, 5))
+        hierarchy = self.offset_and_cord(hierarchy)
+        df = pd.DataFrame(hierarchy, columns=[
+                          'joint', 'parent', 'offset.x', 'offset.y', 'offset.z'])
+        df.to_csv(file_path.split(".")[0]+"_hierarchy.csv", index=False)
+        return file_path.split(".")[0]+"_hierarchy.csv"
+
+    def write_position_file(self, file_path: str):
+        df = pd.DataFrame(range(self.fc), columns=['time'])
+        df['time'] = df['time'] * 1 / 60
+        for name, j in all_joints.items():
+            if len(j.connected_joints) != 0:
+                df[j.name+".x"] = j.cords[:, 0]
+                df[j.name+".y"] = j.cords[:, 1]
+                df[j.name+".z"] = j.cords[:, 2]
+        df.to_csv(file_path.split(".")[0]+"_pos.csv", index=False)
+        return file_path.split(".")[0]+"_pos.csv"
 
 
 class Bone:
@@ -206,49 +211,11 @@ for bone in skeleton:
         Joint(bone[1])
     Joint.connect_joints(bone[0], bone[1])
 
-gen_bvh.write_hierarchy_file(file_path)
+hierarchy = gen_bvh.write_hierarchy_file(file_path)
+position = gen_bvh.write_position_file(file_path)
+
 
 """
-for bone in skeleton:
-    Joint.connect_joints(bone)
-
-root = Joint.get_root()
-
-# hierarchy
-
-
-def traverse(hierarchy, parent):
-    if parent.name == root:
-        hierarchy = np.row_stack(
-            (hierarchy, np.array([root, "", 0, 0, 0])))
-    index = initial_frame_index()
-    for c in parent.connected_joints:
-        if c.name not in hierarchy:
-            all_bones.append(Bone(parent, c))
-            cord = (c.cords[index] - parent.cords[index])[:3]
-            bone = np.array([c.name, parent.name])
-            cord = np.concatenate((bone, cord))
-            hierarchy = np.row_stack((hierarchy, cord))
-            hierarchy = traverse(hierarchy, c)
-    return hierarchy
-
-
-def initial_frame_index() -> int:
-    for f in range(fc):
-        found = True
-        for j in all_joints:
-            if has_nan(j.cords[f][:3]):
-                found = False
-        if found:
-            return f
-
-
-hierarchy = np.empty((0, 5))
-hierarchy = traverse(hierarchy, Joint.get_joint(root))
-df = pd.DataFrame(
-    hierarchy, columns=['joint', 'parent', 'offset.x', 'offset.y', 'offset.z'])
-df.to_csv(file_path.split(
-    ".")[0]+"_hierarchy.csv", index=False)
 
 
 # positions
