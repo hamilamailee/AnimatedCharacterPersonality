@@ -8,8 +8,8 @@ import os
 
 plt.style.use('_mpl-gallery')
 
-file_path = r'CollectedData_Byron_pos.csv'
-file_path = r'CollectedData_Byron - nolost_pos.csv'
+# file_path = r'CollectedData_Byron_pos.csv'
+file_path = r'./CollectedData_Byron - nolost_pos.csv'
 
 all_frames_x = []
 all_frames_y = []

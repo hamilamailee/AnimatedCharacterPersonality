@@ -213,8 +213,8 @@ class Joint:
 # conf_path = "config.yaml"
 # root = "tailbase"
 
-file_path = r"CollectedData_Byron - nolost.csv"
-conf_path = r"Horses-Byron-2019-05-08\config.yaml"
+file_path = r"AnimatedCharacterPersonality\CollectedData_Byron - nolost.csv"
+conf_path = r"AnimatedCharacterPersonality\config.yaml"
 root = "Ischium"
 
 gen_bvh = BVH(file_path, conf_path, root)
