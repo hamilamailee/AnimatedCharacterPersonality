@@ -1,5 +1,5 @@
 from __future__ import annotations
-from cmath import acos, pi, sqrt
+from cmath import acos, pi
 import yaml
 import numpy as np
 from bvhtoolbox.convert import csv2bvh_file
@@ -15,25 +15,21 @@ def has_nan(array) -> bool:
 
 
 def degy(vec12y) -> np.double:
-    cos_theta = vec12y[0] / sqrt(vec12y[0] ** 2 + vec12y[2] ** 2)
-    if vec12y[2] <= 0:
-        return np.real(acos(cos_theta) * 180 / pi)
-    else:
-        return np.real(acos(cos_theta) * -180 / pi)
+    return 0
 
 
-def degz(vec12z) -> np.double:
-    try:
-        cos_theta = sqrt(vec12z[0] ** 2 + vec12z[2] ** 2) / \
-            sqrt(vec12z[0] ** 2 + vec12z[1] ** 2+vec12z[2] ** 2)
-    except:
+def degz(vec12z, offset) -> np.double:
+    dot = np.dot(vec12z, offset)
+    cross = np.cross(vec12z, offset)
+    norm = np.linalg.norm(vec12z) * np.linalg.norm(offset)
+
+    if norm == 0:
         return 0
-    if vec12z[1] > 0:
-        return np.real(acos(cos_theta) * 180 / pi)
-    elif vec12z[1] == 0:
-        return 0.0
-    else:
-        return np.real(acos(cos_theta) * -180 / pi)
+
+    cos_theta = dot/norm
+    sin_theta = cross[2]/norm
+
+    return np.real(acos(cos_theta)) * 180 * (-1) * np.sign(sin_theta) / pi
 
 
 def bfs(main_root: str, root: str):
@@ -83,15 +79,17 @@ class BVH:
 
     def get_angles(self) -> np.array:
         all_rotations = np.empty((self.fc + 1, 0))
-        for b in Bone.all_bones:
+        for b in Bone.all_bones[:]:
+            if b.child.is_leaf():
+                continue
             vec1 = b.parent.cords[:, :3]
             vec2 = b.child.cords[:, :3]
             vec = vec2 - vec1
             info = np.array(
-                [[b.parent.name+".y", b.parent.name+".z", b.parent.name+".x"]])
+                [[b.child.name+".y", b.child.name+".z", b.child.name+".x"]])
             col1 = np.apply_along_axis(degy, 1, vec)
-            col2 = np.apply_along_axis(degz, 1, vec)
-            col3 = np.zeros_like(col1)
+            col3 = np.apply_along_axis(degz, 1, vec, b.offset)
+            col2 = np.zeros_like(col1)
             rotation_angles = np.column_stack((col1, col2, col3))
             rotation_angles = np.row_stack((info, rotation_angles))
             all_rotations = np.concatenate(
@@ -103,12 +101,12 @@ class BVH:
             joint.get_cords_from_df(self.df, self.conf['alphavalue'])
         index = self.initial_frame_index()
         for b in Bone.all_bones:
-            cord = (b.child.cords[index] - b.parent.cords[index])[:3]
+            b.offset = (b.child.cords[index] - b.parent.cords[index])[:3]
             if b.child.name == self.root:
                 bone = np.array([b.child.name, ""])
             else:
                 bone = np.array([b.child.name, b.parent.name])
-            cord = np.concatenate((bone, cord))
+            cord = np.concatenate((bone, b.offset))
             hierarchy = np.row_stack((hierarchy, cord))
         return hierarchy
 
@@ -149,17 +147,18 @@ class Bone:
     def __init__(self, child: Joint, parent: Joint) -> None:
         self.child = child
         self.parent = parent
+        self.offset = None
         Bone.all_bones.append(self)
-
-    def print_bone(self) -> None:
-        string = f"(parent : {self.parent.name} , child : {self.child.name}) -> length: -"
-        print(string)
 
     def clean_hierarchy():
         for bi in Bone.all_bones:
             for bj in Bone.all_bones:
                 if bi != bj and bi.child.name == bj.child.name:
                     Bone.all_bones.remove(bj)
+
+    def print_bone(self) -> None:
+        string = f"(parent : {self.parent.name} , child : {self.child.name}) -> length: {self.length}"
+        print(string)
 
 
 class Joint:
@@ -181,9 +180,16 @@ class Joint:
         j1.connected_joints.append(j2)
         j2.connected_joints.append(j1)
 
+    def is_leaf(joint: Joint):
+        for b in Bone.all_bones:
+            if b.parent == joint:
+                return False
+        return True
+
     def get_cords_from_df(self, df, alpha) -> None:
         if self.name in df.columns:
             model = df[self.name].astype(np.float64)
+            model['z'] = 1
             model.columns = ['x', 'y', 'z']
             model.loc[model['z'] < alpha, :] = np.NaN
             model.loc[model['z'] >= alpha, 'z'] = 0
@@ -203,10 +209,13 @@ class Joint:
 # conf_path = input("Enter the path of your config.yaml file: ")
 # root = input("Enter the name of your root: ")
 
-file_path = "test\p1DLC_effnet_b0_Simba ModifiedAug27shuffle0_150000.csv"
-conf_path = "config.yaml"
-root = "tailbase"
+# file_path = "test\p1DLC_effnet_b0_Simba ModifiedAug27shuffle0_150000.csv"
+# conf_path = "config.yaml"
+# root = "tailbase"
 
+file_path = r"CollectedData_Byron - nolost.csv"
+conf_path = r"Horses-Byron-2019-05-08\config.yaml"
+root = "Ischium"
 
 gen_bvh = BVH(file_path, conf_path, root)
 skeleton = gen_bvh.conf['skeleton']
@@ -222,4 +231,5 @@ hierarchy = gen_bvh.write_hierarchy_file(file_path)
 position = gen_bvh.write_position_file(file_path)
 rotation = gen_bvh.write_rotation_file(file_path)
 
-csv2bvh_file(hierarchy, position, rotation, "test/dest.bvh")
+csv2bvh_file(hierarchy, position, rotation, r"./nolost-colschange.bvh")
+# csv2bvh_file(hierarchy, position, rotation, r"test\simba.bvh")
