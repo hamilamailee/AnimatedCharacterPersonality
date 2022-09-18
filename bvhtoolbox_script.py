@@ -29,7 +29,7 @@ def degz(vec12z, offset) -> np.double:
     cos_theta = dot/norm
     sin_theta = cross[2]/norm
 
-    return np.real(acos(cos_theta)) * 180 * (-1) * np.sign(sin_theta) / pi
+    return np.real(acos(cos_theta)) * 180 * np.sign(sin_theta) / pi
 
 
 def bfs(main_root: str, root: str):
@@ -189,10 +189,14 @@ class Joint:
     def get_cords_from_df(self, df, alpha) -> None:
         if self.name in df.columns:
             model = df[self.name].astype(np.float64)
-            model['z'] = 1
             model.columns = ['x', 'y', 'z']
             model.loc[model['z'] < alpha, :] = np.NaN
             model.loc[model['z'] >= alpha, 'z'] = 0
+            model.interpolate(inplace=True, axis=0)
+            model = model.iloc[::-1]
+            model.interpolate(inplace=True, axis=0)
+            model = model.iloc[::-1]
+            print(model)
             model['frame'] = model.index - 1
             model['y'] = -model['y']
             self.cords = model.to_numpy()
@@ -209,13 +213,9 @@ class Joint:
 # conf_path = input("Enter the path of your config.yaml file: ")
 # root = input("Enter the name of your root: ")
 
-# file_path = "test\p1DLC_effnet_b0_Simba ModifiedAug27shuffle0_150000.csv"
-# conf_path = "config.yaml"
-# root = "tailbase"
-
-file_path = r"AnimatedCharacterPersonality\CollectedData_Byron - nolost.csv"
-conf_path = r"AnimatedCharacterPersonality\config.yaml"
-root = "Ischium"
+file_path = "AnimatedCharacterPersonality\Test_Zootopia\dlc.csv"
+conf_path = "AnimatedCharacterPersonality\Test_Zootopia\config.yaml"
+root = "tailbase"
 
 gen_bvh = BVH(file_path, conf_path, root)
 skeleton = gen_bvh.conf['skeleton']
@@ -231,5 +231,6 @@ hierarchy = gen_bvh.write_hierarchy_file(file_path)
 position = gen_bvh.write_position_file(file_path)
 rotation = gen_bvh.write_rotation_file(file_path)
 
-csv2bvh_file(hierarchy, position, rotation, r"./nolost-colschange.bvh")
+csv2bvh_file(hierarchy, position, rotation,
+             r"AnimatedCharacterPersonality\Test_Zootopia\bvh.bvh")
 # csv2bvh_file(hierarchy, position, rotation, r"test\simba.bvh")
