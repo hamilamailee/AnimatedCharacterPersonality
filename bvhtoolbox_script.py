@@ -126,7 +126,7 @@ class BVH:
         df['time'] = df['time'] * 1 / 60
         for name, j in all_joints.items():
             if len(j.connected_joints) != 0:
-                df[j.name+".x"] = j.cords[:, 0]
+                df[j.name+".x"] = -j.cords[:, 0]
                 df[j.name+".y"] = j.cords[:, 1]
                 df[j.name+".z"] = j.cords[:, 2]
         df.to_csv(file_path.split(".")[0]+"_pos.csv", index=False)
@@ -213,8 +213,8 @@ class Joint:
 # conf_path = input("Enter the path of your config.yaml file: ")
 # root = input("Enter the name of your root: ")
 
-file_path = "AnimatedCharacterPersonality\Test_Zootopia\dlc.csv"
-conf_path = "AnimatedCharacterPersonality\Test_Zootopia\config.yaml"
+file_path = "AnimatedCharacterPersonality\Test_Madagascar\dlc.csv"
+conf_path = "AnimatedCharacterPersonality\Test_Madagascar\config.yaml"
 root = "tailbase"
 
 gen_bvh = BVH(file_path, conf_path, root)
@@ -232,5 +232,5 @@ position = gen_bvh.write_position_file(file_path)
 rotation = gen_bvh.write_rotation_file(file_path)
 
 csv2bvh_file(hierarchy, position, rotation,
-             r"AnimatedCharacterPersonality\Test_Zootopia\bvh.bvh")
+             r"AnimatedCharacterPersonality\Test_Madagascar\bvh.bvh")
 # csv2bvh_file(hierarchy, position, rotation, r"test\simba.bvh")
