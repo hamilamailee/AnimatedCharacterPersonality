@@ -1,0 +1,167 @@
+    # Project definitions (do not edit)
+Task: MBTI Database
+scorer: Hamila Mailee
+date: Nov24
+multianimalproject: false
+identity:
+
+    # Project path (change when moving around)
+project_path: /content/drive/MyDrive/DLC/MBTI Database-Hamila Mailee-2022-11-24
+
+    # Annotation data set configuration (and individual video cropping parameters)
+video_sets:
+  ? C:\Users\HP\Documents\Computer Graphics\CSV to BVH animals\MBTI\Sasang\MBTI Database-Hamila
+    Mailee-2022-11-24\videos\00023.gif
+  : crop: 0, 256, 0, 256
+  ? C:\Users\HP\Documents\Computer Graphics\CSV to BVH animals\MBTI\Sasang\MBTI Database-Hamila
+    Mailee-2022-11-24\videos\00041.gif
+  : crop: 0, 256, 0, 256
+  ? C:\Users\HP\Documents\Computer Graphics\CSV to BVH animals\MBTI\Sasang\MBTI Database-Hamila
+    Mailee-2022-11-24\videos\00045.gif
+  : crop: 0, 256, 0, 256
+  ? C:\Users\HP\Documents\Computer Graphics\CSV to BVH animals\MBTI\Sasang\MBTI Database-Hamila
+    Mailee-2022-11-24\videos\00064.gif
+  : crop: 0, 256, 0, 256
+  ? C:\Users\HP\Documents\Computer Graphics\CSV to BVH animals\MBTI\Sasang\MBTI Database-Hamila
+    Mailee-2022-11-24\videos\00070.gif
+  : crop: 0, 256, 0, 256
+  ? C:\Users\HP\Documents\Computer Graphics\CSV to BVH animals\MBTI\Sasang\MBTI Database-Hamila
+    Mailee-2022-11-24\videos\00072.gif
+  : crop: 0, 256, 0, 256
+  ? C:\Users\HP\Documents\Computer Graphics\CSV to BVH animals\MBTI\Sasang\MBTI Database-Hamila
+    Mailee-2022-11-24\videos\00002.gif
+  : crop: 0, 256, 0, 256
+  ? C:\Users\HP\Documents\Computer Graphics\CSV to BVH animals\MBTI\Sasang\MBTI Database-Hamila
+    Mailee-2022-11-24\videos\00004.gif
+  : crop: 0, 256, 0, 256
+  ? C:\Users\HP\Documents\Computer Graphics\CSV to BVH animals\MBTI\Sasang\MBTI Database-Hamila
+    Mailee-2022-11-24\videos\00031.gif
+  : crop: 0, 256, 0, 256
+  ? C:\Users\HP\Documents\Computer Graphics\CSV to BVH animals\MBTI\Sasang\MBTI Database-Hamila
+    Mailee-2022-11-24\videos\00048.gif
+  : crop: 0, 256, 0, 256
+  ? C:\Users\HP\Documents\Computer Graphics\CSV to BVH animals\MBTI\Sasang\MBTI Database-Hamila
+    Mailee-2022-11-24\videos\00066.gif
+  : crop: 0, 256, 0, 256
+  ? C:\Users\HP\Documents\Computer Graphics\CSV to BVH animals\MBTI\Sasang\MBTI Database-Hamila
+    Mailee-2022-11-24\videos\00022.gif
+  : crop: 0, 256, 0, 256
+  ? C:\Users\HP\Documents\Computer Graphics\CSV to BVH animals\MBTI\Sasang\MBTI Database-Hamila
+    Mailee-2022-11-24\videos\00027.gif
+  : crop: 0, 256, 0, 256
+  ? C:\Users\HP\Documents\Computer Graphics\CSV to BVH animals\MBTI\Sasang\MBTI Database-Hamila
+    Mailee-2022-11-24\videos\00032.gif
+  : crop: 0, 256, 0, 256
+  ? C:\Users\HP\Documents\Computer Graphics\CSV to BVH animals\MBTI\Sasang\MBTI Database-Hamila
+    Mailee-2022-11-24\videos\00042.gif
+  : crop: 0, 256, 0, 256
+  ? C:\Users\HP\Documents\Computer Graphics\CSV to BVH animals\MBTI\Sasang\MBTI Database-Hamila
+    Mailee-2022-11-24\videos\00049.gif
+  : crop: 0, 256, 0, 256
+  ? C:\Users\HP\Documents\Computer Graphics\CSV to BVH animals\MBTI\Sasang\MBTI Database-Hamila
+    Mailee-2022-11-24\videos\00067.gif
+  : crop: 0, 256, 0, 256
+  ? C:\Users\HP\Documents\Computer Graphics\CSV to BVH animals\MBTI\Sasang\MBTI Database-Hamila
+    Mailee-2022-11-24\videos\00003.gif
+  : crop: 0, 256, 0, 256
+  ? C:\Users\HP\Documents\Computer Graphics\CSV to BVH animals\MBTI\Sasang\MBTI Database-Hamila
+    Mailee-2022-11-24\videos\00008.gif
+  : crop: 0, 256, 0, 256
+  ? C:\Users\HP\Documents\Computer Graphics\CSV to BVH animals\MBTI\Sasang\MBTI Database-Hamila
+    Mailee-2022-11-24\videos\00054.gif
+  : crop: 0, 256, 0, 256
+  ? C:\Users\HP\Documents\Computer Graphics\CSV to BVH animals\MBTI\Sasang\MBTI Database-Hamila
+    Mailee-2022-11-24\videos\00065.gif
+  : crop: 0, 256, 0, 256
+  ? C:\Users\HP\Documents\Computer Graphics\CSV to BVH animals\MBTI\Sasang\MBTI Database-Hamila
+    Mailee-2022-11-24\videos\00082.gif
+  : crop: 0, 256, 0, 256
+bodyparts:
+- earr
+- earl
+- eyer
+- eyel
+- nose
+- throat
+- elbowr
+- elbowl
+- handr
+- handl
+- tailbase
+- tailtip
+- kneer
+- kneel
+- ankler
+- anklel
+
+    # Fraction of video to start/stop when extracting frames for labeling/refinement
+
+    # Fraction of video to start/stop when extracting frames for labeling/refinement
+start: 0
+stop: 1
+numframes2pick: 2
+
+    # Plotting configuration
+skeleton:
+- - earr
+  - eyer
+- - earl
+  - eyel
+- - eyel
+  - eyer
+- - nose
+  - eyer
+- - nose
+  - eyel
+- - throat
+  - eyer
+- - throat
+  - eyel
+- - throat
+  - elbowr
+- - throat
+  - elbowl
+- - throat
+  - tailbase
+- - handr
+  - elbowr
+- - handl
+  - elbowl
+- - tailtip
+  - tailbase
+- - kneer
+  - tailbase
+- - kneel
+  - tailbase
+- - kneel
+  - anklel
+- - kneer
+  - ankler
+skeleton_color: black
+pcutoff: 0.6
+dotsize: 3
+alphavalue: 0.7
+colormap: rainbow
+
+    # Training,Evaluation and Analysis configuration
+TrainingFraction:
+- 0.95
+iteration: 0
+default_net_type: resnet_50
+default_augmenter: default
+snapshotindex: -1
+batch_size: 8
+
+    # Cropping Parameters (for analysis and outlier frame detection)
+cropping: false
+    #if cropping is true for analysis, then set the values here:
+x1: 0
+x2: 640
+y1: 277
+y2: 624
+
+    # Refinement configuration (parameters from annotation dataset configuration also relevant in this stage)
+corner2move2:
+- 50
+- 50
+move2corner: true
