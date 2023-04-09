@@ -88,7 +88,7 @@ pairwise_huber_loss: false
 pairwise_predict: false
 partaffinityfield_predict: false
 pos_dist_thresh: 17
-project_path: /content/drive/MyDrive/DLC/Secret Life of Pets-Hamila-2023-04-09
+project_path: /content/drive/MyDrive/Secret Life of Pets-Hamila-2023-04-09
 rotation: 25
 rotratio: 0.4
 save_iters: 50000
