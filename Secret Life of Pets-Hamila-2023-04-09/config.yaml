@@ -1,0 +1,103 @@
+    # Project definitions (do not edit)
+Task: Secret Life of Pets
+scorer: Hamila
+date: Apr9
+multianimalproject: false
+identity:
+
+    # Project path (change when moving around)
+project_path: /content/drive/MyDrive/DLC/Secret Life of Pets-Hamila-2023-04-09
+
+    # Annotation data set configuration (and individual video cropping parameters)
+video_sets:
+  ? C:\Users\HP\Desktop\Secret Life of Pets-Hamila-2023-04-09\videos\The_Secret_Life_of_Pets__What_do_pets_do_when_we_leave_HD_CLIP_.mp4
+  : crop: 0, 1920, 0, 1080
+bodyparts:
+- earr
+- earl
+- eyer
+- eyel
+- nose
+- throat
+- elbowr
+- elbowl
+- handr
+- handl
+- tailbase
+- tailtip
+- kneer
+- kneel
+- ankler
+- anklel
+
+    # Fraction of video to start/stop when extracting frames for labeling/refinement
+
+    # Fraction of video to start/stop when extracting frames for labeling/refinement
+start: 0
+stop: 1
+numframes2pick: 48
+
+    # Plotting configuration
+skeleton:
+- - earr
+  - eyer
+- - earl
+  - eyel
+- - eyel
+  - eyer
+- - nose
+  - eyer
+- - nose
+  - eyel
+- - throat
+  - eyer
+- - throat
+  - eyel
+- - throat
+  - elbowr
+- - throat
+  - elbowl
+- - throat
+  - tailbase
+- - handr
+  - elbowr
+- - handl
+  - elbowl
+- - tailtip
+  - tailbase
+- - kneer
+  - tailbase
+- - kneel
+  - tailbase
+- - kneel
+  - anklel
+- - kneer
+  - ankler
+skeleton_color: black
+pcutoff: 0.6
+dotsize: 12
+alphavalue: 0.7
+colormap: rainbow
+
+    # Training,Evaluation and Analysis configuration
+TrainingFraction:
+- 0.95
+iteration: 0
+default_net_type: resnet_50
+default_augmenter: default
+snapshotindex: -1
+batch_size: 8
+
+    # Cropping Parameters (for analysis and outlier frame detection)
+cropping: false
+    #if cropping is true for analysis, then set the values here:
+x1: 0
+x2: 640
+y1: 277
+y2: 624
+
+    # Refinement configuration (parameters from annotation dataset configuration also relevant in this stage)
+corner2move2:
+- 50
+- 50
+move2corner: true
